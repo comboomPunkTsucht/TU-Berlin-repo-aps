@@ -8,6 +8,8 @@
 - [[#2025-10-27][2025-10-27]]
   - [[#organisatorisches][Organisatorisches]]
   - [[#einführung][Einführung]]
+- [[#2025-11-03][2025-11-03]]
+  - [[#zahlendarstellungen][Zahlendarstellungen]]
 
 * 2025-10-27
 
@@ -25,3 +27,23 @@ Web: [[https://tu.berlin/msc][tu.berlin/msc]]
 *** Komponenten
 
 *** Funktionsweise
+
+* 2025-11-03
+
+** Zahlendarstellungen
+
+*** Binär-/Oktal-/Hexadezimalzahlen
+
+Umrechnung in allen Richtungen
+
+*** 2-Komplement-Zahlen
+
+*** m-Bit 2-Komplement-Zahlen
+
+*** Arithmetische Operationen mit Binärzahlen
+
+*** Überlauf
+
+*** Bruchzahlen (IEEE 754)
+
+*** Arithmetische Operationen (IEEE 754)
