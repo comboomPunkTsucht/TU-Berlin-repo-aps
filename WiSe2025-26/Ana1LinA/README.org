@@ -18,6 +18,8 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 - [[#2025-10-28][2025-10-28]]
   - [[#abbildungen-1][Abbildungen]]
   - [[#elementare-funktionen-i][Elementare Funktionen I]]
+- [[#2025-10-30][2025-10-30]]
+  - [[#komplexe-zahlen-2][Komplexe Zahlen (2)]]
 - [[#2025-11-03][2025-11-03]]
   - [[#polynome][Polynome]]
 - [[#2024-11-04][2024-11-04]]
@@ -48,6 +50,10 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 ** Abbildungen
 
 ** Elementare Funktionen I
+
+* 2025-10-30
+
+** Komplexe Zahlen (2)
 
 * 2025-11-03
 
