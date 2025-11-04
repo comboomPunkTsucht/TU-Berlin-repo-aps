@@ -1,0 +1,150 @@
+% !TEX program = lualatex
+\documentclass[12pt,a4paper]{article} % oder book
+
+\usepackage{fontspec}        % bei lualatex/xelatex
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+%\usepackage{enumitem}        % Für [(a)]-Listen und \label in Listen
+\usepackage[ngerman]{babel}  % deutsche Silbentrennung
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}        % besseres TOC → hyperref
+\usepackage{fancyhdr}
+
+% Versuche zuerst die gewünschte Systemschrift, sonst Fallback
+\IfFontExistsTF{CaskaydiaCove Nerd Font Propo}
+  {\setmainfont{CaskaydiaCove Nerd Font Propo}}
+  {\setmainfont{Latin Modern Roman}} % Fallback
+
+% Fancyhdr: Seitenzahlen rechts in Fußzeile (du kannst C->zentriert ändern)
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Metadaten für PDF
+\hypersetup{
+  pdftitle={Hausaufgabe 03},
+  pdfauthor={Fabian Aps:525528, Joris Victor Vorderwülbecke:0528715, Emil Arthur Joseph Hartmann:052542, Friedrich Ludwig Finck:0526329},
+  pdfsubject={Hausaufgabe 03 - Felix 09},
+  pdfcreator={LuaLaTeX}
+}
+
+% --- Eigener Befehl für die Funktion ---
+% So wird sie überall gleich angezeigt
+\newcommand{\myfunc}{f(x) = e^{\cos(\ln(x))} + \sin^2(\ln(x))}
+
+% --- ALTERNATIVER WEG (OHNE enumitem) ---
+% Definiert "Level 1" der enumerate-Liste neu
+\renewcommand{\labelenumi}{\alph{enumi})}
+\renewcommand{\labelenumii}{\alph{enumii})} % Für verschachtelte Listen
+% ----------------------------------------
+
+
+\begin{document}
+
+% ------------------
+% Titelseite (keine Seitenzahl)
+% ------------------
+\begin{titlepage}
+  \centering
+  {\Large Technische Universität Berlin\par}
+  \vspace{2cm}
+  {\Huge\bfseries Hausaufgabe 03\par}
+  \vspace{1.5cm}
+  {\Large Felix 09\par}
+  \vfill
+  {\large Autoren: Fabian Aps:525528, Joris Victor Vorderwülbecke:0528715, Emil Arthur Joseph Hartmann:052542, Friedrich Ludwig Finck:0526329\par}
+  \vspace{2cm}
+  {\large \today\par}
+  \thispagestyle{empty} % Titelseite ohne Seitenzahl
+\end{titlepage}
+
+% ------------------
+% Inhaltsverzeichnis mit römischen Seitenzahlen (i, ii, ...)
+% ------------------
+\cleardoublepage
+\pagenumbering{roman} % i, ii, iii, iv ...
+\setcounter{page}{1}
+
+\tableofcontents
+\clearpage
+
+% ------------------
+% Hauptteil: arabische Seitenzahlen ab 1
+% ------------------
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Aufgaben}\label{sec:aufgaben}
+
+Die gegebene Funktion lautet:
+$$ \myfunc $$
+
+\begin{enumerate} % Nummerierung im Stil (a), (b), ...
+    \item Für welche $x \in \mathbb{R}$ ist die Funktion definiert? \label{task:a}
+
+    \item Zeigen Sie, dass $f\left(\frac{1}{x}\right) = f(x)$ für alle $x > 0$ gilt. \label{task:b}
+    \par\textit{Hinweis: Nutzen Sie die Rechenregeln der elementaren Funktionen.}
+
+    \item Berechnen Sie $f\left(e^{{\frac{3}{2}}\pi}\right)$. \label{task:c}
+\end{enumerate}
+
+\vspace{2cm}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{ha_03.png}
+\end{figure}
+
+
+% ------------------
+% Lösungen
+% ------------------
+
+\cleardoublepage % Beginnt Lösungs-Teil auf einer neuen Seite
+
+\section{Lösung zu Aufgabe a)} \label{sec:a}
+
+\textbf{Aufgabe \ref{task:a}:} \textit{Für welche $x \in \mathbb{R}$ ist die Funktion definiert?}
+\par\bigskip
+Die gegebene Funktion ist:
+$$ \myfunc $$
+\par\bigskip
+\textbf{Lösung:}
+\par
+Hier beginnt die Lösung für Aufgabe a)...
+
+\clearpage
+\section{Lösung zu Aufgabe b)} \label{sec:b}
+
+\textbf{Aufgabe \ref{task:b}:} \textit{Zeigen Sie, dass $f\left(\frac{1}{x}\right) = f(x)$ für alle $x > 0$ gilt.}
+\par\bigskip
+Die gegebene Funktion ist:
+$$ \myfunc $$
+\par\bigskip
+\textbf{Beweis:}
+\par
+Hier beginnt der Beweis für Aufgabe b)...
+
+\clearpage
+\section{Lösung zu Aufgabe c)} \label{sec:c}
+
+\textbf{Aufgabe \ref{task:c}:} \textit{Berechnen Sie $f\left(e^{\frac{3\pi}{2}}\right)$.}
+\par\bigskip
+Die gegebene Funktion ist:
+$$ \myfunc $$
+\par\bigskip
+\textbf{Berechnung:}
+\par
+Hier beginnt die Berechnung für Aufgabe c)...
+
+
+\end{document}
+
+% Local Variables:
+% TeX-engine: luatex
+% End:
