@@ -1,5 +1,5 @@
 % !TEX program = lualatex
-\documentclass[12pt,a4paper]{article} % oder book
+\documentclass[12pt,a4paper]{report} % oder book
 
 \usepackage{fontspec}        % bei lualatex/xelatex
 \usepackage{microtype}
@@ -23,11 +23,13 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+\newcommand{\authorsline}{Fabian Aps:525528, Joris Victor Vorderwülbecke:0528715, Emil Arthur Joseph Hartmann:052542, Friedrich Ludwig Finck:0526329}
+
 % Metadaten für PDF
 \hypersetup{
   pdftitle={Hausaufgabe 03},
-  pdfauthor={Fabian Aps:525528, Joris Victor Vorderwülbecke:0528715, Emil Arthur Joseph Hartmann:052542, Friedrich Ludwig Finck:0526329},
-  pdfsubject={Hausaufgabe 03 - Felix 09},
+  pdfauthor={\authorsline},
+  pdfsubject={Ana1LinA - Hausaufgabe 03 - Felix 09},
   pdfcreator={LuaLaTeX}
 }
 
@@ -55,7 +57,7 @@
   \vspace{1.5cm}
   {\Large Felix 09\par}
   \vfill
-  {\large Autoren: Fabian Aps:525528, Joris Victor Vorderwülbecke:0528715, Emil Arthur Joseph Hartmann:052542, Friedrich Ludwig Finck:0526329\par}
+  {\large Autoren: \authorsline\par}
   \vspace{2cm}
   {\large \today\par}
   \thispagestyle{empty} % Titelseite ohne Seitenzahl
@@ -78,10 +80,10 @@
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-\section{Aufgaben}\label{sec:aufgaben}
+\chapter{Aufgaben}\label{ch:aufgaben}
 
 Die gegebene Funktion lautet:
-$$ \myfunc $$
+$$ \myfunc $$ \label{func:f}
 
 \begin{enumerate} % Nummerierung im Stil (a), (b), ...
     \item Für welche $x \in \mathbb{R}$ ist die Funktion definiert? \label{task:a}
@@ -106,38 +108,37 @@ $$ \myfunc $$
 
 \cleardoublepage % Beginnt Lösungs-Teil auf einer neuen Seite
 
-\section{Lösung zu Aufgabe a)} \label{sec:a}
+\chapter{Aufgabe a)} \label{ch:a}
+\textbf{Funktion:} $ \myfunc $
+\par\bigskip
+\textbf{Aufgabe:} \textit{Für welche $x \in \mathbb{R}$ ist die Funktion definiert?}
+\par\bigskip
 
-\textbf{Aufgabe \ref{task:a}:} \textit{Für welche $x \in \mathbb{R}$ ist die Funktion definiert?}
-\par\bigskip
-Die gegebene Funktion ist:
-$$ \myfunc $$
-\par\bigskip
-\textbf{Lösung:}
+\section{Lösung} \label{sec:aL}
 \par
 Hier beginnt die Lösung für Aufgabe a)...
 
 \clearpage
-\section{Lösung zu Aufgabe b)} \label{sec:b}
+\chapter{Aufgabe b)} \label{ch:b}
 
-\textbf{Aufgabe \ref{task:b}:} \textit{Zeigen Sie, dass $f\left(\frac{1}{x}\right) = f(x)$ für alle $x > 0$ gilt.}
+\textbf{Funktion:} $ \myfunc $
 \par\bigskip
-Die gegebene Funktion ist:
-$$ \myfunc $$
+\textbf{Aufgabe:} \textit{Zeigen Sie, dass $f\left(\frac{1}{x}\right) = f(x)$ für alle $x > 0$ gilt.}
 \par\bigskip
-\textbf{Beweis:}
+
+\section{Beweis} \label{sec:bB}
 \par
 Hier beginnt der Beweis für Aufgabe b)...
 
 \clearpage
-\section{Lösung zu Aufgabe c)} \label{sec:c}
+\chapter{Aufgabe c)} \label{ch:c}
 
-\textbf{Aufgabe \ref{task:c}:} \textit{Berechnen Sie $f\left(e^{{\frac{3}{2}}\pi}\right)$.}
+\textbf{Funktion:} $ \myfunc $
 \par\bigskip
-Die gegebene Funktion ist:
-$$ \myfunc $$
+\textbf{Aufgabe:} \textit{Berechnen Sie $f\left(e^{{\frac{3}{2}}\pi}\right)$.}
 \par\bigskip
-\textbf{Berechnung:}
+
+\section{Berechnung} \label{sec:cB}
 \par
 Hier beginnt die Berechnung für Aufgabe c)...
 

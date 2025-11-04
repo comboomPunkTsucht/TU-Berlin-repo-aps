@@ -22,11 +22,17 @@
 \renewcommand{\headrulewidth}{0pt} 
 \renewcommand{\footrulewidth}{0pt}
 
+\newcommand{\titleline}{Titel der Arbeit}
+\newcommand{\subtitleline}{Subtitle der Arbeit}
+\newcommand{\authorsline}{Fabian Aps}
+\newcommand{\matrikelline}{525528}
+
+
 % Metadaten für PDF
 \hypersetup{
-  pdftitle={Titel der Arbeit},
-  pdfauthor={Fabian Aps},
-  pdfsubject={Thema},
+  pdftitle={\titleline},
+  pdfauthor={\authorsline - \matrikelline},
+  pdfsubject={\subtitleline},
   pdfcreator={LuaLaTeX}
 }
 
@@ -39,12 +45,12 @@
   \centering
   {\Large Technische Universität Berlin\par}
   \vspace{2cm}
-  {\Huge\bfseries Titel der Arbeit\par}
+  {\Huge\bfseries \titleline\par}
   \vspace{1.5cm}
-  {\Large Untertitel (falls vorhanden)\par}
+  {\Large \subtitleline\par}
   \vfill
-  {\large Autor: Fabian Aps\par}
-  {\large Matrikelnummer: 123456\par}
+  {\large Autor: \authorsline\par}
+  {\large Matrikelnummer:\matrikelline\par}
   {\large Studium: B.Sc. Informatik\par}
   \vspace{1cm}
   {\large Betreuer: Prof. Dr. X\par}
@@ -78,3 +84,7 @@ Seitenzahlen erscheinen nun als 1, 2, 3, \ldots
 Text\ldots
 
 \end{document}
+
+% Local Variables:
+% TeX-engine: luatex
+% End:
