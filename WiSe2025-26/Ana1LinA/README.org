@@ -18,6 +18,10 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 - [[#2025-10-28][2025-10-28]]
   - [[#abbildungen-1][Abbildungen]]
   - [[#elementare-funktionen-i][Elementare Funktionen I]]
+- [[#2025-11-03][2025-11-03]]
+  - [[#polynome][Polynome]]
+- [[#2024-11-04][2024-11-04]]
+  - [[#rationale-funktionen][Rationale Funktionen]]
 
 * 2025-10-15
 
@@ -44,3 +48,11 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 ** Abbildungen
 
 ** Elementare Funktionen I
+
+* 2025-11-03
+
+** Polynome
+
+* 2024-11-04
+
+** Rationale Funktionen
