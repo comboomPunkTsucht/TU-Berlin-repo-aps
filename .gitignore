@@ -612,54 +612,54 @@ Cargo.lock
 
 ### Images template
 # JPEG
-*.jpg
-*.jpeg
-*.jpe
-*.jif
-*.jfif
-*.jfi
+# *.jpg
+# *.jpeg
+# *.jpe
+# *.jif
+# *.jfif
+# *.jfi
 
 # JPEG 2000
-*.jp2
-*.j2k
-*.jpf
-*.jpx
-*.jpm
-*.mj2
+# *.jp2
+# *.j2k
+# *.jpf
+# *.jpx
+# *.jpm
+# *.mj2
 
 # JPEG XR
-*.jxr
-*.hdp
-*.wdp
+# *.jxr
+# *.hdp
+# *.wdp
 
 # Graphics Interchange Format
-*.gif
+# *.gif
 
 # RAW
 *.raw
 
 # Web P
-*.webp
+# *.webp
 
 # Portable Network Graphics
-*.png
+# *.png
 
 # Animated Portable Network Graphics
-*.apng
+# *.apng
 
 # Multiple-image Network Graphics
-*.mng
+# *.mng
 
 # Tagged Image File Format
-*.tiff
-*.tif
+# *.tiff
+# *.tif
 
 # Scalable Vector Graphics
-*.svg
-*.svgz
+# *.svg
+# *.svgz
 
 # Portable Document Format
-*.pdf
+# *.pdf
 
 # X BitMap
 *.xbm
@@ -669,7 +669,7 @@ Cargo.lock
 *.dib
 
 # ICO
-*.ico
+# *.ico
 
 # 3D Images
 *.3dm
@@ -5371,3 +5371,8 @@ gradle-app.setting
 # Eclipse Core
 # JDT-specific (Eclipse Java Development Tools)
 
+# Erlaube zweistellige numerische Ordner wie 02/, 03/, 10/, ...
+![0-9][0-9]/
+
+# Erlaube ISO-Datum-Ordner wie 2025-11-05/
+![0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
