@@ -8,6 +8,9 @@
 - [[#2025-10-29][2025-10-29]]
   - [[#was-ist-wissenschaft][Was ist Wissenschaft]]
   - [[#was-ist-informatik][Was ist Informatik]]
+- [[#2025-11-05][2025-11-05]]
+  - [[#die-mechanisierung-des-denkens][Die Mechanisierung des Denkens]]
+  - [[#der-erste-computer][Der erste Computer]]
 
 * 2025-10-29
 
@@ -23,3 +26,29 @@
  * Verstentnis der Funktionsweise
  * Zentum Informationen
  * Informationen werden durch Informationen bearbeitet
+
+* 2025-11-05
+
+** Die Mechanisierung des Denkens
+
+ * Sprache
+ * Organe
+
+ * Aufgrund des nichtvorhandenseins der Computer
+ * Das Computer heutzutage das Universalinstrument schlichtweg
+
+ * Rechnen
+ * Gottfried Wilhem Leibniz, Wilhelm Schickard, Blaise Pascal
+ * 18. Jh, frühes 19. Jh.
+
+ * Analytical Engine
+ * Charles Babbage
+
+
+** Der erste Computer
+
+ * Zuses Z1
+
+ * Weniger Komplex
+
+ * Zwichenergebnisse konten überprüft werden
