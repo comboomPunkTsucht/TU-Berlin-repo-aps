@@ -5,11 +5,11 @@
 #+options: toc:2
 
 * Table of Contents :toc:
-- [[#2025-1029][2025-10.29]]
+- [[#2025-10-29][2025-10-29]]
   - [[#was-ist-wissenschaft][Was ist Wissenschaft]]
   - [[#was-ist-informatik][Was ist Informatik]]
 
-* 2025-10.29
+* 2025-10-29
 
 ** Was ist Wissenschaft
 
