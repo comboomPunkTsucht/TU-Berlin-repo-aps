@@ -10,6 +10,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{bookmark}        % besseres TOC → hyperref
 \usepackage{fancyhdr}
+\usepackage{nicefrac}         % Für schöne Brüche
 
 % Versuche zuerst die gewünschte Systemschrift, sonst Fallback
 \IfFontExistsTF{CaskaydiaCove Nerd Font Propo}
@@ -88,12 +89,15 @@ Die gegebene Funktion lautet:
 $$ \myfunc $$ \label{func:f}
 
 \begin{enumerate} % Nummerierung im Stil (a), (b), ...
-    \item Für welche $x \in \mathbb{R}$ ist die Funktion definiert? \label{task:a}
+    \item Für welche $x \in \mathbb{R}$ ist die Funktion definiert?
+\label{task:a}
 
-    \item Zeigen Sie, dass $f\left(\frac{1}{x}\right) = f(x)$ für alle $x > 0$ gilt. \label{task:b}
+    \item Zeigen Sie, dass $f\left(\frac{1}{x}\right) = f(x)$ für alle $x > 0$ gilt.
+\label{task:b}
     \par\textit{Hinweis: Nutzen Sie die Rechenregeln der elementaren Funktionen.}
 
-    \item Berechnen Sie $f\left(e^{{\frac{3}{2}}\pi}\right)$. \label{task:c}
+    \item Berechnen Sie $f\left(e^{{\frac{3}{2}}\pi}\right)$.
+\label{task:c}
 \end{enumerate}
 
 \vspace{2cm}
@@ -118,7 +122,15 @@ $$ \myfunc $$ \label{func:f}
 
 \section{Lösung} \label{sec:aL}
 \par
-Hier beginnt die Lösung für Aufgabe a)...
+Die Funktion $f(x)$ ist definiert, solange alle ihre Teilfunktionen definiert sind. Die innerste Funktion ist der \textbf{natürliche Logarithmus} $\ln(x)$.
+\begin{itemize}
+    \item Der Logarithmus $\ln(x)$ ist nur für Argumente $x > 0$ definiert.
+    \item Die Funktionen $\cos(z)$, $\sin^2(z)$ und $e^z$ sind für alle reellen Zahlen $z$ definiert.
+\end{itemize}
+Daher muss nur die Bedingung für $\ln(x)$ erfüllt sein.
+
+\textbf{Definitionsbereich:}
+$$ D = \{x \in \mathbb{R} \mid x > 0\} = (0, \infty) $$
 
 \clearpage
 \chapter{Aufgabe b)} \label{ch:b}
@@ -130,7 +142,22 @@ Hier beginnt die Lösung für Aufgabe a)...
 
 \section{Beweis} \label{sec:bB}
 \par
-Hier beginnt der Beweis für Aufgabe b)...
+Wir beginnen mit der linken Seite der Gleichung, $f\left(\frac{1}{x}\right)$, und setzen den Term in die Funktionsgleichung ein:
+$$ f\left(\frac{1}{x}\right) = e^{\cos\left(\ln\left(\frac{1}{x}\right)\right)} + \sin^2\left(\ln\left(\frac{1}{x}\right)\right) $$
+Nun wenden wir die Rechenregel für den Logarithmus an: $\ln\left(\frac{1}{x}\right) = -\ln(x)$ (gültig für $x>0$).
+$$ f\left(\frac{1}{x}\right) = e^{\cos(-\ln(x))} + \sin^2(-\ln(x)) $$
+Anschließend nutzen wir die Symmetrieeigenschaften der trigonometrischen Funktionen:
+\begin{itemize}
+    \item $\cos(-z) = \cos(z)$ (Kosinus ist eine gerade Funktion).
+    \item $\sin(-z) = -\sin(z)$ (Sinus ist eine ungerade Funktion).
+\end{itemize}
+Wir setzen $z = \ln(x)$:
+$$ f\left(\frac{1}{x}\right) = e^{\cos(\ln(x))} + \left(-\sin(\ln(x))\right)^2 $$
+Da $\left(-\sin(\ln(x))\right)^2 = (-1)^2 \cdot \sin^2(\ln(x)) = \sin^2(\ln(x))$, erhalten wir:
+$$ f\left(\frac{1}{x}\right) = e^{\cos(\ln(x))} + \sin^2(\ln(x)) $$
+Dies entspricht exakt der Definition der Funktion $f(x)$:
+$$ f\left(\frac{1}{x}\right) = f(x) $$
+Somit ist die Behauptung gezeigt.
 
 \clearpage
 \chapter{Aufgabe c)} \label{ch:c}
@@ -142,7 +169,25 @@ Hier beginnt der Beweis für Aufgabe b)...
 
 \section{Berechnung} \label{sec:cB}
 \par
-Hier beginnt die Berechnung für Aufgabe c)...
+Wir setzen den Wert $x_0 = e^{{\frac{3}{2}}\pi}$ in die Funktion $f(x)$ ein:
+$$ f\left(e^{\frac{3}{2}\pi}\right) = e^{\cos\left(\ln\left(e^{\frac{3}{2}\pi}\right)\right)} + \sin^2\left(\ln\left(e^{\frac{3}{2}\pi}\right)\right) $$
+**Schritt 1: Vereinfachen des Logarithmus**
+Mittels $\ln(e^z) = z$:
+$$ \ln\left(e^{\frac{3}{2}\pi}\right) = \frac{3}{2}\pi $$
+Einsetzen in die Gleichung:
+$$ f\left(e^{\frac{3}{2}\pi}\right) = e^{\cos\left(\frac{3}{2}\pi\right)} + \sin^2\left(\frac{3}{2}\pi\right) $$
+**Schritt 2: Einsetzen der trigonometrischen Werte**
+Die trigonometrischen Werte für $\frac{3}{2}\pi$ (oder $270^\circ$) sind:
+\begin{itemize}
+    \item $\cos\left(\frac{3}{2}\pi\right) = 0$
+    \item $\sin\left(\frac{3}{2}\pi\right) = -1$
+\end{itemize}
+Einsetzen in die Gleichung:
+$$ f\left(e^{\frac{3}{2}\pi}\right) = e^{0} + (-1)^2 $$
+**Schritt 3: Endgültige Berechnung**
+Da $e^0 = 1$ und $(-1)^2 = 1$:
+$$ f\left(e^{\frac{3}{2}\pi}\right) = 1 + 1 $$
+$$ f\left(e^{\frac{3}{2}\pi}\right) = 2 $$
 
 
 \end{document}
