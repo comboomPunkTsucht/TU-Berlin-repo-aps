@@ -11,7 +11,7 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
   - [[#zahlen][Zahlen]]
 - [[#2025-10-21][2025-10-21]]
   - [[#komplexe-zahlen][Komplexe Zahlen]]
-- [[#2025-10-222025-10-23][2025-10-22/2025-10-23]]
+- [[#2025-10-23][2025-10-23]]
   - [[#volständige-induktion][Volständige Induktion]]
 - [[#2025-10-27][2025-10-27]]
   - [[#abbildungen][Abbildungen]]
@@ -41,7 +41,7 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 
 ** Komplexe Zahlen
 
-* 2025-10-22/2025-10-23
+* 2025-10-23
 
 ** Volständige Induktion
 
