@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{bm}
+\usepackage[ngerman]{babel}
+\allowdisplaybreaks
+\setlength{\parindent}{0.0em}
+\usepackage[left=3.5cm,right=3.5cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{hyperref} %Package, um den Link unten in diese Vorlage einzufügen, kann also in Hausaufgaben weggelassen werden
+
+\newcommand*{\QED}{\hfill\ensuremath{\square}} 
+
+\newenvironment{aufgabe}[1]{\noindent\textbf{#1.\,Aufgabe}\\[.5ex]}{\ \\[1ex]}
+\newenvironment{loesung}[1]{\noindent\textbf{Lösung zu #1.\,Aufgabe}\\[.5ex]}{\vfill}
+
+\title{Analysis I und Lineare Algebra für Ingenieurwissenschaften WS 21/22\\ 01.\,Hausaufgabenblatt}
+\author{Gruppe: Zama A\\ Erlenbauer, Nada, Matrikelnummer \\  Al Mashlab, Tarek, Matrikelnummer\\ Vorderwülbecke, Luca, Matrikel-Nr.465798}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\section*{Hausaufgaben:}
+
+\begin{aufgabe}{2}
+	Es sei $x\in\mathbb{R}$. Zeigen Sie, dass für alle $n\in\mathbb{N}$ gilt, dass $x^n\in\mathbb{R}$.
+\end{aufgabe}
+
+\begin{loesung}{2}
+	\textbf{Induktionsanfang:}
+	Nach Voraussetzung ist $x^1=x\in\mathbb{R}$. Damit gilt schon einmal der Induktionsanfang.\\[0.5ex]
+	\textit{Induktionsvoraussetzung:}
+	Sei nun $x^n\in\mathbb{R}$ für ein beliebiges aber festes $n\in\mathbb{N}$.\\[.5ex]
+	\underline{Induktionsschritt $(n\to n+1)$}: Ist die Induktionsvoraussetzung für $n\in\mathbb{N}$ erfüllt, so gilt, dass
+	\[
+	x^{n+1}
+	= x^n\cdot x
+	\in \mathbb{R}
+	\]
+	sein muss, da sowohl $x^n\in\mathbb{R}$ als auch $x\in\mathbb{R}$ und $\mathbb{R}$ abgeschlossen ist unter Multiplikation. \hfill $\square$
+\end{loesung}
+
+\begin{aufgabe}{3}
+	Es sei $f:\mathbb{R} \to \mathbb{R}, x\mapsto x^2\cdot e^{-x}$. Bestimmen Sie die erste Ableitung von $f$.
+\end{aufgabe}
+
+\begin{loesung}{3}
+	Beide Abbildungen $x\mapsto x^2$ und $x\mapsto e^{-x}$ sind differenzierbar. Daher folgt nach der Produktregel:
+	\begin{align*}
+		f'(x)
+		&= (x^2)'\cdot e^{-x} + x^2\cdot(e^{-x})'\\[2.5ex]
+		&= 2xe^{-x} + x^2(-e^{-x})
+		= (2x-x^2)e^{-x}.
+	\end{align*}
+	\hfill $\square$
+\end{loesung}
+
+
+\end{document}

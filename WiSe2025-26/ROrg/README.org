@@ -10,6 +10,10 @@
   - [[#einführung][Einführung]]
 - [[#2025-11-03][2025-11-03]]
   - [[#zahlendarstellungen][Zahlendarstellungen]]
+- [[#2025-11-10][2025-11-10]]
+  - [[#logishe-gatter][logishe Gatter]]
+  - [[#alu][ALU]]
+  - [[#speicherelemente][Speicherelemente]]
 
 * 2025-10-27
 
@@ -47,3 +51,11 @@ Umrechnung in allen Richtungen
 *** Bruchzahlen (IEEE 754)
 
 *** Arithmetische Operationen (IEEE 754)
+
+* 2025-11-10
+
+** logishe Gatter
+
+** ALU
+
+** Speicherelemente

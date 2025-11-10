@@ -2365,12 +2365,11 @@ obj/
 
 ### JBoss-4-2-3-GA template
 
-/**
-* For ignore * .war, * .war.failed and * .xml.failed if you use other directories of jboss.
-* Do it similar configuration used for
-* /server/default/deploy
-*
-*/
+
+# For ignore * .war, * .war.failed and * .xml.failed if you use other directories of jboss.
+# Do it similar configuration used for
+# /server/default/deploy
+
 
 ### PhpStorm+iml template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
