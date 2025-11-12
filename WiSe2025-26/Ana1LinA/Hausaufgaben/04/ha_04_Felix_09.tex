@@ -1,0 +1,207 @@
+% !TEX program = lualatex
+\documentclass[12pt,a4paper]{report} % oder book
+
+\usepackage{fontspec}        % bei lualatex/xelatex
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage[ngerman]{babel}  % deutsche Silbentrennung
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}        % besseres TOC → hyperref
+\usepackage{fancyhdr}
+\usepackage{nicefrac}         % Für schöne Brüche
+
+% Versuche zuerst die gewünschte Systemschrift, sonst Fallback
+\IfFontExistsTF{CaskaydiaCove Nerd Font Propo}
+  {\setmainfont{CaskaydiaCove Nerd Font Propo}}
+  {\setmainfont{Latin Modern Roman}} % Fallback
+
+% Fancyhdr: Seitenzahlen rechts in Fußzeile (du kannst C->zentriert ändern)
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\titleline}{Ana1LinA - Hausaufgabe 04}
+\newcommand{\subtitleline}{Felix 09}
+\newcommand{\authorsline}{Fabian Aps:525528, Joris Victor Vorderwülbecke:0528715, Emil Arthur
+Joseph Hartmann:052542, Friedrich Ludwig Finck:0526329}
+
+% Metadaten für PDF
+\hypersetup{
+  pdftitle={\titleline},
+  pdfauthor={\authorsline},
+  pdfsubject={\titleline - \subtitleline},
+  pdfcreator={LuaLaTeX}
+}
+
+% --- Eigener Befehl für die Funktion / das Polynom ---
+% Anpassung an die neue Aufgabe
+\newcommand{\mypolynom}{p_a(x) = x^3 + (a^2-2a+1)x^2 + (-2a^3+a^2-2a)x - 2a^3}
+
+% --- ALTERNATIVER WEG (OHNE enumitem) ---
+% Definiert "Level 1" der enumerate-Liste neu
+\renewcommand{\labelenumi}{\alph{enumi})}
+\renewcommand{\labelenumii}{\alph{enumii})} % Für verschachtelte Listen
+% ----------------------------------------
+
+
+\begin{document}
+
+% ------------------
+% Titelseite (keine Seitenzahl)
+% ------------------
+\begin{titlepage}
+  \centering
+  {\Large Technische Universität Berlin\par}
+  \vspace{2cm}
+  {\Huge\bfseries \titleline\par}
+  \vspace{1.5cm}
+  {\Large \subtitleline\par}
+  \vfill
+  {\large Autoren: \authorsline\par}
+  \vspace{2cm}
+  {\large \today\par}
+  \thispagestyle{empty} % Titelseite ohne Seitenzahl
+\end{titlepage}
+
+% ------------------
+% Inhaltsverzeichnis mit römischen Seitenzahlen (i, ii, ...)
+% ------------------
+\cleardoublepage
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\tableofcontents
+\clearpage
+
+% ------------------
+% Hauptteil: arabische Seitenzahlen ab 1
+% ------------------
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Aufgaben}\label{ch:aufgaben}
+
+Das gegebene Polynom $p_a(x)$ für $a \in \mathbb{R}$ lautet:
+$$ \mypolynom $$ \label{func:p}
+
+\begin{enumerate} % Nummerierung im Stil (a), (b), ...
+    \item Berechnen Sie $p_a(2a)$.
+    \item Bestimmen Sie alle Nullstellen von $p_a$.
+    \item Berechnen Sie die komplexe Linearfaktorzerlegung von $p_a$.
+    \item Berechnen Sie die reelle Zerlegung von $p_a$.
+\end{enumerate}
+
+\vspace{2cm}
+
+
+\begin{figure}[h!]
+    \centerline{\includegraphics[width=1.25\textwidth,]{ha_04.png}}
+\end{figure}
+
+
+% ------------------
+% Lösungen
+% ------------------
+
+\cleardoublepage % Beginnt Lösungs-Teil auf einer neuen Seite
+
+\chapter{Aufgabe a)} \label{ch:a}
+\textbf{Polynom:} $ p_a(x) = x^3 + (a^2-2a+1)x^2 + (-2a^3+a^2-2a)x - 2a^3 $
+\par\bigskip
+\textbf{Aufgabe:} \textit{Berechnen Sie $p_a(2a)$.}
+\par\bigskip
+
+\section{Berechnung} \label{sec:aL}
+\par
+Wir setzen $x = 2a$ in das Polynom $p_a(x)$ ein:
+$$ p_a(2a) = (2a)^3 + (a^2-2a+1)(2a)^2 + (-2a^3+a^2-2a)(2a) - 2a^3 $$
+Zuerst vereinfachen wir die Terme mit $(2a)$:
+\begin{align*}
+p_a(2a) &= 8a^3 + (a^2-2a+1)(4a^2) + (-2a^3+a^2-2a)(2a) - 2a^3 \\
+\end{align*}
+Nun multiplizieren wir die Produkte aus:
+\begin{align*}
+p_a(2a) &= 8a^3 + (4a^4 - 8a^3 + 4a^2) + (-4a^4 + 2a^3 - 4a^2) - 2a^3 \\
+\end{align*}
+Wir fassen die Terme zusammen, indem wir nach Potenzen von $a$ ordnen:
+$$ p_a(2a) = (4a^4 - 4a^4) + (8a^3 - 8a^3 + 2a^3 - 2a^3) + (4a^2 - 4a^2) $$
+Alle Terme heben sich gegenseitig auf:
+$$ p_a(2a) = 0 $$
+\par
+\textbf{Ergebnis:} $p_a(2a) = 0$. Dies bedeutet, dass $x_1 = 2a$ eine Nullstelle des Polynoms ist.
+
+
+\clearpage
+\chapter{Aufgabe b), c) und d)} \label{ch:bcd}
+
+\textbf{Polynom:} $ p_a(x) = x^3 + (a^2-2a+1)x^2 + (-2a^3+a^2-2a)x - 2a^3 $
+\par\bigskip
+\textbf{Aufgabe:} \textit{Bestimmen Sie alle Nullstellen von $p_a$. Berechnen Sie die komplexe und reelle Zerlegung von $p_a$.}
+\par\bigskip
+
+\section{Nullstellenbestimmung (Aufgabe b))} \label{sec:bL}
+\par
+Aus Aufgabe a) wissen wir, dass $x_1 = 2a$ eine Nullstelle ist, da $p_a(2a) = 0$.
+Wir können nun eine \textbf{Polynomdivision} durch den Linearfaktor $(x - 2a)$ durchführen.
+$$ \left(x^3 + (a^2-2a+1)x^2 + (-2a^3+a^2-2a)x - 2a^3\right) : (x - 2a) $$
+
+\par
+\begin{center}
+\begin{tabular}{r l}
+  & $\left(x^3 + (a^2-2a+1)x^2 + (-2a^3+a^2-2a)x - 2a^3\right) : (x - 2a) = x^2 + (a^2+1)x + a^2$ \\
+$-$ & $\underline{(x^3 - 2ax^2)}$ \\
+  & $(a^2+1)x^2 + (-2a^3+a^2-2a)x$ \\
+$-$ & $\underline{((a^2+1)x^2 - 2a(a^2+1)x)}$ \\
+  & $( -2a^3+a^2-2a + 2a^3+2a )x - 2a^3$ \\
+  & $( a^2 )x - 2a^3$ \\
+$-$ & $\underline{(a^2 x - 2a^3)}$ \\
+  & $0$
+\end{tabular}
+\end{center}
+\par
+Der Quotient ist das quadratische Polynom $q(x) = x^2 + (a^2+1)x + a^2$. Die verbleibenden Nullstellen $x_{2,3}$ erhalten wir durch Anwenden der Mitternachtsformel (p-q-Formel oder abc-Formel) auf $q(x) = 0$.
+
+$$ x^2 + (a^2+1)x + a^2 = 0 $$
+Mit $A=1$, $B=(a^2+1)$ und $C=a^2$:
+\begin{align*}
+x_{2,3} &= \frac{-B \pm \sqrt{B^2 - 4AC}}{2A} \\
+x_{2,3} &= \frac{-(a^2+1) \pm \sqrt{(a^2+1)^2 - 4(1)(a^2)}}{2} \\
+x_{2,3} &= \frac{-(a^2+1) \pm \sqrt{a^4 + 2a^2 + 1 - 4a^2}}{2} \\
+x_{2,3} &= \frac{-(a^2+1) \pm \sqrt{a^4 - 2a^2 + 1}}{2} \\
+\end{align*}
+Der Ausdruck unter der Wurzel ist ein vollständiges Quadrat: $a^4 - 2a^2 + 1 = (a^2 - 1)^2$.
+\begin{align*}
+x_{2,3} &= \frac{-(a^2+1) \pm \sqrt{(a^2 - 1)^2}}{2} \\
+x_{2,3} &= \frac{-(a^2+1) \pm |a^2 - 1|}{2} \\
+\end{align*}
+Wir betrachten die zwei Fälle für das $\pm$:
+\par
+\textbf{Fall 1: Positives Vorzeichen ($+$)}
+$$ x_2 = \frac{-(a^2+1) + (a^2 - 1)}{2} = \frac{-a^2 - 1 + a^2 - 1}{2} = \frac{-2}{2} = -1 $$
+\par
+\textbf{Fall 2: Negatives Vorzeichen ($-$) - muss beachtet werden, da $|a^2 - 1| = -(a^2-1)$ möglich wäre.}
+Unabhängig davon, ob wir $\sqrt{(a^2-1)^2} = a^2-1$ oder $-(a^2-1)$ annehmen, führt der zweite Fall in der $\pm$ Rechnung zum gleichen Ergebnis:
+$$ x_3 = \frac{-(a^2+1) - (a^2 - 1)}{2} = \frac{-a^2 - 1 - a^2 + 1}{2} = \frac{-2a^2}{2} = -a^2 $$
+\par
+\textbf{Alle Nullstellen von $p_a$ (Aufgabe b)):}
+$$ \mathcal{N} = \{2a, -1, -a^2\} $$
+
+
+\section{Komplexe Linearfaktorzerlegung (Aufgabe c))} \label{sec:cL}
+\par
+Die Linearfaktorzerlegung eines normierten Polynoms dritten Grades $p(x)$ mit den Nullstellen $x_1, x_2, x_3$ lautet: $p(x) = (x-x_1)(x-x_2)(x-x_3)$. Da alle Nullstellen reell sind (für $a \in \mathbb{R}$), ist die komplexe Zerlegung identisch mit der reellen.
+$$ p_a(x) = (x - 2a)(x - (-1))(x - (-a^2)) $$
+$$ p_a(x) = (x - 2a)(x + 1)(x + a^2) $$
+Diese Zerlegung gilt für alle $x \in \mathbb{C}$.
+
+\section{Reelle Zerlegung (Aufgabe d))} \label{sec:dL}
+\par
+Da alle Nullstellen $x_1=2a$, $x_2=-1$ und $x_3=-a^2$ reell sind, besteht die reelle Zerlegung nur aus Linearfaktoren und ist somit identisch mit der komplexen Linearfaktorzerlegung.
+$$ p_a(x) = (x - 2a)(x + 1)(x + a^2) $$
+
+
+\end{document}
