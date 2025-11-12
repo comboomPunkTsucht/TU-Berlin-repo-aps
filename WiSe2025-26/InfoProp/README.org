@@ -11,6 +11,7 @@
 - [[#2025-11-05][2025-11-05]]
   - [[#die-mechanisierung-des-denkens][Die Mechanisierung des Denkens]]
   - [[#der-erste-computer][Der erste Computer]]
+- [[#2025-11-12][2025-11-12]]
 
 * 2025-10-29
 
@@ -52,3 +53,5 @@
  * Weniger Komplex
 
  * Zwichenergebnisse konten überprüft werden
+
+* 2025-11-12

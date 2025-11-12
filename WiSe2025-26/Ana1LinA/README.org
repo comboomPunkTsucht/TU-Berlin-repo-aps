@@ -28,6 +28,8 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
   - [[#vektorräume][Vektorräume]]
 - [[#2025-11-10][2025-11-10]]
   - [[#basis-und-dimensionen][Basis und Dimensionen]]
+- [[#2025-11-11][2025-11-11]]
+  - [[#matrizen][Matrizen]]
 
 * 2025-10-15
 
@@ -74,3 +76,7 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 * 2025-11-10
 
 ** Basis und Dimensionen
+
+* 2025-11-11
+
+** Matrizen
