@@ -1,0 +1,135 @@
+% !TEX program = lualatex
+\documentclass[12pt,a4paper]{report}
+
+% --- Pakete ---
+\usepackage{fontspec}        % Für lualatex/xelatex
+\usepackage{microtype}       % Schönerer Satz
+\usepackage{graphicx}        % Für Bilder
+\usepackage{amsmath,amssymb} % Für mathematische Symbole und Umgebungen
+\usepackage[ngerman]{babel}  % Deutsche Silbentrennung
+\usepackage[hidelinks]{hyperref} % PDF-Links ohne Rahmen
+\usepackage{bookmark}        % Besseres Inhaltsverzeichnis
+\usepackage{fancyhdr}        % Für Kopf- und Fußzeile
+\usepackage{nicefrac}        % Für schöne Brüche
+
+% --- Schriftart (anpassen, falls gewünscht) ---
+% Versuche zuerst eine Systemschrift, sonst Fallback
+\IfFontExistsTF{CaskaydiaCove Nerd Font Propo}
+  {\setmainfont{CaskaydiaCove Nerd Font Propo}}
+  {\setmainfont{Latin Modern Roman}} % Fallback
+
+% --- Kopf- und Fußzeile (Seitenzahl zentriert im Fuß) ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% --- Metadaten und Konstanten (WICHTIG: Hier anpassen!) ---
+\newcommand{\titleline}{Ana1LinA  - Hausaufgabe X}
+\newcommand{\subtitleline}{Felix 09}
+\newcommand{\authorsline}{{Fabian Aps:525528, Joris Victor Vorderwülbecke:0528715, Emil Arthur Joseph Hartmann:052542, Friedrich Ludwig Finck:0526329}}
+
+% Eigener Befehl für die Funktion/das Polynom
+% HIER FUNKTION ODER POLYNOM EINFÜGEN!
+\newcommand{\mymathobject}{f(x) = \text{Funktion oder } p(x) = \text{Polynom}}
+
+% Metadaten für PDF
+\hypersetup{
+  pdftitle={\titleline},
+  pdfauthor={\authorsline},
+  pdfsubject={\titleline - \subtitleline},
+  pdfcreator={LuaLaTeX}
+}
+
+% --- Nummerierungsstil für enumerate-Listen ---
+% (a), (b), ...
+\renewcommand{\labelenumi}{\alph{enumi})}
+
+\begin{document}
+
+% ------------------
+% Titelseite
+% ------------------
+\begin{titlepage}
+  \centering
+  {\Large Technische Universität Berlin\par}
+  \vspace{2cm}
+  {\Huge\bfseries \titleline\par}
+  \vspace{1.5cm}
+  {\Large \subtitleline\par}
+  \vfill
+  {\large Autoren: \authorsline\par}
+  \vspace{2cm}
+  {\large \today\par}
+  \thispagestyle{empty} % Titelseite ohne Seitenzahl
+\end{titlepage}
+
+% ------------------
+% Inhaltsverzeichnis (römische Seitenzahlen)
+% ------------------
+\cleardoublepage
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\tableofcontents
+\clearpage
+
+% ------------------
+% Hauptteil: arabische Seitenzahlen ab 1
+% ------------------
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Aufgabenstellung}\label{ch:aufgaben}
+
+Die gegebene Funktion/das Polynom lautet:
+$$ \mymathobject $$ \label{func:main}
+
+\begin{enumerate} % Nummerierung im Stil (a), (b), ...
+    \item Hier kommt der Text von Aufgabe a).
+    \item Hier kommt der Text von Aufgabe b).
+    \item Hier kommt der Text von Aufgabe c).
+    \item Hier kommt der Text von Aufgabe d).
+\end{enumerate}
+
+% Optional: Füge hier ein Bild der Aufgabenstellung ein
+% \begin{figure}[h!]
+%     \centerline{\includegraphics[width=1.0\textwidth,]{bildname.png}}
+% \end{figure}
+
+% ------------------
+% Lösungen
+% ------------------
+
+\cleardoublepage % Beginnt Lösungs-Teil auf einer neuen Seite
+
+\chapter{Lösung zu Aufgabe a)} \label{ch:a}
+\textbf{Gegeben:} $ \mymathobject $
+\par\bigskip
+\textbf{Aufgabe:} \textit{Aufgabenstellung von a) in Kursiv.}
+\par\bigskip
+
+\section{Bearbeitung} \label{sec:aL}
+\par
+% HIER DEINE LÖSUNG EINFÜGEN. Verwende $$ für display-Gleichungen und \begin{align*} ... \end{align*} für Herleitungen.
+Die Lösung zu Aufgabe a) ...
+
+\clearpage
+\chapter{Lösung zu Aufgabe b)} \label{ch:b}
+
+\textbf{Gegeben:} $ \mymathobject $
+\par\bigskip
+\textbf{Aufgabe:} \textit{Aufgabenstellung von b) in Kursiv.}
+\par\bigskip
+
+\section{Bearbeitung} \label{sec:bL}
+\par
+% HIER DEINE LÖSUNG EINFÜGEN
+Die Lösung zu Aufgabe b) ...
+
+\clearpage
+% ... Füge weitere Kapitel/Lösungen hinzu ...
+
+\end{document}
