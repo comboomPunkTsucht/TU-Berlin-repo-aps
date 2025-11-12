@@ -6,22 +6,23 @@
 
 * Table of Contents :toc:
 - [[#2025-10-29][2025-10-29]]
-  - [[#was-ist-wissenschaft][Was ist Wissenschaft]]
-  - [[#was-ist-informatik][Was ist Informatik]]
+  - [[#einführung-und-überblick---informatik-als-wissenschaftliche-disziplin][Einführung und Überblick - Informatik als wissenschaftliche Disziplin]]
 - [[#2025-11-05][2025-11-05]]
-  - [[#die-mechanisierung-des-denkens][Die Mechanisierung des Denkens]]
-  - [[#der-erste-computer][Der erste Computer]]
+  - [[#geschichte---die-mechanisierung-des-denkens][Geschichte - Die Mechanisierung des Denkens]]
 - [[#2025-11-12][2025-11-12]]
+  - [[#originalität---can-machines-think][Originalität - Can machines think?]]
 
 * 2025-10-29
 
-** Was ist Wissenschaft
+** Einführung und Überblick - Informatik als wissenschaftliche Disziplin
+
+*** Was ist Wissenschaft
 
  * Austauch von Information
  * Erketnisse Reproduktierbar und Nachweisbar
  * Wird Durch Forschung erreicht
 
-** Was ist Informatik
+*** Was ist Informatik
 
  * Kentnisse der Informations- & Telekomunikationstechnick
  * Verstentnis der Funktionsweise
@@ -30,7 +31,9 @@
 
 * 2025-11-05
 
-** Die Mechanisierung des Denkens
+** Geschichte - Die Mechanisierung des Denkens
+
+*** Die Mechanisierung des Denkens
 
  * Sprache
  * Organe
@@ -46,7 +49,7 @@
  * Charles Babbage
 
 
-** Der erste Computer
+*** Der erste Computer
 
  * Zuses Z1
 
@@ -55,3 +58,5 @@
  * Zwichenergebnisse konten überprüft werden
 
 * 2025-11-12
+
+** Originalität - Can machines think?
