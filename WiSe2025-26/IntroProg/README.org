@@ -20,8 +20,12 @@
 - [[#2025-10-23][2025-10-23]]
 - [[#2025-10-24][2025-10-24]]
 - [[#2025-10-30][2025-10-30]]
-  - [[#vorlesungsorganisatorik][Vorlesungsorganisatorik]]
-  - [[#aulgorymtmen][Aulgorymtmen]]
+  - [[#organisation-und-inhalt][Organisation und Inhalt]]
+  - [[#algorithmen-pseudocode-sortieren-][Algorithmen, Pseudocode, Sortieren |]]
+- [[#2025-11-06][2025-11-06]]
+  - [[#algorithmen-pseudocode-sortieren-ii][Algorithmen, Pseudocode, Sortieren II]]
+- [[#2025-11-13][2025-11-13]]
+  - [[#laufzeit-und-speicherplatz][Laufzeit und Speicherplatz]]
 
 * Default
   This is a simple Hello World program in C using nob.h to build and run the program.
@@ -105,8 +109,34 @@ this is header-only library for making build-scripts using C.
 
 * 2025-10-30
 
-** Vorlesungsorganisatorik
+** Organisation und Inhalt
 
-** Aulgorymtmen
+** Algorithmen, Pseudocode, Sortieren |
 
 *** Pseudocode
+
+*** Insertion Sort
+
+* 2025-11-06
+
+** Algorithmen, Pseudocode, Sortieren II
+
+*** Selection Sort
+
+*** Bubble Sort
+
+*** Count Sort
+
+* 2025-11-13
+
+** Laufzeit und Speicherplatz
+
+*** Wie beschreibt man einen Algorithmus?
+
+*** Rechenmodell
+
+*** Laufzeitanalyse (Zeitkomplexität)
+
+*** Speicherplatzanalyse (Raumkomplexität)
+
+*** Wie beweist man die Korrektheit eines Algorithmus?

@@ -30,6 +30,9 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
   - [[#basis-und-dimensionen][Basis und Dimensionen]]
 - [[#2025-11-11][2025-11-11]]
   - [[#matrizen][Matrizen]]
+- [[#2025-11-13][2025-11-13]]
+  - [[#lineare-gleichungssysteme][Lineare Gleichungssysteme]]
+- [[#links][Links]]
 
 * 2025-10-15
 
@@ -80,3 +83,12 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 * 2025-11-11
 
 ** Matrizen
+
+* 2025-11-13
+
+** Lineare Gleichungssysteme
+
+
+* Links
+
+ * [[https://pingo.coactum.de/927788][Pingo Unfragen Keiper]]
