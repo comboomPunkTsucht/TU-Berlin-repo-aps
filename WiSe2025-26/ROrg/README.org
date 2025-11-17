@@ -12,9 +12,9 @@
   - [[#zahlendarstellungen][Zahlendarstellungen]]
 - [[#2025-11-10][2025-11-10]]
   - [[#logishe-gatter][logishe Gatter]]
+- [[#2025-11-17][2025-11-17]]
   - [[#alu][ALU]]
   - [[#speicherelemente][Speicherelemente]]
-- [[#2025-11-17][2025-11-17]]
 
 * 2025-10-27
 
@@ -57,8 +57,8 @@ Umrechnung in allen Richtungen
 
 ** logishe Gatter
 
+* 2025-11-17
+
 ** ALU
 
 ** Speicherelemente
-
-* 2025-11-17
