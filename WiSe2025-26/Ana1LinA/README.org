@@ -3,6 +3,7 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 #+description:https://mcpeapsunterstrichhd.dev/linkhub
 #+startup: showeverything
 #+options: toc:2
+#+STARTUP: inlineimages
 
 * Table of Contents :toc:
 - [[#2025-10-15][2025-10-15]]
@@ -32,29 +33,49 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
   - [[#matrizen][Matrizen]]
 - [[#2025-11-13][2025-11-13]]
   - [[#lineare-gleichungssysteme][Lineare Gleichungssysteme]]
+- [[#2025-11-17][2025-11-17]]
+  - [[#weitere-anwendungen-des-gauss-algorithmus][Weitere Anwendungen des Gauss-Algorithmus]]
+- [[#2025-11-18][2025-11-18]]
+  - [[#lineare-abbildungen][Lineare Abbildungen]]
 - [[#links][Links]]
 
 * 2025-10-15
+
+[[./2025-10-15/Organisation-Ana1-LinA-Winkert-WiSe-2025-2026.pdf]]
+
+[[./2025-10-15/VL-1-43-Folien-Ana1-LinA-Winkert-WiSe-2025-2026.pdf]]
+
+[[./2025-10-15/VL-1-Mitschrift-Ana1-LinA-Winkert-WiSe-2025-2026.pdf]]
 
 ** Grundlagen der Mengenlehre
 
 * 2025-10-20
 
+[[./2025-10-20/VL2_Zahlen.pdf]]
+
 ** Zahlen
 
 * 2025-10-21
+
+[[./2025-10-21/VL3_KomplexeZahlen.pdf]]
 
 ** Komplexe Zahlen
 
 * 2025-10-23
 
+[[./2025-10-23/VL4_Induktion.pdf]]
+
 ** Volständige Induktion
 
 * 2025-10-27
 
+[[./2025-10-27/VL5_Abbildungen.pdf]]
+
 ** Abbildungen
 
 * 2025-10-28
+
+[[./2025-10-28/VL6_ElementareFunktionen.pdf]]
 
 ** Abbildungen
 
@@ -62,31 +83,57 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 
 * 2025-10-30
 
+[[./2025-10-30/VL7_KomplexeZahlen2.pdf]]
+
 ** Komplexe Zahlen (2)
 
 * 2025-11-03
+
+[[./2025-11-03/VL8_Polynome.pdf]]
 
 ** Polynome
 
 * 2025-11-04
 
+[[./2025-11-04/VL9_RationaleFunktionen.pdf]]
+
 ** Rationale Funktionen
 
 * 2025-11-06
+
+[[./2025-11-06/VL10_Vektorräume.pdf]]
 
 ** Vektorräume
 
 * 2025-11-10
 
+[[./2025-11-10/VL11_BasisundDimension.pdf]]
+
 ** Basis und Dimensionen
 
 * 2025-11-11
+
+[[./2025-11-11/VL12_Matrizen.pdf]]
 
 ** Matrizen
 
 * 2025-11-13
 
+[[./2025-11-13/VL13_LineareGleichungssysteme.pdf]]
+
 ** Lineare Gleichungssysteme
+
+* 2025-11-17
+
+[[./2025-11-17/VL14_WeitereAnwendungenGauss.pdf]]
+
+** Weitere Anwendungen des Gauss-Algorithmus
+
+* 2025-11-18
+
+[[./2025-11-18/VL15.pdf]]
+
+** Lineare Abbildungen
 
 
 * Links
