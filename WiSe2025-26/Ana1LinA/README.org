@@ -38,6 +38,11 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 - [[#2025-11-18][2025-11-18]]
   - [[#lineare-abbildungen][Lineare Abbildungen]]
 - [[#links][Links]]
+- [[#hausaufgaben][Hausaufgaben]]
+  - [[#02][02]]
+  - [[#03][03]]
+  - [[#04][04]]
+  - [[#05][05]]
 
 * 2025-10-15
 
@@ -139,3 +144,38 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 * Links
 
  * [[https://pingo.coactum.de/927788][Pingo Unfragen Keiper]]
+
+
+* Hausaufgaben
+
+** 02
+
+ * [[./Hausaufgaben/02/HA 2 schriftlich.png][Aufgabe]]
+
+ * [[./Hausaufgaben/02/Felix 09 Hausaufgabe 2.pdf][Abgabe]]
+
+ * [[./Hausaufgaben/02/Felix 09 Hausaufgabe 2_Feadback.pdf][Feadback]]
+
+** 03
+
+ * [[./Hausaufgaben/03/ha_03.png][Aufgabe]]
+
+ * [[./Hausaufgaben/03/ha_03_Felix_09.tex][LaTeX]]
+
+ * [[./Hausaufgaben/03/ha_03_Felix_09.tex][Abgabe]]
+
+** 04
+
+ * [[./Hausaufgaben/04/ha_04.png][Aufgabe]]
+
+ * [[./Hausaufgaben/04/ha_04_Felix_09.tex][LaTeX]]
+
+ * [[./Hausaufgaben/04/ha_04_Felix_09.tex][Abgabe]]
+
+** 05
+
+ * [[./Hausaufgaben/05/ha_05.png][Aufgabe]]
+
+ * [[./Hausaufgaben/05/ha_05_Felix_09.tex][LaTeX]]
+
+ * [[./Hausaufgaben/05/ha_05_Felix_09.tex][Abgabe]]
