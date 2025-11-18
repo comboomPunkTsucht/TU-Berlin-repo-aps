@@ -41,41 +41,41 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 
 * 2025-10-15
 
-[[./2025-10-15/Organisation-Ana1-LinA-Winkert-WiSe-2025-2026.pdf]]
+ * [[./2025-10-15/Organisation-Ana1-LinA-Winkert-WiSe-2025-2026.pdf][Organisatorische Folien]]
 
-[[./2025-10-15/VL-1-43-Folien-Ana1-LinA-Winkert-WiSe-2025-2026.pdf]]
+ * [[./2025-10-15/VL-1-43-Folien-Ana1-LinA-Winkert-WiSe-2025-2026.pdf][Vorlesungs-Folien VL1 Winkert]]
 
-[[./2025-10-15/VL-1-Mitschrift-Ana1-LinA-Winkert-WiSe-2025-2026.pdf]]
+ * [[./2025-10-15/VL-1-Mitschrift-Ana1-LinA-Winkert-WiSe-2025-2026.pdf][Mitschrift VL1 Winkert]]
 
 ** Grundlagen der Mengenlehre
 
 * 2025-10-20
 
-[[./2025-10-20/VL2_Zahlen.pdf]]
+ * [[./2025-10-20/VL2_Zahlen.pdf][Vorlesungs-Mitschrifts-Folien VL2 Keiper]]
 
 ** Zahlen
 
 * 2025-10-21
 
-[[./2025-10-21/VL3_KomplexeZahlen.pdf]]
+ * [[./2025-10-21/VL3_KomplexeZahlen.pdf][Vorlesungs-Mitschrifts-Folien VL3 Keiper]]
 
 ** Komplexe Zahlen
 
 * 2025-10-23
 
-[[./2025-10-23/VL4_Induktion.pdf]]
+ * [[./2025-10-23/VL4_Induktion.pdf][Vorlesungs-Mitschrifts-Folien VL4 Keiper]]
 
 ** Volständige Induktion
 
 * 2025-10-27
 
-[[./2025-10-27/VL5_Abbildungen.pdf]]
+ * [[./2025-10-27/VL5_Abbildungen.pdf][Vorlesungs-Mitschrifts-Folien VL5 Keiper]]
 
 ** Abbildungen
 
 * 2025-10-28
 
-[[./2025-10-28/VL6_ElementareFunktionen.pdf]]
+ * [[./2025-10-28/VL6_ElementareFunktionen.pdf][Vorlesungs-Mitschrifts-Folien VL6 Keiper]]
 
 ** Abbildungen
 
@@ -83,55 +83,55 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 
 * 2025-10-30
 
-[[./2025-10-30/VL7_KomplexeZahlen2.pdf]]
+ * [[./2025-10-30/VL7_KomplexeZahlen2.pdf][Vorlesungs-Mitschrifts-Folien VL7 Keiper]]
 
 ** Komplexe Zahlen (2)
 
 * 2025-11-03
 
-[[./2025-11-03/VL8_Polynome.pdf]]
+ * [[./2025-11-03/VL8_Polynome.pdf][Vorlesungs-Mitschrifts-Folien VL8 Keiper]]
 
 ** Polynome
 
 * 2025-11-04
 
-[[./2025-11-04/VL9_RationaleFunktionen.pdf]]
+ * [[./2025-11-04/VL9_RationaleFunktionen.pdf][Vorlesungs-Mitschrifts-Folien VL9 Keiper]]
 
 ** Rationale Funktionen
 
 * 2025-11-06
 
-[[./2025-11-06/VL10_Vektorräume.pdf]]
+ * [[./2025-11-06/VL10_Vektorräume.pdf][Vorlesungs-Mitschrifts-Folien VL10 Keiper]]
 
 ** Vektorräume
 
 * 2025-11-10
 
-[[./2025-11-10/VL11_BasisundDimension.pdf]]
+ * [[./2025-11-10/VL11_BasisundDimension.pdf][Vorlesungs-Mitschrifts-Folien VL11 Keiper]]
 
 ** Basis und Dimensionen
 
 * 2025-11-11
 
-[[./2025-11-11/VL12_Matrizen.pdf]]
+ * [[./2025-11-11/VL12_Matrizen.pdf][Vorlesungs-Mitschrifts-Folien VL12 Keiper]]
 
 ** Matrizen
 
 * 2025-11-13
 
-[[./2025-11-13/VL13_LineareGleichungssysteme.pdf]]
+ * [[./2025-11-13/VL13_LineareGleichungssysteme.pdf][Vorlesungs-Mitschrifts-Folien VL13 Keiper]]
 
 ** Lineare Gleichungssysteme
 
 * 2025-11-17
 
-[[./2025-11-17/VL14_WeitereAnwendungenGauss.pdf]]
+ * [[./2025-11-17/VL14_WeitereAnwendungenGauss.pdf][Vorlesungs-Mitschrifts-Folien VL14 Keiper]]
 
 ** Weitere Anwendungen des Gauss-Algorithmus
 
 * 2025-11-18
 
-[[./2025-11-18/VL15.pdf]]
+ * [[./2025-11-18/VL15.pdf][Vorlesungs-Mitschrifts-Folien VL15 Keiper]]
 
 ** Lineare Abbildungen
 
