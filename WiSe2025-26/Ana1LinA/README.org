@@ -162,7 +162,7 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 
  * [[./Hausaufgaben/03/ha_03_Felix_09.tex][LaTeX]]
 
- * [[./Hausaufgaben/03/ha_03_Felix_09.tex][Abgabe]]
+ * [[./Hausaufgaben/03/ha_03_Felix_09.pdf][Abgabe]]
 
 ** 04
 
@@ -170,7 +170,7 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 
  * [[./Hausaufgaben/04/ha_04_Felix_09.tex][LaTeX]]
 
- * [[./Hausaufgaben/04/ha_04_Felix_09.tex][Abgabe]]
+ * [[./Hausaufgaben/04/ha_04_Felix_09.pdf][Abgabe]]
 
 ** 05
 
@@ -178,4 +178,4 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 
  * [[./Hausaufgaben/05/ha_05_Felix_09.tex][LaTeX]]
 
- * [[./Hausaufgaben/05/ha_05_Felix_09.tex][Abgabe]]
+ * [[./Hausaufgaben/05/ha_05_Felix_09.pdf][Abgabe]]
