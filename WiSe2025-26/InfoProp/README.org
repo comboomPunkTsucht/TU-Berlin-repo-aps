@@ -11,6 +11,8 @@
   - [[#geschichte---die-mechanisierung-des-denkens][Geschichte - Die Mechanisierung des Denkens]]
 - [[#2025-11-12][2025-11-12]]
   - [[#originalität---can-machines-think][Originalität - Can machines think?]]
+- [[#2025-11-19][2025-11-19]]
+  - [[#algorithmen--objektivität][Algorithmen & Objektivität]]
 
 * 2025-10-29
 
@@ -85,3 +87,23 @@
  *
 
  *
+
+
+* 2025-11-19
+
+** Algorithmen & Objektivität
+
+*** Lesen Sie den Text
+
+ * ansamlung von Schritten
+
+ * probleme durch bestimte anzahl an Schritten Lösen
+
+*** Übung
+
+geg.: 8 5
+
+   8 - 5 = 3
+   5 - 3 = 2
+   2 - 1 = 1
+   1 - 1 = 0
