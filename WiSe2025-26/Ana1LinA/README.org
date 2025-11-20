@@ -37,6 +37,8 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
   - [[#weitere-anwendungen-des-gauss-algorithmus][Weitere Anwendungen des Gauss-Algorithmus]]
 - [[#2025-11-18][2025-11-18]]
   - [[#lineare-abbildungen][Lineare Abbildungen]]
+- [[#2025-11-20][2025-11-20]]
+  - [[#koordinaten-und-matrixdarstellung][Koordinaten und Matrixdarstellung]]
 - [[#links][Links]]
 - [[#hausaufgaben][Hausaufgaben]]
   - [[#02][02]]
@@ -136,10 +138,15 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 
 * 2025-11-18
 
- * [[2025-11-18/VL15.pdf][Vorlesungs-Mitschrifts-Folien VL15 Keiper]]
+ * [[2025-11-18/VL15_LineareAbbildungen.pdf][Vorlesungs-Mitschrifts-Folien VL15 Keiper]]
 
 ** Lineare Abbildungen
 
+* 2025-11-20
+
+ * [[2025-11-20/VL16.pdf][Vorlesungs-Mitschrifts-Folien VL16 Keiper]]
+
+** Koordinaten und Matrixdarstellung
 
 * Links
 
