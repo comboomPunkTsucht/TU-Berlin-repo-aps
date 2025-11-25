@@ -20,16 +20,16 @@
 
 *** Was ist Wissenschaft
 
- * Austauch von Information
- * Erketnisse Reproduktierbar und Nachweisbar
- * Wird Durch Forschung erreicht
+- Austauch von Information
+-  Erketnisse Reproduktierbar und Nachweisbar
+-  Wird Durch Forschung erreicht
 
 *** Was ist Informatik
 
- * Kentnisse der Informations- & Telekomunikationstechnick
- * Verstentnis der Funktionsweise
- * Zentum Informationen
- * Informationen werden durch Informationen bearbeitet
+-  Kentnisse der Informations- & Telekomunikationstechnick
+-  Verstentnis der Funktionsweise
+-  Zentum Informationen
+-  Informationen werden durch Informationen bearbeitet
 
 * 2025-11-05
 
@@ -37,27 +37,27 @@
 
 *** Die Mechanisierung des Denkens
 
- * Sprache
- * Organe
+- Sprache
+- Organe
 
- * Aufgrund des nichtvorhandenseins der Computer
- * Das Computer heutzutage das Universalinstrument schlichtweg
+- Aufgrund des nichtvorhandenseins der Computer
+- Das Computer heutzutage das Universalinstrument schlichtweg
 
- * Rechnen
- * Gottfried Wilhem Leibniz, Wilhelm Schickard, Blaise Pascal
- * 18. Jh, frühes 19. Jh.
+- Rechnen
+- Gottfried Wilhem Leibniz, Wilhelm Schickard, Blaise Pascal
+- 18. Jh, frühes 19. Jh.
 
- * Analytical Engine
- * Charles Babbage
+- Analytical Engine
+- Charles Babbage
 
 
 *** Der erste Computer
 
- * Zuses Z1
+- Zuses Z1
 
- * Weniger Komplex
+- Weniger Komplex
 
- * Zwichenergebnisse konten überprüft werden
+- Zwichenergebnisse konten überprüft werden
 
 * 2025-11-12
 
@@ -65,28 +65,28 @@
 
 *** Wissenschaftskriterium: Originalität
 
- * etwas neues herbeibringen
- * anderer Blickwinkel
+- etwas neues herbeibringen
+- anderer Blickwinkel
 
- * neue Sichtweisen erprobt
- * bessere/inovativere Lösungen zu finden
- * heufig bei kreativen Teamsitzungen in der Wirtschaft
+- neue Sichtweisen erprobt
+- bessere/inovativere Lösungen zu finden
+- heufig bei kreativen Teamsitzungen in der Wirtschaft
 
- * nein --> anders denken, meinungen der nicht generellen geselschaft
+- nein --> anders denken, meinungen der nicht generellen geselschaft
 
 *** Can machines think?
 
- * eine umfrage das es nicht das richtige ist
+- eine umfrage das es nicht das richtige ist
 
- * subjective, menthale Aktivität
+- subjective, menthale Aktivität
 
- * ein Frage-Antwort-Spiel
+- ein Frage-Antwort-Spiel
 
- *
+-
 
- *
+-
 
- *
+-
 
 
 * 2025-11-19
@@ -95,9 +95,9 @@
 
 *** Lesen Sie den Text
 
- * ansamlung von Schritten
+- ansamlung von Schritten
 
- * probleme durch bestimte anzahl an Schritten Lösen
+- probleme durch bestimte anzahl an Schritten Lösen
 
 *** Übung
 

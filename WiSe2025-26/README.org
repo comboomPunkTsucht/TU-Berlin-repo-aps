@@ -11,16 +11,16 @@
 
 * Analysis 1 und Lineare Algebra
 
-  * [[Ana1LinA][Ordner von Modul]]
+- [[Ana1LinA][Ordner von Modul]]
 
 * Introduction to Programing
 
 Das Modul zur Programmierung Einstieg mit C/C++
 
-  * [[IntroProg][Ordner von Modul]]
+- [[IntroProg][Ordner von Modul]]
 
 * Rechnerorgination
 
 Grundlagen der Hardware
 
- * [[ROrg][Ordner vom Modul]]
+- [[ROrg][Ordner vom Modul]]
