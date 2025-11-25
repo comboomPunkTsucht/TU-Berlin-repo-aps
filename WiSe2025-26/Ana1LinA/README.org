@@ -6,6 +6,7 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 #+STARTUP: inlineimages
 
 * Table of Contents :toc:
+- [[#skript][Skript]]
 - [[#2025-10-15][2025-10-15]]
   - [[#grundlagen-der-mengenlehre][Grundlagen der Mengenlehre]]
 - [[#2025-10-20][2025-10-20]]
@@ -39,6 +40,8 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
   - [[#lineare-abbildungen][Lineare Abbildungen]]
 - [[#2025-11-20][2025-11-20]]
   - [[#koordinaten-und-matrixdarstellung][Koordinaten und Matrixdarstellung]]
+- [[#2025-11-20-1][2025-11-20]]
+  - [[#konvergenz-von-zahlenfolgen][Konvergenz von Zahlenfolgen]]
 - [[#links][Links]]
 - [[#hausaufgaben][Hausaufgaben]]
   - [[#02][02]]
@@ -46,43 +49,47 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
   - [[#04][04]]
   - [[#05][05]]
 
+* Skript
+
+- [[Analysis_I_und_Lineare_Algebra.pdf][Dokument]]
+
 * 2025-10-15
 
- * [[2025-10-15/Organisation-Ana1-LinA-Winkert-WiSe-2025-2026.pdf][Organisatorische Folien]]
+- [[2025-10-15/Organisation-Ana1-LinA-Winkert-WiSe-2025-2026.pdf][Organisatorische Folien]]
 
- * [[2025-10-15/VL-1-43-Folien-Ana1-LinA-Winkert-WiSe-2025-2026.pdf][Vorlesungs-Folien VL1 Winkert]]
+- [[2025-10-15/VL-1-43-Folien-Ana1-LinA-Winkert-WiSe-2025-2026.pdf][Vorlesungs-Folien VL1 Winkert]]
 
- * [[2025-10-15/VL-1-Mitschrift-Ana1-LinA-Winkert-WiSe-2025-2026.pdf][Mitschrift VL1 Winkert]]
+- [[2025-10-15/VL-1-Mitschrift-Ana1-LinA-Winkert-WiSe-2025-2026.pdf][Mitschrift VL1 Winkert]]
 
 ** Grundlagen der Mengenlehre
 
 * 2025-10-20
 
- * [[2025-10-20/VL2_Zahlen.pdf][Vorlesungs-Mitschrifts-Folien VL2 Keiper]]
+- [[2025-10-20/VL2_Zahlen.pdf][Vorlesungs-Mitschrifts-Folien VL2 Keiper]]
 
 ** Zahlen
 
 * 2025-10-21
 
- * [[2025-10-21/VL3_KomplexeZahlen.pdf][Vorlesungs-Mitschrifts-Folien VL3 Keiper]]
+- [[2025-10-21/VL3_KomplexeZahlen.pdf][Vorlesungs-Mitschrifts-Folien VL3 Keiper]]
 
 ** Komplexe Zahlen
 
 * 2025-10-23
 
- * [[2025-10-23/VL4_Induktion.pdf][Vorlesungs-Mitschrifts-Folien VL4 Keiper]]
+- [[2025-10-23/VL4_Induktion.pdf][Vorlesungs-Mitschrifts-Folien VL4 Keiper]]
 
 ** Volständige Induktion
 
 * 2025-10-27
 
- * [[2025-10-27/VL5_Abbildungen.pdf][Vorlesungs-Mitschrifts-Folien VL5 Keiper]]
+- [[2025-10-27/VL5_Abbildungen.pdf][Vorlesungs-Mitschrifts-Folien VL5 Keiper]]
 
 ** Abbildungen
 
 * 2025-10-28
 
- * [[2025-10-28/VL6_ElementareFunktionen.pdf][Vorlesungs-Mitschrifts-Folien VL6 Keiper]]
+- [[2025-10-28/VL6_ElementareFunktionen.pdf][Vorlesungs-Mitschrifts-Folien VL6 Keiper]]
 
 ** Abbildungen
 
@@ -90,99 +97,106 @@ author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 
 * 2025-10-30
 
- * [[2025-10-30/VL7_KomplexeZahlen2.pdf][Vorlesungs-Mitschrifts-Folien VL7 Keiper]]
+- [[2025-10-30/VL7_KomplexeZahlen2.pdf][Vorlesungs-Mitschrifts-Folien VL7 Keiper]]
 
 ** Komplexe Zahlen (2)
 
 * 2025-11-03
 
- * [[2025-11-03/VL8_Polynome.pdf][Vorlesungs-Mitschrifts-Folien VL8 Keiper]]
+- [[2025-11-03/VL8_Polynome.pdf][Vorlesungs-Mitschrifts-Folien VL8 Keiper]]
 
 ** Polynome
 
 * 2025-11-04
 
- * [[2025-11-04/VL9_RationaleFunktionen.pdf][Vorlesungs-Mitschrifts-Folien VL9 Keiper]]
+- [[2025-11-04/VL9_RationaleFunktionen.pdf][Vorlesungs-Mitschrifts-Folien VL9 Keiper]]
 
 ** Rationale Funktionen
 
 * 2025-11-06
 
- * [[2025-11-06/VL10_Vektorräume.pdf][Vorlesungs-Mitschrifts-Folien VL10 Keiper]]
+- [[2025-11-06/VL10_Vektorräume.pdf][Vorlesungs-Mitschrifts-Folien VL10 Keiper]]
 
 ** Vektorräume
 
 * 2025-11-10
 
- * [[2025-11-10/VL11_BasisundDimension.pdf][Vorlesungs-Mitschrifts-Folien VL11 Keiper]]
+- [[2025-11-10/VL11_BasisundDimension.pdf][Vorlesungs-Mitschrifts-Folien VL11 Keiper]]
 
 ** Basis und Dimensionen
 
 * 2025-11-11
 
- * [[2025-11-11/VL12_Matrizen.pdf][Vorlesungs-Mitschrifts-Folien VL12 Keiper]]
+- [[2025-11-11/VL12_Matrizen.pdf][Vorlesungs-Mitschrifts-Folien VL12 Keiper]]
 
 ** Matrizen
 
 * 2025-11-13
 
- * [[2025-11-13/VL13_LineareGleichungssysteme.pdf][Vorlesungs-Mitschrifts-Folien VL13 Keiper]]
+- [[2025-11-13/VL13_LineareGleichungssysteme.pdf][Vorlesungs-Mitschrifts-Folien VL13 Keiper]]
 
 ** Lineare Gleichungssysteme
 
 * 2025-11-17
 
- * [[2025-11-17/VL14_WeitereAnwendungenGauss.pdf][Vorlesungs-Mitschrifts-Folien VL14 Keiper]]
+- [[2025-11-17/VL14_WeitereAnwendungenGauss.pdf][Vorlesungs-Mitschrifts-Folien VL14 Keiper]]
 
 ** Weitere Anwendungen des Gauss-Algorithmus
 
 * 2025-11-18
 
- * [[2025-11-18/VL15_LineareAbbildungen.pdf][Vorlesungs-Mitschrifts-Folien VL15 Keiper]]
+- [[2025-11-18/VL15_LineareAbbildungen.pdf][Vorlesungs-Mitschrifts-Folien VL15 Keiper]]
 
 ** Lineare Abbildungen
 
 * 2025-11-20
 
- * [[2025-11-20/VL16.pdf][Vorlesungs-Mitschrifts-Folien VL16 Keiper]]
+- [[2025-11-20/VL16_KoordinatenMatrixdarstellung.pdf][Vorlesungs-Mitschrifts-Folien VL16 Keiper]]
 
 ** Koordinaten und Matrixdarstellung
 
+* 2025-11-20
+
+- [[2025-11-24/VL17_Zahlenfolgen.pdf][Vorlesungs-Mitschrifts-Folien VL17 Keiper]]
+
+** Konvergenz von Zahlenfolgen
+
+
 * Links
 
- * [[https://pingo.coactum.de/927788][Pingo Unfragen Keiper]]
+- [[https://pingo.coactum.de/927788][Pingo Unfragen Keiper]]
 
 
 * Hausaufgaben
 
 ** 02
 
- * [[Hausaufgaben/02/HA 2 schriftlich.png][Aufgabe]]
+- [[Hausaufgaben/02/HA 2 schriftlich.png][Aufgabe]]
 
- * [[Hausaufgaben/02/Felix 09 Hausaufgabe 2.pdf][Abgabe]]
+- [[Hausaufgaben/02/Felix 09 Hausaufgabe 2.pdf][Abgabe]]
 
- * [[Hausaufgaben/02/Felix 09 Hausaufgabe 2_Feadback.pdf][Feadback]]
+- [[Hausaufgaben/02/Felix 09 Hausaufgabe 2_Feadback.pdf][Feadback]]
 
 ** 03
 
- * [[Hausaufgaben/03/ha_03.png][Aufgabe]]
+- [[Hausaufgaben/03/ha_03.png][Aufgabe]]
 
- * [[Hausaufgaben/03/ha_03_Felix_09.tex][LaTeX]]
+- [[Hausaufgaben/03/ha_03_Felix_09.tex][LaTeX]]
 
- * [[Hausaufgaben/03/ha_03_Felix_09.pdf][Abgabe]]
+- [[Hausaufgaben/03/ha_03_Felix_09.pdf][Abgabe]]
 
 ** 04
 
- * [[Hausaufgaben/04/ha_04.png][Aufgabe]]
+- [[Hausaufgaben/04/ha_04.png][Aufgabe]]
 
- * [[Hausaufgaben/04/ha_04_Felix_09.tex][LaTeX]]
+- [[Hausaufgaben/04/ha_04_Felix_09.tex][LaTeX]]
 
- * [[Hausaufgaben/04/ha_04_Felix_09.pdf][Abgabe]]
+- [[Hausaufgaben/04/ha_04_Felix_09.pdf][Abgabe]]
 
 ** 05
 
- * [[Hausaufgaben/05/ha_05.png][Aufgabe]]
+- [[Hausaufgaben/05/ha_05.png][Aufgabe]]
 
- * [[Hausaufgaben/05/ha_05_Felix_09.tex][LaTeX]]
+- [[Hausaufgaben/05/ha_05_Felix_09.tex][LaTeX]]
 
- * [[Hausaufgaben/05/ha_05_Felix_09.pdf][Abgabe]]
+- [[Hausaufgaben/05/ha_05_Felix_09.pdf][Abgabe]]
