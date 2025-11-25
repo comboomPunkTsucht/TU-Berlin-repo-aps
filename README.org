@@ -11,7 +11,7 @@
   - [[#gitlab][Gitlab]]
 
 * Links
-https://mcpeapsunterstrichhd.dev/linkhub
+[[https://mcpeapsunterstrichhd.dev/linkhub]]
 
 * Git Repositories
 
