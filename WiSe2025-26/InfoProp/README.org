@@ -101,7 +101,7 @@
 
 *** Übung
 
-#+begin_export latex
+#+begin_src latex
 \begin{align*}
 \text{geg.: } & 8, 5 \\
 8 - 5 &= 3 \\
@@ -109,4 +109,4 @@
 2 - 1 &= 1 \\
 1 - 1 &= 0
 \end{align*}
-#+end_export
+#+end_src
