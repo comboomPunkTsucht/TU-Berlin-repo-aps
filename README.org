@@ -17,8 +17,8 @@ https://mcpeapsunterstrichhd.dev/linkhub
 
 ** Github
 
-https://github.com/comboomPunkTsucht/TU-Berlin-repo-aps
+[[https://github.com/comboomPunkTsucht/TU-Berlin-repo-aps]]
 
 ** Gitlab
 
-https://git.tu-berlin.de/mahd/TU-Berlin-repo-aps
+[[https://git.tu-berlin.de/mahd/TU-Berlin-repo-aps]]
