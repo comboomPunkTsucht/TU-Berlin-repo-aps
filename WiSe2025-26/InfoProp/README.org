@@ -6,17 +6,19 @@
 
 * Table of Contents :toc:
 - [[#2025-10-29][2025-10-29]]
-  - [[#einführung-und-überblick---informatik-als-wissenschaftliche-disziplin][Einführung und Überblick - Informatik als wissenschaftliche Disziplin]]
+  - [[#einführung-und-überblick-informatik-als-wissenschaftliche-disziplin][Einführung und Überblick: Informatik als wissenschaftliche Disziplin]]
 - [[#2025-11-05][2025-11-05]]
-  - [[#geschichte---die-mechanisierung-des-denkens][Geschichte - Die Mechanisierung des Denkens]]
+  - [[#geschichte-die-mechanisierung-des-denkens][Geschichte: Die Mechanisierung des Denkens]]
 - [[#2025-11-12][2025-11-12]]
-  - [[#originalität---can-machines-think][Originalität - Can machines think?]]
+  - [[#originalität-can-machines-think][Originalität: Can machines think?]]
 - [[#2025-11-19][2025-11-19]]
   - [[#algorithmen--objektivität][Algorithmen & Objektivität]]
+- [[#2025-11-26][2025-11-26]]
+  - [[#relevanz-informatischer-entwicklung-ver--und-entschlüsseln-von-informationen][Relevanz informatischer Entwicklung: Ver- und Entschlüsseln von Informationen]]
 
 * 2025-10-29
 
-** Einführung und Überblick - Informatik als wissenschaftliche Disziplin
+** Einführung und Überblick: Informatik als wissenschaftliche Disziplin
 
 *** Was ist Wissenschaft
 
@@ -33,7 +35,7 @@
 
 * 2025-11-05
 
-** Geschichte - Die Mechanisierung des Denkens
+** Geschichte: Die Mechanisierung des Denkens
 
 *** Die Mechanisierung des Denkens
 
@@ -61,7 +63,7 @@
 
 * 2025-11-12
 
-** Originalität - Can machines think?
+** Originalität: Can machines think?
 
 *** Wissenschaftskriterium: Originalität
 
@@ -110,3 +112,9 @@
 1 - 1 &= 0
 \end{align*}
 #+end_src
+
+* 2025-11-26
+
+** Relevanz informatischer Entwicklung: Ver- und Entschlüsseln von Informationen
+
+*** Geschichte der Kryptographie

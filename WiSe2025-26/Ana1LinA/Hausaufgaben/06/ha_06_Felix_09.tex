@@ -1,0 +1,210 @@
+% !TEX program = lualatex
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{fontspec}        % bei lualatex/xelatex
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage[ngerman]{babel}  % deutsche Silbentrennung
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}        % besseres TOC → hyperref
+\usepackage{fancyhdr}
+\usepackage{nicefrac}        % Für schöne Brüche
+\usepackage{caption}         % Für Bildunterschriften
+\usepackage{subcaption}      % Für Unterbilder
+
+% Versuche zuerst die gewünschte Systemschrift, sonst Fallback
+\IfFontExistsTF{CaskaydiaCove Nerd Font Propo}
+  {\setmainfont{CaskaydiaCove Nerd Font Propo}}
+  {\setmainfont{Latin Modern Roman}} % Fallback
+
+% Fancyhdr: Seitenzahlen rechts in Fußzeile
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\titleline}{Ana1LinA - Hausaufgabe 06}
+\newcommand{\subtitleline}{Felix 09}
+\newcommand{\authorsline}{Fabian Aps:525528, Joris Victor Vorderwülbecke:0528715, Emil Arthur Joseph Hartmann:052542, Friedrich Ludwig Finck:0526329}
+
+% Metadaten für PDF
+\hypersetup{
+  pdftitle={\titleline},
+  pdfauthor={\authorsline},
+  pdfsubject={\titleline - \subtitleline},
+  pdfcreator={LuaLaTeX}
+}
+
+% Eigener Befehl für die elementaren Zeilenoperationen (falls benötigt)
+\newcommand{\ZOp}[2]{\text{Z}_{#1} \leftarrow #2}
+
+% --- ALTERNATIVER WEG (OHNE enumitem) ---
+\renewcommand{\labelenumi}{\alph{enumi})}
+\renewcommand{\labelenumii}{\alph{enumii})}
+
+\begin{document}
+
+% ------------------
+% Titelseite
+% ------------------
+\begin{titlepage}
+  \centering
+  {\Large Technische Universität Berlin\par}
+  \vspace{2cm}
+  {\Huge\bfseries \titleline\par}
+  \vspace{1.5cm}
+  {\Large \subtitleline\par}
+  \vfill
+  {\large Autoren: \authorsline\par}
+  \vspace{2cm}
+  {\large \today\par}
+  \thispagestyle{empty}
+\end{titlepage}
+
+% ------------------
+% Inhaltsverzeichnis
+% ------------------
+\cleardoublepage
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\tableofcontents
+\clearpage
+
+% ------------------
+% Hauptteil
+% ------------------
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Aufgabe 11} \label{ch:aufgabe}
+
+Gegeben sei die Abbildung $f : \mathbb{C}^3 \to \mathbb{C}^2$, definiert durch:
+$$
+\begin{bmatrix} a \\ b \\ c \end{bmatrix} \mapsto \begin{bmatrix} ia + b \\ 2ic \end{bmatrix}
+$$
+
+Es sind folgende Teilaufgaben zu bearbeiten:
+\begin{enumerate}
+    \item Zeigen Sie, dass $f$ linear ist.
+    \item Finden Sie eine Matrix $A$, sodass $f\left(\begin{bmatrix} a \\ b \\ c \end{bmatrix}\right) = A \begin{bmatrix} a \\ b \\ c \end{bmatrix}$ für alle $\begin{bmatrix} a \\ b \\ c \end{bmatrix} \in \mathbb{C}^3$ gilt.
+    \item Bestimmen Sie $\text{Kern}(f)$ und geben Sie eine Basis des Kerns an.
+    \item Ist $f$ injektiv/surjektiv?
+\end{enumerate}
+
+%\vspace{2cm}
+
+
+\begin{figure}[h!]
+    \centerline{\includegraphics[width=1.25\textwidth,]{ha_06.png}}
+\end{figure}
+
+% ------------------
+% Lösungen
+% ------------------
+
+\chapter{Lösung zu Aufgabe 11} \label{ch:loesung}
+
+\section{a) Linearität von $f$}
+Zu zeigen ist, dass für alle $\vec{u}, \vec{v} \in \mathbb{C}^3$ und alle $\lambda \in \mathbb{C}$ gilt:
+\begin{enumerate}
+    \item $f(\vec{u} + \vec{v}) = f(\vec{u}) + f(\vec{v})$ (Additivität)
+    \item $f(\lambda \vec{u}) = \lambda f(\vec{u})$ (Homogenität)
+\end{enumerate}
+
+Seien $\vec{u} = \begin{bmatrix} a_1 \\ b_1 \\ c_1 \end{bmatrix}$ und $\vec{v} = \begin{bmatrix} a_2 \\ b_2 \\ c_2 \end{bmatrix}$.
+
+\textbf{Additivität:}
+\begin{align*}
+f(\vec{u} + \vec{v}) &= f\left( \begin{bmatrix} a_1+a_2 \\ b_1+b_2 \\ c_1+c_2 \end{bmatrix} \right)
+= \begin{bmatrix} i(a_1+a_2) + (b_1+b_2) \\ 2i(c_1+c_2) \end{bmatrix} \\
+&= \begin{bmatrix} (ia_1+b_1) + (ia_2+b_2) \\ 2ic_1 + 2ic_2 \end{bmatrix}
+= \begin{bmatrix} ia_1+b_1 \\ 2ic_1 \end{bmatrix} + \begin{bmatrix} ia_2+b_2 \\ 2ic_2 \end{bmatrix} \\
+&= f(\vec{u}) + f(\vec{v})
+\end{align*}
+
+\textbf{Homogenität:}
+\begin{align*}
+f(\lambda \vec{u}) &= f\left( \begin{bmatrix} \lambda a_1 \\ \lambda b_1 \\ \lambda c_1 \end{bmatrix} \right)
+= \begin{bmatrix} i(\lambda a_1) + (\lambda b_1) \\ 2i(\lambda c_1) \end{bmatrix} \\
+&= \begin{bmatrix} \lambda(ia_1 + b_1) \\ \lambda(2ic_1) \end{bmatrix}
+= \lambda \begin{bmatrix} ia_1 + b_1 \\ 2ic_1 \end{bmatrix} \\
+&= \lambda f(\vec{u})
+\end{align*}
+Da beide Eigenschaften erfüllt sind, ist $f$ linear.
+
+\section{b) Matrixdarstellung $A$}
+Wir suchen eine Matrix $A \in \mathbb{C}^{2 \times 3}$, sodass gilt:
+$$
+A \begin{bmatrix} a \\ b \\ c \end{bmatrix} = \begin{bmatrix} ia + b \\ 2ic \end{bmatrix}
+$$
+Wir können den Ergebnisvektor als Linearkombination der Eingabekomponenten schreiben:
+$$
+\begin{bmatrix} ia + b \\ 2ic \end{bmatrix} = \begin{bmatrix} i \cdot a + 1 \cdot b + 0 \cdot c \\ 0 \cdot a + 0 \cdot b + 2i \cdot c \end{bmatrix}
+$$
+Daraus lassen sich die Koeffizienten direkt in die Matrix $A$ übertragen:
+$$
+A = \begin{bmatrix}
+i & 1 & 0 \\
+0 & 0 & 2i
+\end{bmatrix}
+$$
+
+\section{c) Kern von $f$}
+Der Kern von $f$ ist die Menge aller Vektoren $\vec{x} \in \mathbb{C}^3$, die auf den Nullvektor abgebildet werden, also $A\vec{x} = \vec{0}$.
+Wir lösen das homogene lineare Gleichungssystem:
+$$
+\begin{bmatrix}
+i & 1 & 0 \\
+0 & 0 & 2i
+\end{bmatrix}
+\begin{bmatrix} a \\ b \\ c \end{bmatrix}
+=
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}
+$$
+Daraus ergeben sich zwei Gleichungen:
+\begin{enumerate}
+    \item $ia + b = 0 \implies b = -ia$
+    \item $2ic = 0 \implies c = 0$ (da $2i \neq 0$)
+\end{enumerate}
+Die Variable $a$ ist frei wählbar. Setzen wir $a = t$ mit $t \in \mathbb{C}$, so folgt $b = -it$.
+Der Lösungsvektor lautet somit:
+$$
+\vec{x} = \begin{bmatrix} t \\ -it \\ 0 \end{bmatrix} = t \begin{bmatrix} 1 \\ -i \\ 0 \end{bmatrix}
+$$
+Der Kern ist also:
+$$
+\text{Kern}(f) = \text{span}\left( \begin{bmatrix} 1 \\ -i \\ 0 \end{bmatrix} \right)
+$$
+Eine Basis des Kerns ist:
+$$
+\mathcal{B}_{\text{Kern}} = \left\{ \begin{bmatrix} 1 \\ -i \\ 0 \end{bmatrix} \right\}
+$$
+
+\section{d) Injektivität und Surjektivität}
+
+\textbf{Injektivität:} \\
+Eine lineare Abbildung ist genau dann injektiv, wenn ihr Kern nur den Nullvektor enthält (trivialer Kern).
+Aus Teilaufgabe c) wissen wir, dass $\text{Kern}(f) \neq \{\vec{0}\}$, da z.B. $\begin{bmatrix} 1 \\ -i \\ 0 \end{bmatrix} \in \text{Kern}(f)$.
+Daraus folgt: $f$ ist \textbf{nicht injektiv}.
+
+\textbf{Surjektivität:} \\
+Eine lineare Abbildung $f: V \to W$ ist surjektiv, wenn $\text{Bild}(f) = W$. Alternativ gilt der Dimensionssatz (Rangformel):
+$$
+\dim(V) = \dim(\text{Kern}(f)) + \dim(\text{Bild}(f))
+$$
+Hier ist $V = \mathbb{C}^3$, also $\dim(V) = 3$. Aus c) wissen wir, dass $\dim(\text{Kern}(f)) = 1$ (da die Basis ein Element hat).
+$$
+3 = 1 + \dim(\text{Bild}(f)) \implies \dim(\text{Bild}(f)) = 2
+$$
+Der Zielraum ist $W = \mathbb{C}^2$, welcher ebenfalls die Dimension 2 hat. Da die Dimension des Bildes gleich der Dimension des Zielraums ist, muss das Bild der gesamte Zielraum sein.
+Daraus folgt: $f$ ist \textbf{surjektiv}.
+
+\end{document}
+
+% Local Variables:
+% TeX-engine: luatex
+% End:
