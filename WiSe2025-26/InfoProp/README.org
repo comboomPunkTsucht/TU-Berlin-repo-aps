@@ -15,6 +15,8 @@
   - [[#algorithmen--objektivität][Algorithmen & Objektivität]]
 - [[#2025-11-26][2025-11-26]]
   - [[#relevanz-informatischer-entwicklung-ver--und-entschlüsseln-von-informationen][Relevanz informatischer Entwicklung: Ver- und Entschlüsseln von Informationen]]
+- [[#2025-12-03][2025-12-03]]
+  - [[#abstraktion-einführung-in-graphentheorie][Abstraktion: Einführung in Graphentheorie]]
 
 * 2025-10-29
 
@@ -118,3 +120,8 @@
 ** Relevanz informatischer Entwicklung: Ver- und Entschlüsseln von Informationen
 
 *** Geschichte der Kryptographie
+
+
+* 2025-12-03
+
+** Abstraktion: Einführung in Graphentheorie

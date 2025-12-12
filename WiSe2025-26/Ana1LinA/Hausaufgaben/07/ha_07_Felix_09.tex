@@ -1,0 +1,195 @@
+% !TEX program = lualatex
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{fontspec}        % bei lualatex/xelatex
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage[ngerman]{babel}  % deutsche Silbentrennung
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}        % besseres TOC → hyperref
+\usepackage{fancyhdr}
+\usepackage{nicefrac}        % Für schöne Brüche
+\usepackage{caption}         % Für Bildunterschriften
+\usepackage{subcaption}      % Für Unterbilder
+
+% Versuche zuerst die gewünschte Systemschrift, sonst Fallback
+\IfFontExistsTF{CaskaydiaCove Nerd Font Propo}
+  {\setmainfont{CaskaydiaCove Nerd Font Propo}}
+  {\setmainfont{Latin Modern Roman}} % Fallback
+
+% Fancyhdr: Seitenzahlen rechts in Fußzeile
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\titleline}{Ana1LinA - Hausaufgabe 07}
+\newcommand{\subtitleline}{Felix 09}
+\newcommand{\authorsline}{Fabian Aps:525528, Joris Victor Vorderwülbecke:0528715, Emil Arthur Joseph Hartmann:052542, Friedrich Ludwig Finck:0526329}
+
+% Metadaten für PDF
+\hypersetup{
+  pdftitle={\titleline},
+  pdfauthor={\authorsline},
+  pdfsubject={\titleline - \subtitleline},
+  pdfcreator={LuaLaTeX}
+}
+
+\begin{document}
+
+% ------------------
+% Titelseite
+% ------------------
+\begin{titlepage}
+  \centering
+  {\Large Technische Universität Berlin\par}
+  \vspace{2cm}
+  {\Huge\bfseries \titleline\par}
+  \vspace{1.5cm}
+  {\Large \subtitleline\par}
+  \vfill
+  {\large Autoren: \authorsline\par}
+  \vspace{2cm}
+  {\large \today\par}
+  \thispagestyle{empty}
+\end{titlepage}
+
+% ------------------
+% Inhaltsverzeichnis
+% ------------------
+\cleardoublepage
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\tableofcontents
+\clearpage
+
+% ------------------
+% Hauptteil
+% ------------------
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Aufgabe} \label{ch:aufgabe}
+
+Untersuchen Sie die folgenden Funktionen auf Stetigkeit:
+
+$$
+f: \mathbb{R} \to \mathbb{R}, \quad f(x) = \begin{cases}
+\cos(\pi x) + 1 & \text{für } x < 2, \\
+x^2 - 1 & \text{für } x \ge 2
+\end{cases}
+$$
+
+$$
+g: \mathbb{R} \to \mathbb{R}, \quad g(x) = \begin{cases}
+x + \frac{x+1}{|x+1|} & \text{für } x \ne -1, \\
+0 & \text{für } x = -1
+\end{cases}
+$$
+
+\vspace{1cm}
+
+\begin{figure}[h!]
+    \centerline{\includegraphics[width=1.0\textwidth,]{ha_07.png}}
+\end{figure}
+
+% ------------------
+% Lösungen
+% ------------------
+
+\chapter{Lösung zur Aufgabe} \label{ch:loesung}
+
+Eine Funktion $h: D \to \mathbb{R}$ heißt stetig in $a \in D$, wenn $\lim_{x \to a} h(x) = h(a)$ gilt (vgl. Definition 19.7 im Skript). Dies ist äquivalent dazu, dass der linksseitige Grenzwert $\lim_{x \nearrow a} h(x)$ und der rechtsseitige Grenzwert $\lim_{x \searrow a} h(x)$ existieren und mit dem Funktionswert $h(a)$ übereinstimmen (vgl. Abschnitt 19.2 im Skript).
+
+\section{Untersuchung von $f$}
+
+Die Funktion ist definiert als:
+$$
+f(x) = \begin{cases}
+\cos(\pi x) + 1 & \text{für } x < 2 \\
+x^2 - 1 & \text{für } x \ge 2
+\end{cases}
+$$
+
+\subsection{Bereich $x \neq 2$}
+In den Bereichen $]-\infty, 2[$ und $]2, \infty[$ ist die Funktion als Komposition und Summe elementarer, stetiger Funktionen (Kosinus, Polynome) stetig (vgl. Satz 19.10 im Skript). Der einzige kritische Punkt für die Stetigkeit ist die Nahtstelle $x_0 = 2$.
+
+\subsection{Untersuchung an der Stelle $x_0 = 2$}
+Wir berechnen den linksseitigen und den rechtsseitigen Grenzwert sowie den Funktionswert.
+
+\textbf{1. Funktionswert:} \\
+Da für $x = 2$ der Fall $x \ge 2$ gilt:
+$$
+f(2) = 2^2 - 1 = 4 - 1 = 3
+$$
+
+\textbf{2. Linksseitiger Grenzwert ($x \nearrow 2$):} \\
+Für $x < 2$ gilt $f(x) = \cos(\pi x) + 1$. Da der Cosinus stetig ist, folgt:
+$$
+\lim_{x \nearrow 2} f(x) = \lim_{x \nearrow 2} (\cos(\pi x) + 1) = \cos(2\pi) + 1 = 1 + 1 = 2
+$$
+
+\textbf{3. Rechtsseitiger Grenzwert ($x \searrow 2$):} \\
+Für $x > 2$ gilt $f(x) = x^2 - 1$. Da Polynome stetig sind, folgt:
+$$
+\lim_{x \searrow 2} f(x) = \lim_{x \searrow 2} (x^2 - 1) = 2^2 - 1 = 3
+$$
+
+\textbf{Fazit:} \\
+Da der linksseitige Grenzwert ($2$) ungleich dem rechtsseitigen Grenzwert ($3$) ist, existiert der Grenzwert $\lim_{x \to 2} f(x)$ nicht.
+$$
+\lim_{x \nearrow 2} f(x) \neq \lim_{x \searrow 2} f(x)
+$$
+Damit ist die Funktion $f$ an der Stelle $x=2$ \textbf{nicht stetig}.
+
+\section{Untersuchung von $g$}
+
+Die Funktion ist definiert als:
+$$
+g(x) = \begin{cases}
+x + \frac{x+1}{|x+1|} & \text{für } x \ne -1 \\
+0 & \text{für } x = -1
+\end{cases}
+$$
+
+\subsection{Bereich $x \neq -1$}
+Für $x \neq -1$ ist die Funktion aus stetigen Funktionen (Polynome, Betrag, Quotient mit Nenner $\neq 0$) zusammengesetzt und somit stetig (vgl. Satz 19.10). Die kritische Stelle ist $x_0 = -1$.
+
+\subsection{Untersuchung an der Stelle $x_0 = -1$}
+Wir untersuchen den Term $\frac{x+1}{|x+1|}$.
+$$
+\frac{x+1}{|x+1|} = \begin{cases}
+\frac{x+1}{x+1} = 1 & \text{für } x+1 > 0 \iff x > -1 \\
+\frac{x+1}{-(x+1)} = -1 & \text{für } x+1 < 0 \iff x < -1
+\end{cases}
+$$
+
+\textbf{1. Funktionswert:} \\
+Laut Definition ist $g(-1) = 0$.
+
+\textbf{2. Linksseitiger Grenzwert ($x \nearrow -1$):} \\
+Für $x < -1$ ist $\frac{x+1}{|x+1|} = -1$.
+$$
+\lim_{x \nearrow -1} g(x) = \lim_{x \nearrow -1} (x - 1) = -1 - 1 = -2
+$$
+
+\textbf{3. Rechtsseitiger Grenzwert ($x \searrow -1$):} \\
+Für $x > -1$ ist $\frac{x+1}{|x+1|} = 1$.
+$$
+\lim_{x \searrow -1} g(x) = \lim_{x \searrow -1} (x + 1) = -1 + 1 = 0
+$$
+
+\textbf{Fazit:} \\
+Der linksseitige Grenzwert ($-2$) ist ungleich dem rechtsseitigen Grenzwert ($0$). Somit existiert der Grenzwert $\lim_{x \to -1} g(x)$ nicht.
+Zwar stimmt der rechtsseitige Grenzwert mit dem Funktionswert überein ($0 = g(-1)$), für die Stetigkeit müssen jedoch beide einseitigen Grenzwerte mit dem Funktionswert übereinstimmen.
+Daher ist $g$ an der Stelle $x=-1$ \textbf{nicht stetig}.
+
+\end{document}
+
+% Local Variables:
+% TeX-engine: luatex
+% End:
