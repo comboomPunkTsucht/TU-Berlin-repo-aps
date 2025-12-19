@@ -1,0 +1,135 @@
+% !TEX program = lualatex
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage[ngerman]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\usepackage{nicefrac}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Seitenränder anpassen
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+% Schriftart-Einstellungen
+\IfFontExistsTF{CaskaydiaCove Nerd Font Propo}
+  {\setmainfont{CaskaydiaCove Nerd Font Propo}}
+  {\setmainfont{Latin Modern Roman}}
+
+% Kopf- und Fußzeilen
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Metadaten
+\newcommand{\titleline}{Ana1LinA - Hausaufgabe 09}
+\newcommand{\subtitleline}{Felix 09}
+\newcommand{\authorsline}{Fabian Aps:525528, Joris Victor Vorderwülbecke:0528715, Emil Arthur Joseph Hartmann:052542, Friedrich Ludwig Finck:0526329}
+
+\hypersetup{
+  pdftitle={\titleline},
+  pdfauthor={\authorsline},
+  pdfsubject={\titleline - \subtitleline},
+  pdfcreator={LuaLaTeX}
+}
+
+\begin{document}
+
+% ------------------
+% Titelseite
+% ------------------
+\begin{titlepage}
+  \centering
+  {\Large Technische Universität Berlin\par}
+  \vspace{2cm}
+  {\Huge\bfseries \titleline\par}
+  \vspace{1.5cm}
+  {\Large \subtitleline\par}
+  \vfill
+  {\large Autoren: \authorsline\par}
+  \vspace{2cm}
+  {\large \today\par}
+  \thispagestyle{empty}
+\end{titlepage}
+
+% ------------------
+% Inhaltsverzeichnis
+% ------------------
+\cleardoublepage
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\tableofcontents
+\clearpage
+
+% ------------------
+% Hauptteil
+% ------------------
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Aufgabe} \label{ch:aufgabe}
+
+\textbf{Geben Sie diese Hausaufgabe in schriftlicher Form in ISIS ab.}
+
+Zeigen Sie, dass
+\[ |\tan(x) + \tan(y)| \geq |x + y| \]
+für alle $x, y \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$ gilt.
+
+\vspace{1cm}
+
+\begin{figure}[h!]
+    \centering
+    % Stellen Sie sicher, dass 'ha_09.png' im selben Verzeichnis liegt wie die .tex Datei
+    \includegraphics[width=0.95\textwidth]{ha_09.png}
+    \caption*{Original Aufgabenstellung}
+\end{figure}
+
+% ------------------
+% Lösungen
+% ------------------
+
+\chapter{Lösung zur Aufgabe} \label{ch:loesung}
+
+Um die Behauptung zu beweisen, nutzen wir den \textbf{Mittelwertsatz der Differentialrechnung} (MWS).
+
+Sei $f: \left(-\frac{\pi}{2}, \frac{\pi}{2}\right) \to \mathbb{R}$ definiert durch $f(t) = \tan(t)$. Die Funktion $f$ ist auf ihrem gesamten Definitionsbereich differenzierbar mit der Ableitung:
+\[ f'(t) = 1 + \tan^2(t) = \frac{1}{\cos^2(t)} \]
+
+\textbf{Fallunterscheidung:}
+
+\begin{enumerate}
+    \item \textbf{Fall $x = -y$:} \\
+    In diesem Fall gilt $x + y = 0$. Es folgt:
+    \[ |\tan(x) + \tan(-x)| = |\tan(x) - \tan(x)| = 0 \geq 0 = |x - x| \]
+    Die Ungleichung ist also trivialerweise erfüllt.
+
+    \item \textbf{Fall $x \neq -y$:} \\
+    Wir betrachten das Intervall zwischen $x$ und $-y$. Da $x, y \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$, liegt auch $-y$ in diesem Intervall. Ohne Beschränkung der Allgemeinheit nehmen wir an, dass $-y < x$. Da $f(t) = \tan(t)$ auf dem Intervall $[-y, x]$ stetig und auf $(-y, x)$ differenzierbar ist, existiert nach dem Mittelwertsatz ein $\xi \in (-y, x)$ mit:
+    \[ \frac{f(x) - f(-y)}{x - (-y)} = f'(\xi) \]
+    Einsetzen der Funktion und ihrer Ableitung ergibt:
+    \[ \frac{\tan(x) - \tan(-y)}{x + y} = 1 + \tan^2(\xi) \]
+    Unter Verwendung der Identität $\tan(-y) = -\tan(y)$ erhalten wir:
+    \[ \frac{\tan(x) + \tan(y)}{x + y} = 1 + \tan^2(\xi) \]
+    Durch Anwendung des Betrags folgt:
+    \[ \left| \frac{\tan(x) + \tan(y)}{x + y} \right| = |1 + \tan^2(\xi)| \]
+    Da $\tan^2(\xi) \geq 0$ für alle $\xi \in \mathbb{R}$ gilt, folgt $1 + \tan^2(\xi) \geq 1$. Somit:
+    \[ \frac{|\tan(x) + \tan(y)|}{|x + y|} \geq 1 \]
+    Multiplikation mit $|x + y|$ (da $x \neq -y$ ist $|x+y| > 0$) liefert die gewünschte Ungleichung:
+    \[ |\tan(x) + \tan(y)| \geq |x + y| \]
+\end{enumerate}
+
+Damit ist die Behauptung für alle $x, y \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$ bewiesen.
+\end{document}
+
+% Local Variables:
+% TeX-engine: luatex
+% End:
