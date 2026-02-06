@@ -1,0 +1,245 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+% ---------------------------------------------------------
+% LAYOUT: Ränder minimiert für maximale Platzausnutzung
+% ---------------------------------------------------------
+\geometry{top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm}
+\pagestyle{empty}
+
+% Kompakte Listen
+\setlist{nosep, leftmargin=*}
+
+% Überschriften
+\titlespacing*{\section}{0pt}{2pt}{1pt}
+\titlespacing*{\subsection}{0pt}{2pt}{1pt}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% Highlight-Box
+\newcommand{\boxx}[1]{\fcolorbox{black}{gray!15}{\parbox{\linewidth}{#1}}}
+
+\begin{document}
+
+% ====================================================================
+% SEITE 1: ANALYSIS (VL 1-9, 17-31)
+% ====================================================================
+
+\begin{center}
+    \textbf{\Large Analysis I (VL 1--9, 17--31)}
+\end{center}
+
+\begin{multicols*}{2}
+
+% ---------------------------------------------------------
+\section*{1. Grundlagen \& Induktion (VL 1, 4)}
+\textbf{Logik:} $A \Rightarrow B \iff \neg B \Rightarrow \neg A$ (Kontraposition) [42]. \\
+\textbf{Binomischer Lehrsatz:} $(a+b)^n = \sum_{k=0}^n \binom{n}{k} a^{n-k}b^k$ [95].
+
+\subsection*{Vollständige Induktion [85]}
+Beweis einer Aussage $A(n)$ für alle $n \ge n_0$.
+\begin{enumerate}
+    \item \textbf{IA (Anfang):} Zeige $A(n_0)$ ist wahr.
+    \item \textbf{IS (Schritt):} $n \to n+1$.
+    \begin{itemize}
+        \item \textit{IV (Voraussetzung):} Gelte $A(n)$.
+        \item \textit{Schluss:} Zeige $A(n+1)$ unter Nutzung der IV.
+    \end{itemize}
+\end{enumerate}
+\textbf{Wichtige Summen:} \\
+$\sum_{k=1}^n k = \frac{n(n+1)}{2}$ (Gauß) [88] \quad |
+\quad $\sum_{k=0}^n q^k = \frac{1-q^{n+1}}{1-q}$ (Geometr.) [66]
+
+% ---------------------------------------------------------
+\section*{2. Komplexe Zahlen $\mathbb{C}$ (VL 3, 7)}
+$z = x + iy = r e^{i\phi} = r(\cos \phi + i \sin \phi)$. \\
+$r = |z| = \sqrt{x^2+y^2}$, $\phi = \arg(z)$.
+\begin{itemize}
+    \item \textbf{Konjugation:} $\bar{z} = x - iy$. Es gilt $z\bar{z} = |z|^2$.
+    \item \textbf{Euler-Formel:} $e^{i\phi} = \cos \phi + i \sin \phi$.
+    \item \textbf{Multiplikation:} $z_1 z_2 = r_1 r_2 e^{i(\phi_1 + \phi_2)}$. (Winkel addieren!)
+    \item \textbf{Potenzen (Moivre):} $z^n = r^n e^{in\phi}$.
+    \item \textbf{Wurzeln:} $z^n = w = s e^{i\alpha}$ hat $n$ Lösungen ($k=0,\dots,n-1$):
+    \[ z_k = \sqrt[n]{s} \cdot e^{i \frac{\alpha + 2\pi k}{n}} \quad \text{(Regelmäßiges $n$-Eck)} \]
+\end{itemize}
+\textbf{Quadrat. Gleichung:} $az^2+bz+c=0$.
+Lsg: $z_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$. (Wurzel aus komplexer Zahl beachten! Ggf. in Polar umwandeln).
+
+% ---------------------------------------------------------
+\section*{3. Folgen \& Stetigkeit (VL 17-20)}
+\textbf{Grenzwerte:} $\lim \frac{1}{n}=0$, $\lim \sqrt[n]{n}=1$, $\lim (1+\frac{x}{n})^n = e^x$. \\
+\textbf{Sandwich-Satz:} $a_n \le b_n \le c_n$ und $a_n, c_n \to a \Rightarrow b_n \to a$. \\
+\textbf{Stetigkeit:} $f$ stetig in $x_0 \iff \lim_{x \to x_0} f(x) = f(x_0)$.
+\begin{itemize}
+    \item \textbf{Zwischenwertsatz:} $f$ stetig auf $[a,b]$, $f(a)<c<f(b) \Rightarrow \exists \xi: f(\xi)=c$. (Nullstellensuche).
+    \item \textbf{Min/Max:} Stetige Fkt. auf kompaktem Intervall $[a,b]$ nimmt Min und Max an.
+\end{itemize}
+
+% ---------------------------------------------------------
+\section*{4. Differentialrechnung (VL 21-25)}
+\textbf{Ableitungen:} $(\sin x)' = \cos x$, $(\cos x)' = -\sin x$, $(\ln x)' = 1/x$, $(\arctan x)' = \frac{1}{1+x^2}$, $(\arcsin x)' = \frac{1}{\sqrt{1-x^2}}$. \\
+\textbf{Regeln:} Produkt $(uv)'=u'v+uv'$, Quotient $(u/v)'=\frac{u'v-uv'}{v^2}$, Kette $(f(g(x)))' = f'(g(x))g'(x)$. \\
+\textbf{Umkehrfunktion:} $(f^{-1})'(y) = \frac{1}{f'(f^{-1}(y))}$.
+\subsection*{Mittelwertsatz \& l'Hospital}
+\textbf{MWS:} Ist $f$ diffbar auf $]a,b[$, stetig auf $[a,b]$, dann $\exists \xi \in ]a,b[$:
+\[ f'(\xi) = \frac{f(b)-f(a)}{b-a} \quad \text{(Steigung Tangente = Steigung Sekante)} \]
+\textbf{L'Hospital:} Bei "$\frac{0}{0}$" oder "$\frac{\infty}{\infty}$": $\lim \frac{f(x)}{g(x)} = \lim \frac{f'(x)}{g'(x)}$.
+\subsection*{Taylor \& Extrema (Wichtig!)}
+\textbf{Extrema:} Notwendig $f'(x_0)=0$. Hinreichend:
+\begin{itemize}
+    \item $f''(x_0) > 0 \Rightarrow$ Min, $f''(x_0) < 0 \Rightarrow$ Max.
+    \item Falls $f''(x_0)=0$: Erstes $f^{(n)}(x_0) \neq 0$ suchen. $n$ gerade? Extremum. $n$ ungerade? Sattelpunkt.
+\end{itemize}
+\boxx{
+\textbf{Taylor-Formel mit Lagrange-Restglied (VL 24):}
+\[ f(x) = \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k + R_n(x) \]
+\[ R_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}, \quad \xi \text{ zw. } x, x_0 \]
+\textit{Reihen:} $e^x = \sum \frac{x^k}{k!}$, $\sin x = \sum (-1)^k \frac{x^{2k+1}}{(2k+1)!}$.
+}
+
+% ---------------------------------------------------------
+\section*{5. Integralrechnung (VL 28-31)}
+\textbf{Hauptsatz:} $\int_a^b f(x)dx = F(b) - F(a)$ mit $F' = f$.
+
+\subsection*{Integrationstechniken}
+\textbf{1. Partielle Integration:} $\int u' v = uv - \int u v'$.
+(Tipp: Wähle $v$ so, dass es beim Ableiten einfacher wird, z.B. $x \cdot e^x$).
+
+\textbf{2. Substitution:} $x = g(t) \Rightarrow dx = g'(t)dt$.
+\[ \int_{g(a)}^{g(b)} f(x) dx = \int_a^b f(g(t)) g'(t) dt \]
+
+\subsection*{Partialbruchzerlegung (PBZ) - VL 9/31}
+Ziel: Integriere rationale Funktion $R(x) = \frac{P(x)}{Q(x)}$.
+\begin{enumerate}
+    \item \textbf{Polynomdivision:} Falls Grad $P \ge$ Grad $Q$ $\to$ Rest $\frac{R(x)}{Q(x)}$.
+    \item \textbf{Nullstellen Nenner:} $Q(x)$ faktorisieren.
+    \item \textbf{Ansatz:}
+    \begin{itemize}
+        \item \textit{Einfach} $(x-x_0)$: $\frac{A}{x-x_0}$. ($\int \to A \ln|x-x_0|$)
+        \item \textit{Mehrfach} $(x-x_0)^k$: $\frac{A_1}{x-x_0} + \dots + \frac{A_k}{(x-x_0)^k}$. \\
+        ($\int \to \ln$ und Potenzen $\frac{1}{(1-k)(x-x_0)^{k-1}}$).
+        \item \textit{Komplex} $(x^2+px+q)$: $\frac{Bx+C}{x^2+px+q}$. \\
+        $\to$ Zerlegen in $\frac{2x+p}{x^2+px+q}$ ($\int \to \ln(\text{Nenner})$) und Rest ($\to \arctan$).
+    \end{itemize}
+    \item \textbf{Koeffizienten:} Zuhaltemethode (einfache Pole) oder LGS.
+\end{enumerate}
+
+\subsection*{Uneigentliche Integrale (VL 31)}
+Grenzen $\pm \infty$ oder Polstellen. Als Grenzwert berechnen!
+$\int_a^\infty f(x) dx = \lim_{b \to \infty} \int_a^b f(x) dx$.
+Wichtig: $\int_1^\infty \frac{1}{x^\alpha} dx$ konv. für $\alpha > 1$. $\int_0^1 \frac{1}{x^\alpha} dx$ konv. für $\alpha < 1$.
+\end{multicols*}
+
+\newpage
+
+% ====================================================================
+% SEITE 2: LINEARE ALGEBRA (VL 10-16, 32, 33)
+% ====================================================================
+
+\begin{center}
+    \textbf{\Large Lineare Algebra (VL 10--16, 32--33)}
+\end{center}
+
+\begin{multicols*}{2}
+
+% ---------------------------------------------------------
+\section*{6. Vektorräume (VL 10-11)}
+\textbf{Unterraum:} $U \subset V$ ist UR, wenn $0 \in U$ und abgeschlossen bzgl. $+$ und $\cdot$ (Skalar). \\
+\textbf{Linear Unabhängig:} $\sum \lambda_i v_i = 0 \Rightarrow \forall \lambda_i = 0$. \\
+\textbf{Basis:} Linear unabhängiges Erzeugendensystem. \\
+\textbf{Dimension:} Anzahl der Basisvektoren. \\
+\textbf{Koordinaten:} $v = \sum \lambda_i b_i \Rightarrow$ Koord-Vektor bzgl Basis $B$ ist $(\lambda_1, \dots, \lambda_n)^T$.
+
+% ---------------------------------------------------------
+\section*{7. Matrizen \& LGS (VL 12-14)}
+\textbf{Rang:} Anzahl linear unabhängiger Zeilen/Spalten (oder Pivot-Elemente in der Zeilenstufenform ZSF). \\
+\textbf{Lösbarkeit von $Ax=b$:}
+\begin{itemize}
+    \item \textit{Keine Lsg:} $\text{Rang}(A) < \text{Rang}(A|b)$.
+    \item \textit{Genau eine Lsg:} $\text{Rang}(A) = \text{Rang}(A|b) = n$ (Variablenanzahl).
+    \item \textit{Unendl. Lsg:} $\text{Rang}(A) = \text{Rang}(A|b) < n$. \\ (Freie Parameter = $n - \text{Rang}(A)$).
+\end{itemize}
+\textbf{Inverse:} $A \in K^{n,n}$ invertierbar $\iff \det(A) \neq 0 \iff \text{Rang}(A)=n$. \\
+Berechnung: $(A | I_n) \xrightarrow{\text{Gauss}} (I_n | A^{-1})$. \\
+Regel: $(AB)^{-1} = B^{-1}A^{-1}$, $(A^T)^{-1} = (A^{-1})^T$.
+
+% ---------------------------------------------------------
+\section*{8. Lineare Abbildungen (VL 15-16)}
+$f: V \to W$ linear, $f(\lambda u + v) = \lambda f(u) + f(v)$. \\
+\textbf{Kern:} $\text{Kern}(f) = \{v \in V \mid f(v)=0\}$. (Lösungsraum von $Ax=0$). \\
+\textbf{Bild:} $\text{Bild}(f) = \{f(v) \mid v \in V\}$. (Spaltenraum von $A$). \\
+Injektiv $\iff \text{Kern}=\{0\}$. Surjektiv $\iff \text{Bild}=W$.
+
+\boxx{
+\textbf{Dimensionsformel:}
+\[ \dim(V) = \dim(\text{Kern}(f)) + \dim(\text{Bild}(f)) \]
+Für Matrix $A \in K^{m,n}$: $n = \dim(\text{Kern}) + \text{Rang}(A)$.
+}
+
+\subsection*{Matrixdarstellung \& Basiswechsel}
+Sei $B=\{b_1,\dots,b_n\}$ Basis von $V$, $C$ Basis von $W$. \\
+Matrix $A = M_C^B(f)$: Spalte $j$ enthält Koord. von $f(b_j)$ bzgl. $C$.
+\[ f(v)_C = A \cdot v_B \]
+\textbf{Basiswechsel:} Seien $B, B'$ Basen von $V$. Transformationsmatrix $T = M_B^{B'}(id)$ (Spalten sind $b'_j$ dargestellt in $B$). \\
+Koord-Transf: $v_B = T \cdot v_{B'}$. \\
+\textbf{Matrix-Transformation:} Sei $A$ Matrix bzgl. $B$ und $A'$ Matrix bzgl. $B'$ (bei Endomorphismus $V \to V$):
+\[ A' = T^{-1} A T \quad (\text{ähnliche Matrizen}) \]
+
+% ---------------------------------------------------------
+\section*{9. Determinanten (VL 32)}
+\begin{itemize}
+    \item $2\times2$: $\det \begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad-bc$.
+    \item $3\times3$: Sarrus (Jägerzaun / Diagonalen).
+    \item \textbf{Laplace-Entwicklung:} Nach Zeile $i$ oder Spalte $j$:
+    $\det(A) = \sum_{k=1}^n (-1)^{i+k} a_{ik} \det(A_{ik})$. \\
+    (Tipp: Zeile/Spalte mit vielen Nullen wählen).
+    \item \textbf{Dreiecksmatrix:} Produkt der Diagonalelemente.
+    \item \textbf{Eigenschaften:}
+    \begin{itemize}
+        \item $\det(A) = \det(A^T)$.
+        \item $\det(AB) = \det(A)\det(B)$.
+        \item $\det(A^{-1}) = 1/\det(A)$.
+        \item Zeilentausch: Vorzeichenwechsel.
+        \item Zeile mal $\lambda$: Determinante mal $\lambda$. ($\det(\lambda A) = \lambda^n \det(A)$).
+    \end{itemize}
+\end{itemize}
+
+% ---------------------------------------------------------
+\section*{10. Eigenwerte (EW) und Eigenvektoren (EV) (VL 33)}
+Gleichung: $A v = \lambda v$ mit $v \neq 0$.
+\subsection*{Algorithmus zur Berechnung}
+\begin{enumerate}
+    \item \textbf{Charakteristisches Polynom:}
+    \[ p_A(\lambda) = \det(A - \lambda I_n) \]
+    \item \textbf{Eigenwerte bestimmen:} Nullstellen von $p_A(\lambda)$.
+    \item \textbf{Algebraische Vielfachheit $a(\lambda)$:}
+    Vielfachheit der Nullstelle im Polynom $(X-\lambda)^k$.
+    \item \textbf{Eigenraum / Eigenvektoren:}
+    Löse das homogene LGS für jedes $\lambda$:
+    \[ (A - \lambda I_n)v = 0 \]
+    Der Lösungsraum ist der Eigenraum $V_\lambda$. Basis berechnen!
+    \item \textbf{Geometrische Vielfachheit $g(\lambda)$:}
+    \[ g(\lambda) = \dim(V_\lambda) = n - \text{Rang}(A - \lambda I_n) \]
+\end{enumerate}
+
+\boxx{
+\textbf{Eigenschaften:}
+\begin{itemize}
+    \item $1 \le g(\lambda) \le a(\lambda)$.
+    \item $\sum a(\lambda_i) = n$ (im Komplexen immer).
+    \item Spur$(A) = \sum a_{ii} = \sum \lambda_i$ (Summe inkl. Vielfachheit).
+    \item $\det(A) = \prod \lambda_i$ (Produkt inkl. Vielfachheit).
+\end{itemize}
+}
+\textit{Beispiel:} $A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$. $p_A(\lambda) = (1-\lambda)^2$. EW $\lambda=1$ mit $a(1)=2$.
+$A-1I = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$. Rang=1. $g(1) = 2 - 1 = 1$. Hier gilt $g(1) < a(1)$.
+
+\end{multicols*}
+\end{document}

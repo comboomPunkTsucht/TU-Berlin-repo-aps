@@ -17,6 +17,8 @@
   - [[#relevanz-informatischer-entwicklung-ver--und-entschlüsseln-von-informationen][Relevanz informatischer Entwicklung: Ver- und Entschlüsseln von Informationen]]
 - [[#2025-12-03][2025-12-03]]
   - [[#abstraktion-einführung-in-graphentheorie][Abstraktion: Einführung in Graphentheorie]]
+- [[#2026-01-14][2026-01-14]]
+  - [[#wahrscheinlichkeit-intuition--modelle-der-welt][Wahrscheinlichkeit: Intuition & Modelle der Welt]]
 
 * 2025-10-29
 
@@ -24,7 +26,7 @@
 
 *** Was ist Wissenschaft
 
-- Austauch von Information
+-  Austauch von Information
 -  Erketnisse Reproduktierbar und Nachweisbar
 -  Wird Durch Forschung erreicht
 
@@ -125,3 +127,7 @@
 * 2025-12-03
 
 ** Abstraktion: Einführung in Graphentheorie
+
+* 2026-01-14
+
+** Wahrscheinlichkeit: Intuition & Modelle der Welt
