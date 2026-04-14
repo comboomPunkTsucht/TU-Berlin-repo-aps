@@ -65,5 +65,6 @@
   "C_Cpp.refactoring.includeHeader": "ifNeeded",
   "C_Cpp.default.recursiveIncludes.order": "depthFirst",
   "C_Cpp.autocompleteAddParentheses": true,
-  "C_Cpp.exclusionPolicy": "checkFilesAndFolders"
+  "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
+  "nuxt.isNuxtApp": false
 }

@@ -1,0 +1,10 @@
+#+title: Algorithmen und Datenstrukturen
+#+author: mcpeaps_HD
+
+
+* Table of Contents :toc:
+- [[#][]]
+
+* 
+
+
