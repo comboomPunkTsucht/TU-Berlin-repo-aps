@@ -1,0 +1,17 @@
+#+title: Analisys 1 und Lineare Algebra
+author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
+#+description:https://mcpeapsunterstrichhd.dev/linkhub
+#+startup: showeverything
+#+options: toc:2
+#+STARTUP: inlineimages
+
+* Table of Contents :toc:
+- [[#allgemeine-informationen][Allgemeine Informationen]]
+- [[#vl-1-grundlagen-mengen-und-logik][VL 1: Grundlagen: Mengen und Logik]]
+
+* Allgemeine Informationen
+
+- [[https://isis.tu-berlin.de/course/view.php?id=46899][https://isis.tu-berlin.de/course/view.php?id=46899]] 
+
+* VL 1: Grundlagen: Mengen und Logik
+
