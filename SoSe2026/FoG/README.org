@@ -1,15 +1,8 @@
-#+title: Algorithmen und Datenstrukturen
+#+title: Formal mathematische Grundlagen
 #+author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 #+description:https://mcpeapsunterstrichhd.dev/linkhub
 #+startup: showeverything
 #+options: toc:2
 #+STARTUP: inlineimages
 
-
-
 * Table of Contents :toc:
-- [[#][]]
-
-* 
-
-

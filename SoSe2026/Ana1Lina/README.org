@@ -1,5 +1,5 @@
 #+title: Analisys 1 und Lineare Algebra
-author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
+#+author: mcpeapsUnterstrichHD<mcpeaps_HD@outlook.com>
 #+description:https://mcpeapsunterstrichhd.dev/linkhub
 #+startup: showeverything
 #+options: toc:2
