@@ -25,4 +25,4 @@ jobs:
       - name: Push AlgoDat folder to TU-Berlin repo
         run: |
           git subtree split --prefix SoSe2026/AlgoDat/Hausufgaben --branch algodat-subtree
-          git push https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@git.tu-berlin.de/algodat-sose-26/mahd.git algodat-subtree:main
+          git push https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@git.tu-berlin.de/algodat-sose-26/mahd.git +algodat-subtree:main
