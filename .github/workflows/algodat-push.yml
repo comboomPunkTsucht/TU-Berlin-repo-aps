@@ -6,6 +6,13 @@ on:
       - main
     paths:
       - 'SoSe2026/AlgoDat/Hausufgaben/**'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force push (overwrites remote history)'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   push-algodat:
@@ -23,4 +30,10 @@ jobs:
 
       - name: Push AlgoDat folder to TU-Berlin repo
         run: |
-          git subtree push --prefix SoSe2026/AlgoDat/Hausufgaben https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@git.tu-berlin.de/algodat-sose-26/mahd.git main
+          FORCE_FLAG=""
+          if [ "${{ inputs.force }}" = "true" ]; then
+            FORCE_FLAG="--force"
+          fi
+
+          git subtree split --prefix SoSe2026/AlgoDat/Hausufgaben --branch algodat-subtree
+          git push https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@git.tu-berlin.de/algodat-sose-26/mahd.git algodat-subtree:main $FORCE_FLAG
