@@ -1,0 +1,26 @@
+name: Push AlgoDat Hausaufgaben to TU-Berlin
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'SoSe2026/AlgoDat/Hausufgaben/**'
+
+jobs:
+  push-algodat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git user
+        run: |
+          git config --global user.name "${{ secrets.GITLAB_NAME }}"
+          git config --global user.email "${{ secrets.GITLAB_EMAIL }}"
+
+      - name: Push AlgoDat folder to TU-Berlin repo
+        run: |
+          git subtree push --prefix SoSe2026/AlgoDat/Hausufgaben https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@git.tu-berlin.de/algodat-sose-26/mahd.git main --force
