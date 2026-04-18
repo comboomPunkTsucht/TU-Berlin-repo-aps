@@ -8,8 +8,19 @@
 
 * Table of Contents :toc:
 - [[#origin-of-this-folder][Origin of this folder]]
+- [[#nobh-origin][nob.h origin]]
+- [[#flagh-origin][flag.h origin]]
 
 * Origin of this folder
 this is a folder of my main uni repo, which is located at [[[https://github.com/comboomPunkTsucht/TU-Berlin-repo-aps][TU-Berlin-repo-aps]]], and this folder is for the homework of the course "Algorithmen und Datenstrukturen" in the summer semester of 2026. The main repo is also mirrored on gitlab at [[[https://git.tu-berlin.de/mahd/TU-Berlin-repo-aps][TU-Berlin-repo-aps on gitlab]]].
 
    full path: [[https://github.com/comboomPunkTsucht/TU-Berlin-repo-aps/tree/main/SoSe2026/AlgoDat/Hausufgaben][TU-Berlin-repo-aps/SoSe2026/AlgoDat/Hausufgaben on github]] and [[https://git.tu-berlin.de/mahd/TU-Berlin-repo-aps/-/tree/main/SoSe2026/AlgoDat/Hausufgaben?ref_type=heads][TU-Berlin-repo-aps/SoSe2026/AlgoDat/Hausufgaben on gitlab]].
+
+
+* nob.h origin
+
+[[https://github.com/tsoding/nob.h/blob/main/nob.h][nob.h]]
+
+* flag.h origin
+
+[[https://github.com/tsoding/flag.h/blob/master/flag.h][flag.h]]
