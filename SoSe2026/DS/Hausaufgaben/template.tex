@@ -1,0 +1,133 @@
+% !TEX program = lualatex
+\documentclass[12pt,a4paper]{article}
+
+% --- Sprache und Schriftarten ---
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage[ngerman]{babel}
+
+\IfFontExistsTF{CaskaydiaCove Nerd Font Propo}
+  {\setmainfont{CaskaydiaCove Nerd Font Propo}}
+  {\setmainfont{Latin Modern Roman}}
+
+% --- Mathematik und Symbole ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{nicefrac}
+
+% --- Layout und Formatierung ---
+\usepackage[left=3.5cm,right=3.5cm,top=3cm,bottom=3cm]{geometry}
+\setlength{\parindent}{0.0em}
+\allowdisplaybreaks
+
+% --- Grafiken und Links ---
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+
+% --- Kopf- und Fußzeile ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\titleline}{Diskrete Strukturen - Hausaufgabe [XX]}
+\newcommand{\subtitleline}{06.1 Konstantin Di 8 Uhr MA 544}
+\newcommand{\authorsline}{Sami Ertug Akkoca: [Matrikelnummer], Fabian Aps:525528, Max Kosec: [Matrikelnummer]}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% --- Eigene Befehle und Umgebungen ---
+\newcommand*{\QED}{\hfill\ensuremath{\square}}
+
+\newenvironment{aufgabe}[1]{\noindent\textbf{#1.\,Aufgabe}\\[.5ex]}{\ \\[1ex]}
+\newenvironment{loesung}[1]{\noindent\textbf{Lösung zu #1.\,Aufgabe}\\[.5ex]}{\vfill}
+
+
+\hypersetup{
+  pdftitle={\titleline},
+  pdfauthor={\authorsline},
+  pdfsubject={\titleline - \subtitleline},
+  pdfcreator={LuaLaTeX}
+}
+% =======================================================
+\begin{document}
+
+% --- Manuelle Titelseite ---
+\begin{titlepage}
+	\centering
+  {\Large Technische Universität Berlin\par}
+  \vspace{2cm}
+  {\Huge\bfseries \titleline\par}
+  \vspace{1.5cm}
+  {\Large \subtitleline\par}
+  \vfill
+  {\large Autoren: \authorsline\par}
+  \vspace{2cm}
+  {\large \today\par}
+\end{titlepage}
+
+% --- Inhaltsverzeichnis ---
+\tableofcontents
+\newpage
+
+% --- Aufgabenseite ---
+\section*{Aufgaben}
+\addcontentsline{toc}{section}{Aufgaben}
+
+\begin{aufgabe}{2}
+	Es sei $x\in\mathbb{R}$. Zeigen Sie, dass für alle $n\in\mathbb{N}$ gilt, dass $x^n\in\mathbb{R}$.
+\end{aufgabe}
+
+\vspace{1cm}
+
+\begin{aufgabe}{3}
+	Es sei $f:\mathbb{R} \to \mathbb{R}, x\mapsto x^2\cdot e^{-x}$. Bestimmen Sie die erste Ableitung von $f$.
+\end{aufgabe}
+
+\newpage
+
+% --- Lösungsseite ---
+\section*{Lösungen}
+\addcontentsline{toc}{section}{Lösungen}
+
+\begin{loesung}{2}
+	\textbf{Induktionsanfang:}
+	Nach Voraussetzung ist $x^1=x\in\mathbb{R}$. Damit gilt schon einmal der Induktionsanfang.\\[0.5ex]
+
+    \textit{Induktionsvoraussetzung:}
+	Sei nun $x^n\in\mathbb{R}$ für ein beliebiges aber festes $n\in\mathbb{N}$.\\[.5ex]
+
+    \underline{Induktionsschritt $(n\to n+1)$}: Ist die Induktionsvoraussetzung für $n\in\mathbb{N}$ erfüllt, so gilt, dass
+	\[
+	x^{n+1}
+	= x^n\cdot x
+	\in \mathbb{R}
+	\]
+	sein muss, da sowohl $x^n\in\mathbb{R}$ als auch $x\in\mathbb{R}$ und $\mathbb{R}$ abgeschlossen ist unter Multiplikation.
+	\QED
+\end{loesung}
+
+\newpage
+
+\begin{loesung}{3}
+	Beide Abbildungen $x\mapsto x^2$ und $x\mapsto e^{-x}$ sind differenzierbar. Daher folgt nach der Produktregel:
+	\begin{align*}
+		f'(x)
+		&= (x^2)'\cdot e^{-x} + x^2\cdot(e^{-x})'\\[2.5ex]
+		&= 2xe^{-x} + x^2(-e^{-x}) \\
+		&= (2x-x^2)e^{-x}.
+	\end{align*}
+	\QED
+\end{loesung}
+
+% Doom Emacs Lokale Variablen
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-engine: luatex
+%%% TeX-master: t
+%%% End:
+\end{document}
