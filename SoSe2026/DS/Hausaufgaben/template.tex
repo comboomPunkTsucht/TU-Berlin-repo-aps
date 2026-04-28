@@ -1,5 +1,8 @@
 % !TEX program = lualatex
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,a4paper]{report}
+\usepackage{amsmath}
+\usepackage{amssymb}   % <--- WICHTIG: % entfernt! Behebt \mathbb und \square
+\usepackage{mathtools} % <--- NEU: Behebt den \coloneqq Fehler
 
 % --- Sprache und Schriftarten ---
 \usepackage{fontspec}
@@ -10,18 +13,7 @@
   {\setmainfont{CaskaydiaCove Nerd Font Propo}}
   {\setmainfont{Latin Modern Roman}}
 
-% --- Mathematik und Symbole ---
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{bm}
-\usepackage{nicefrac}
-
-% --- Layout und Formatierung ---
-\usepackage[left=3.5cm,right=3.5cm,top=3cm,bottom=3cm]{geometry}
-\setlength{\parindent}{0.0em}
-\allowdisplaybreaks
-
-% --- Grafiken und Links ---
+% --- Grafiken ---
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{bookmark}
@@ -34,17 +26,18 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\newcommand{\titleline}{Diskrete Strukturen - Hausaufgabe [XX]}
+\newcommand{\titleline}{Diskrete Strukturen - Hausaufgabe [xx]}
 \newcommand{\subtitleline}{06.1 Konstantin Di 8 Uhr MA 544}
-\newcommand{\authorsline}{Sami Ertug Akkoca: [Matrikelnummer], Fabian Aps:525528, Max Kosec: [Matrikelnummer], Franz Juri Münzner: [Matrikelnummer]}
+\newcommand{\authorsline}{Sami Ertug Akkoca: 525993,\\Fabian Aps:525528,\\Max Kosec: 512131,\\Franz Juri Münzner: [Matrikelnummer]}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
 % --- Eigene Befehle und Umgebungen ---
 \newcommand*{\QED}{\hfill\ensuremath{\square}}
 
-\newenvironment{aufgabe}[1]{\noindent\textbf{#1.\,Aufgabe}\\[.5ex]}{\ \\[1ex]}
-\newenvironment{loesung}[1]{\noindent\textbf{Lösung zu #1.\,Aufgabe}\\[.5ex]}{\vfill}
+\newenvironment{aufgabe}[2]{\noindent\textbf{Aufgabe #1#2)}\\[.5ex]}{\ \\[1ex]}
+\newenvironment{aufgabeH}[1]{\ \\[.5ex]\noindent\textbf{Aufgabe #1)}\\[.5ex]}{\ \\[1ex]}
+\newenvironment{loesung}[2]{\noindent\textbf{Lösung zu Aufgabe #1#2)}\\[.5ex]}{\vfill}
 
 
 \hypersetup{
@@ -65,63 +58,242 @@
   \vspace{1.5cm}
   {\Large \subtitleline\par}
   \vfill
-  {\large Autoren: \authorsline\par}
+  {\large Autoren:\\\authorsline\par}
+
   \vspace{2cm}
   {\large \today\par}
 \end{titlepage}
 
 % --- Inhaltsverzeichnis ---
+\cleardoublepage
+\pagenumbering{roman}
+\setcounter{page}{2} % Startet bei 2, da Titelseite 1 ist
+
 \tableofcontents
-\newpage
+\clearpage
+
 
 % --- Aufgabenseite ---
-\section*{Aufgaben}
-\addcontentsline{toc}{section}{Aufgaben}
+\cleardoublepage
+\pagenumbering{arabic}
+% Die Seitenzahl läuft automatisch weiter (z.B. 3), wie von dir gewünscht
 
-\begin{aufgabe}{2}
-	Es sei $x\in\mathbb{R}$. Zeigen Sie, dass für alle $n\in\mathbb{N}$ gilt, dass $x^n\in\mathbb{R}$.
-\end{aufgabe}
+% 1. Kapitel für die Aufgaben erstellen
+\chapter{Aufgaben}\label{ch:aufgaben}
+%\addcontentsline{toc}{chapter}{Aufgaben} % Haupteintrag im ToC
+
+\begin{aufgabeH}{1}
+  \addcontentsline{toc}{section}{Aufgabe 1)}
+
+  Gegeben seien die beiden folgenden Mengen: \\
+   $$A := \{a \in \mathbb{N} : a < 2\}$$ \\
+   $$B := \{X \in \mathcal{P}(\mathbb{N}) : X \subseteq A\}$$.
+
+
+  \begin{aufgabe}{1}{a}
+    \addcontentsline{toc}{section}{Aufgabe 1a)}
+    Geben Sie ohne Begründung die Mengen $A$ und $B$ explizit an (d.h. Auflisten aller Elemente).
+  \end{aufgabe}
+  \begin{aufgabe}{1}{b}
+    \addcontentsline{toc}{section}{Aufgabe 1b)}
+    Geben Sie ohne Begründung die Mengen $A \cup B$ und $A \cap B$ explizit an.
+  \end{aufgabe}
+  \begin{aufgabe}{1}{c}
+    \addcontentsline{toc}{section}{Aufgabe 1c)}
+    Bestimmen Sie $|\{X \in \mathcal{P}(B) : |X| = 2\}|$.
+  \end{aufgabe}
+\end{aufgabeH}
 
 \vspace{1cm}
 
-\begin{aufgabe}{3}
-	Es sei $f:\mathbb{R} \to \mathbb{R}, x\mapsto x^2\cdot e^{-x}$. Bestimmen Sie die erste Ableitung von $f$.
-\end{aufgabe}
+\begin{aufgabeH}{2}
+  \addcontentsline{toc}{section}{Aufgabe 2)}
+  Beim Brettspiel Go werden schwarze und weiße Steine aus einem unbegrenzten Vorrat vonSteinen auf die Schnittpunkte eines Gitters aus 19 horizontalen und 19 vertikalen Liniengelegt. Wir gehen davon aus, dass links und rechts sowie oben und unten vom Spielbrettunterscheidbar ist.
+  \begin{aufgabe}{2}{a}
+    \addcontentsline{toc}{section}{Aufgabe 2a)}
+    Wieviele mögliche Farbkombinationen gibt es bei 19 Steinen ohne Beachtung der Reihenfolge?
+  \end{aufgabe}
+  \begin{aufgabe}{2}{b}
+    \addcontentsline{toc}{section}{Aufgabe 2b)}
+    Wieviele Möglichkeiten gibt es, 19 Steine auf die oberste horizontale Linie zu legen?
+  \end{aufgabe}
+  \begin{aufgabe}{2}{c}
+    \addcontentsline{toc}{section}{Aufgabe 2c)}
+    Wieviele  Möglichkeiten  gibt  es,  14  weiße  und  fünf  schwarze  Steine  auf  die  oberstehorizontale Linie zu legen?
+  \end{aufgabe}
+  \begin{aufgabe}{2}{d}
+    \addcontentsline{toc}{section}{Aufgabe 2d)}
+    Wieviele  Möglichkeiten  gibt  es,  19  schwarze  Steine  so  zu  platzieren,  dass  genau  einschwarzer Stein auf jeder horizontalen und jeder vertikalen Linie liegt?
+  \end{aufgabe}
+\end{aufgabeH}
 
-\newpage
+\vspace{1cm}
+
+\begin{aufgabeH}{3}
+  \addcontentsline{toc}{section}{Aufgabe 3)}
+  \begin{aufgabe}{3}{a}
+    \addcontentsline{toc}{section}{Aufgabe 3a)}
+    Geben Sie für die binomische Formel \\
+    $$(a+b)^{n}=\sum_{k=0}^{n}\binom{n}{k}a^{k}\cdot b^{n-k}$$ \\
+     einen Beweis mittels vollständiger Induktion an.\\
+    Hinweis: Benutzen Sie die Pascal'sche Formel $\binom{n+1}{k+1}=\binom{n}{k}+\binom{n}{k+1}$.
+  \end{aufgabe}
+  \begin{aufgabe}{3}{b}
+    \addcontentsline{toc}{section}{Aufgabe 3b)}
+    Beweisen Sie, dass $\binom{n}{k}=\binom{n}{n-k}$ für alle $0 < k < n$.
+  \end{aufgabe}
+\end{aufgabeH}
+\clearpage
+
 
 % --- Lösungsseite ---
-\section*{Lösungen}
-\addcontentsline{toc}{section}{Lösungen}
+\cleardoublepage
+% Hier hattest du bereits ein Kapitel [cite: 12]
+\chapter{Lösungen}\label{ch:loesungen}
+% Da dies ein nummeriertes Kapitel ist, erscheint es automatisch im ToC.
 
-\begin{loesung}{2}
-	\textbf{Induktionsanfang:}
-	Nach Voraussetzung ist $x^1=x\in\mathbb{R}$. Damit gilt schon einmal der Induktionsanfang.\\[0.5ex]
+\begin{loesung}{1}{a}
+  \addcontentsline{toc}{section}{Lösung zu Aufgabe 1a)}
+  $A = \{0, 1\}$ \\
+  $B = \{ \emptyset, \{0\}, \{1\}, \{0, 1\} \}$
+\end{loesung}
 
-    \textit{Induktionsvoraussetzung:}
-	Sei nun $x^n\in\mathbb{R}$ für ein beliebiges aber festes $n\in\mathbb{N}$.\\[.5ex]
+\begin{loesung}{1}{b}
+  \addcontentsline{toc}{section}{Lösung zu Aufgabe 1b)}
+  $A \cup B = \{0, 1, \emptyset, \{0\}, \{1\}, \{0, 1\}\}$ \\
+  $A \cap B = \emptyset$
+\end{loesung}
 
-    \underline{Induktionsschritt $(n\to n+1)$}: Ist die Induktionsvoraussetzung für $n\in\mathbb{N}$ erfüllt, so gilt, dass
-	\[
-	x^{n+1}
-	= x^n\cdot x
-	\in \mathbb{R}
-	\]
-	sein muss, da sowohl $x^n\in\mathbb{R}$ als auch $x\in\mathbb{R}$ und $\mathbb{R}$ abgeschlossen ist unter Multiplikation.
-	\QED
+\begin{loesung}{1}{c}
+  \addcontentsline{toc}{section}{Lösung zu Aufgabe 1c)}
+  Die Teilmengen müssen jeweils zwei Elemente beinhalten und Duplikate bei Mengen erhöhen per Definition nicht die Kardinalität. Somit wird nicht zurückgelegt. Die Reihenfolge ist ebenfalls per Definition von Mengen nicht Relevant, deshalb verwenden wir den binomischen Lehrsatz:
+  \[
+  \binom{n}{k} = \binom{4}{2} = \frac{4!}{2!(4-2)!} = 6.
+  \]
+  Somit gilt $|\{X \in \mathcal{P}(B) : |X| = 2\}| = 6$.
 \end{loesung}
 
 \newpage
 
-\begin{loesung}{3}
-	Beide Abbildungen $x\mapsto x^2$ und $x\mapsto e^{-x}$ sind differenzierbar. Daher folgt nach der Produktregel:
-	\begin{align*}
-		f'(x)
-		&= (x^2)'\cdot e^{-x} + x^2\cdot(e^{-x})'\\[2.5ex]
-		&= 2xe^{-x} + x^2(-e^{-x}) \\
-		&= (2x-x^2)e^{-x}.
-	\end{align*}
-	\QED
+\begin{loesung}{2}{a}
+  \addcontentsline{toc}{section}{Lösung zu Aufgabe 2a)}
+  Bei der Bestimmung der Farbkombinationen handelt es sich um eine ungeordnete Auswahl mit Zurücklegen (da ein unbegrenzter Vorrat an schwarzen und weißen Steinen existiert).
+
+  Gegeben sind $n=2$ Farben (Schwarz, Weiß) und $k=19$ zu ziehende Steine. Laut der Formel für Kombinationen mit Wiederholung ergibt sich:
+  \[
+  \binom{k+n-1}{k} = \binom{19+2-1}{19} = \binom{20}{19} = \binom{20}{1} = 20.
+  \]
+  Es gibt somit 20 verschiedene Farbkombinationen.
+\end{loesung}
+
+\begin{loesung}{2}{b}
+  \addcontentsline{toc}{section}{Lösung zu Aufgabe 2b)}
+  Bei dieser Teilaufgabe handelt es sich um ein Ziehen mit Beachtung der Reihenfolge und mit Zurücklegen.
+
+  Da links und rechts auf dem Spielbrett unterscheidbar sind, ist die Reihenfolge der platzierten Steine relevant. Da die Steine aus einem unbegrenzten Vorrat stammen, entspricht dies einem Ziehen mit Zurücklegen.
+
+  Auf der obersten horizontalen Linie befinden sich $k = 19$ Schnittpunkte. Für jeden dieser Punkte haben wir $n = 2$ Möglichkeiten (entweder einen schwarzen oder einen weißen Stein). Gemäß der entsprechenden Formel aus der Vorlesung berechnet sich die Anzahl der Möglichkeiten wie folgt:
+  \[
+  n^k = 2^{19} = 524.288
+  \]
+  Es gibt somit $2^{19}$ (oder $524.288$) verschiedene Möglichkeiten, die 19 Steine auf der obersten horizontalen Linie zu platzieren.
+\end{loesung}
+
+\begin{loesung}{2}{c}
+  \addcontentsline{toc}{section}{Lösung zu Aufgabe 2c)}
+  Auf der obersten horizontalen Linie gibt es genau 19 Schnittpunkte. Da wir insgesamt 19 Steine haben (14 weiße und 5 schwarze), wird jeder Punkt mit genau einem Stein besetzt.
+
+  Das Problem entspricht der Auswahl von 5 Positionen aus 19 möglichen Positionen, auf welche die schwarzen Steine gelegt werden (die restlichen 14 Positionen erhalten automatisch die weißen Steine).
+
+  Da die Positionen nur einmal besetzt werden können (ohne Zurücklegen) und die schwarzen Steine untereinander nicht unterscheidbar sind (ungeordnet), berechnet sich die Anzahl der Möglichkeiten mit dem Binomialkoeffizienten:
+  \[
+  \binom{19}{5} = \frac{19!}{5! \cdot (19-5)!} = \frac{19 \cdot 18 \cdot 17 \cdot 16 \cdot 15}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 11.628
+  \]
+  Es gibt somit 11.628 Möglichkeiten, die 14 weißen und 5 schwarzen Steine zu platzieren.
+\end{loesung}
+
+\begin{loesung}{2}{d}
+  \addcontentsline{toc}{section}{Lösung zu Aufgabe 2d)}
+  Die Bedingung lautet, dass auf jeder der 19 horizontalen und 19 vertikalen Linien exakt ein schwarzer Stein platziert werden muss. Dies entspricht einem klassischen Permutationsproblem.
+
+  Wir können das Spielfeld zeilenweise (horizontal) betrachten:
+  Für den Stein in der ersten horizontalen Linie stehen 19 vertikale Linien (Spalten) zur Verfügung. Für den Stein in der zweiten horizontalen Linie verbleiben nur noch 18 Spalten, da die Spalte des ersten Steins blockiert ist. Für die dritte Zeile sind es 17, und so setzt sich dies fort, bis für die 19. horizontale Linie exakt noch 1 Spalte übrig ist.
+
+  Mathematisch entspricht dies einer geordneten Stichprobe ohne Zurücklegen, bei der wir aus $n=19$ verfügbaren Spalten genau $k=19$ auswählen. Nach der Formel für Variationen ohne Zurücklegen ergibt sich:
+  \[
+  n^{\underline{k}} = 19^{\underline{19}} = \binom{19}{19} \cdot 19! = 19! = 121645100408832000
+  \]
+  Es gibt somit $19!$ Möglichkeiten, die schwarzen Steine entsprechend der Regeln auf dem Gitter zu verteilen.
+\end{loesung}
+
+\newpage
+
+\begin{loesung}{3}{a}
+  \addcontentsline{toc}{section}{Lösung zu Aufgabe 3a)}
+  Wir beweisen die binomische Formel mittels vollständiger Induktion über $n$.
+
+  \textbf{Induktionsanfang ($n=0$):} \\
+  Linke Seite: $(a+b)^0 = 1$. \\
+  Rechte Seite: $\sum_{k=0}^{0}\binom{0}{k}a^k b^{0-k} = \binom{0}{0}a^0b^{0-0} = 1 \cdot 1 \cdot 1 = 1$. \\
+  Da linke und rechte Seite übereinstimmen, gilt die Aussage für $n=0$.
+
+  \textbf{Induktionsvoraussetzung (IV):} \\
+  Für ein beliebiges, aber festes $n \in \mathbb{N}$ gelte: $(a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^k b^{n-k}$.
+
+  \textbf{Induktionsschritt ($n \to n+1$):} \\
+  Zu zeigen ist: $(a+b)^{n+1} = \sum_{k=0}^{n+1}\binom{n+1}{k}a^k b^{n+1-k}$.
+
+  Wir formen die linke Seite um und setzen die Induktionsvoraussetzung ein:
+  \begin{align*}
+    (a+b)^{n+1} &= (a+b) \cdot (a+b)^n \\
+    &\overset{\text{IV}}{=} (a+b) \cdot \sum_{k=0}^{n}\binom{n}{k}a^k b^{n-k} \\
+    &= a \cdot \sum_{k=0}^{n}\binom{n}{k}a^k b^{n-k} + b \cdot \sum_{k=0}^{n}\binom{n}{k}a^k b^{n-k} \\
+    &= \sum_{k=0}^{n}\binom{n}{k}a^{k+1} b^{n-k} + \sum_{k=0}^{n}\binom{n}{k}a^k b^{n+1-k}
+  \end{align*}
+  Wir spalten nun aus der ersten Summe den letzten Summanden ($k=n$) und aus der zweiten Summe den ersten Summanden ($k=0$) ab:
+  \begin{align*}
+    (a+b)^{n+1} &= \left( \sum_{k=0}^{n-1}\binom{n}{k}a^{k+1} b^{n-k} + \binom{n}{n}a^{n+1}b^0 \right) \\
+    &\quad + \left( \binom{n}{0}a^0b^{n+1} + \sum_{k=1}^{n}\binom{n}{k}a^k b^{n+1-k} \right)
+  \end{align*}
+  In der zweiten Summe führen wir eine Indexverschiebung durch ($k \to k+1$), sodass sie ebenfalls bei $0$ beginnt und bis $n-1$ läuft:
+  \begin{align*}
+    \sum_{k=1}^{n}\binom{n}{k}a^k b^{n+1-k} &= \sum_{k=0}^{n-1}\binom{n}{k+1}a^{k+1} b^{n+1-(k+1)} = \sum_{k=0}^{n-1}\binom{n}{k+1}a^{k+1} b^{n-k}
+  \end{align*}
+  Nun fassen wir die beiden Summen, die jetzt die gleichen Grenzen und Variablenexponenten haben, zusammen. Anschließend nutzen wir die Pascal'sche Formel aus dem Hinweis $\left(\binom{n}{k} + \binom{n}{k+1} = \binom{n+1}{k+1}\right)$:
+  \begin{align*}
+    (a+b)^{n+1} &= a^{n+1} + b^{n+1} + \sum_{k=0}^{n-1} \left[ \binom{n}{k} + \binom{n}{k+1} \right] a^{k+1} b^{n-k} \\
+    &= a^{n+1} + b^{n+1} + \sum_{k=0}^{n-1} \binom{n+1}{k+1} a^{k+1} b^{n-k}
+  \end{align*}
+  Um die Summe in die endgültige Form zu bringen, verschieben wir den Index wieder zurück ($k+1 \to k$, also läuft $k$ nun von $1$ bis $n$):
+  \begin{align*}
+    (a+b)^{n+1} &= a^{n+1} + b^{n+1} + \sum_{k=1}^{n} \binom{n+1}{k} a^k b^{n+1-k}
+  \end{align*}
+  Da $\binom{n+1}{0} = 1$ und $\binom{n+1}{n+1} = 1$, lassen sich $b^{n+1}$ (als Term für $k=0$) und $a^{n+1}$ (als Term für $k=n+1$) in die Summe integrieren:
+  \begin{align*}
+    (a+b)^{n+1} &= \sum_{k=0}^{n+1} \binom{n+1}{k} a^k b^{n+1-k}
+  \end{align*}
+  Damit ist der Induktionsschritt erbracht und die Formel bewiesen. \QED
+\end{loesung}
+
+\begin{loesung}{3}{b}
+  \addcontentsline{toc}{section}{Lösung zu Aufgabe 3b)}
+  Zu zeigen ist die Symmetrieeigenschaft des Binomialkoeffizienten: $\binom{n}{k} = \binom{n}{n-k}$ für alle $0 < k < n$.
+
+  Der Beweis erfolgt direkt über die Definition des Binomialkoeffizienten. Gemäß der Definition aus der Vorlesung gilt für die linke Seite:
+  \[
+  \binom{n}{k} = \frac{n!}{k! \cdot (n-k)!}
+  \]
+  Nun wenden wir exakt dieselbe Definition auf die rechte Seite der zu zeigenden Gleichung an, indem wir $k$ durch den Term $(n-k)$ ersetzen:
+  \begin{align*}
+    \binom{n}{n-k} &= \frac{n!}{(n-k)! \cdot (n - (n-k))!} \\
+    &= \frac{n!}{(n-k)! \cdot (n - n + k)!} \\
+    &= \frac{n!}{(n-k)! \cdot k!}
+  \end{align*}
+  Da die Multiplikation reeller Zahlen kommutativ ist, können wir die beiden Faktoren im Nenner einfach vertauschen:
+  \[
+  \frac{n!}{(n-k)! \cdot k!} = \frac{n!}{k! \cdot (n-k)!}
+  \]
+  Dies entspricht exakt dem Term der linken Seite und damit der Definition von $\binom{n}{k}$. Somit ist die Gleichheit gezeigt. \QED
 \end{loesung}
 
 % Doom Emacs Lokale Variablen
