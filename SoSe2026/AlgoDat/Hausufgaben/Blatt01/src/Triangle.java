@@ -1,23 +1,50 @@
-import java.util.Arrays;
 
 public class Triangle extends ConvexPolygon {
 
     public Triangle(Vector2D a, Vector2D b, Vector2D c) {
-        // TODO
+        super(new Vector2D[]{a, b, c});
     }
 
     public Triangle(Triangle triangle) {
-        // TODO
+        super(triangle.vertices);
     }
 
     @Override
     public double area() {
-        // TODO
+        // Heron's formula: area = sqrt(s(s-a)(s-b)(s-c))
+        // where s = (a+b+c)/2
+
+        Vector2D a = vertices[0];
+        Vector2D b = vertices[1];
+        Vector2D c = vertices[2];
+
+        // Calculate side lengths
+        Vector2D side1 = new Vector2D(b.getX() - a.getX(), b.getY() - a.getY());
+        Vector2D side2 = new Vector2D(c.getX() - b.getX(), c.getY() - b.getY());
+        Vector2D side3 = new Vector2D(a.getX() - c.getX(), a.getY() - c.getY());
+
+        double s1 = side1.length();
+        double s2 = side2.length();
+        double s3 = side3.length();
+
+        // Semi-perimeter
+        double s = (s1 + s2 + s3) / 2;
+
+        // Heron's formula
+        return Math.sqrt(s * (s - s1) * (s - s2) * (s - s3));
     }
 
     @Override
     public String toString() {
-        // TODO
+        StringBuilder sb = new StringBuilder("Triangle{[");
+        for (int i = 0; i < vertices.length; i++) {
+            sb.append(vertices[i].toString());
+            if (i < vertices.length - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]}");
+        return sb.toString();
     }
 
     public static void main(String[] args) {
@@ -49,4 +76,3 @@ public class Triangle extends ConvexPolygon {
          */
     }
 }
-

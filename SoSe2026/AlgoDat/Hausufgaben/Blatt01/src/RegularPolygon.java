@@ -2,23 +2,48 @@
 
 public class RegularPolygon extends ConvexPolygon {
 
-    // TODO
+    private int N;
+    private double radius;
 
     public RegularPolygon(int N, double radius) {
-        // TODO
+        super(createVertices(N, radius));
+        this.N = N;
+        this.radius = radius;
     }
 
     public RegularPolygon(RegularPolygon polygon) {
-        // TODO
+        super(polygon.vertices);
+        this.N = polygon.N;
+        this.radius = polygon.radius;
+        // Note: This is a shallow copy of vertices (both objects reference same Vector2D objects)
+        // This is intentional - changes to polygon won't affect this copy because resize() updates vertices
+    }
+
+    private static Vector2D[] createVertices(int N, double radius) {
+        Vector2D[] vertices = new Vector2D[N];
+        double angleStep = 2 * Math.PI / N;
+
+        for (int i = 0; i < N; i++) {
+            double angle = i * angleStep;
+            double x = radius * Math.cos(angle);
+            double y = radius * Math.sin(angle);
+            vertices[i] = new Vector2D(x, y);
+        }
+
+        return vertices;
     }
 
     public void resize(double newradius) {
-        // TODO
+        this.radius = newradius;
+        Vector2D[] newVertices = createVertices(N, newradius);
+        for (int i = 0; i < N; i++) {
+            this.vertices[i] = newVertices[i];
+        }
     }
 
     @Override
     public String toString() {
-        // TODO
+        return "RegularPolygon{N=" + N + ", radius=" + radius + "}";
     }
 
     public static void main(String[] args) {
@@ -42,4 +67,3 @@ public class RegularPolygon extends ConvexPolygon {
          */
     }
 }
-

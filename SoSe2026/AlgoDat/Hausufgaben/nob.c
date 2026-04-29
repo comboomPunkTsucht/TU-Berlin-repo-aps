@@ -65,6 +65,61 @@ int blatt01( ) {
 
   nob_log( NOB_INFO, "######## Aufgabe 3: Vererbung ########" );
 
+  // Compile all source files in src/
+  nob_log( NOB_INFO, "kompiliere alle Aufgabe 3 Java-Dateien" );
+  JAVAC( );
+  cmd_append( &cmd, "src/Shape.java" );
+  cmd_append( &cmd, "src/Vector2D.java" );
+  cmd_append( &cmd, "src/Polygon.java" );
+  cmd_append( &cmd, "src/ConvexPolygon.java" );
+  cmd_append( &cmd, "src/Triangle.java" );
+  cmd_append( &cmd, "src/Tetragon.java" );
+  cmd_append( &cmd, "src/RegularPolygon.java" );
+  if ( !cmd_run( &cmd ) ) {
+    nob_log( NOB_ERROR, "Kompilierung der Aufgabe 3 Dateien fehlgeschlagen" );
+    return 1;
+  }
+
+  nob_log( NOB_INFO, "führe Triangle main aus" );
+  JAVA( );
+  cmd_append( &cmd, "-cp" );
+  cmd_append( &cmd, "src" );
+  cmd_append( &cmd, "Triangle" );
+  if ( !cmd_run( &cmd ) ) {
+    nob_log( NOB_ERROR, "Triangle main fehlgeschlagen" );
+    return 1;
+  }
+
+  nob_log( NOB_INFO, "führe RegularPolygon main aus" );
+  JAVA( );
+  cmd_append( &cmd, "-cp" );
+  cmd_append( &cmd, "src" );
+  cmd_append( &cmd, "RegularPolygon" );
+  if ( !cmd_run( &cmd ) ) {
+    nob_log( NOB_ERROR, "RegularPolygon main fehlgeschlagen" );
+    return 1;
+  }
+
+  nob_log( NOB_INFO, "######## Aufgabe 3: Unit Tests (via Maven) ########" );
+
+  // Go back to parent directory for Maven
+  set_current_dir( ".." );
+
+  nob_log( NOB_INFO, "führe Maven Tests für Blatt01 aus" );
+  Nob_Cmd mvn_cmd = { 0 };
+  cmd_append( &mvn_cmd, "mvn" );
+  cmd_append( &mvn_cmd, "clean" );
+  cmd_append( &mvn_cmd, "test" );
+  cmd_append( &mvn_cmd, "-pl" );
+  cmd_append( &mvn_cmd, "Blatt01" );
+  cmd_append( &mvn_cmd, "-q" );
+  if ( !cmd_run( &mvn_cmd ) ) {
+    nob_log( NOB_ERROR, "Maven Tests fehlgeschlagen" );
+    return 1;
+  }
+
+  nob_log( NOB_INFO, "Blatt01 erfolgreich abgeschlossen (Aufgabe 2 & 3)" );
+
   return 0;
 }
 
