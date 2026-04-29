@@ -36,5 +36,5 @@ jobs:
           git config user.email "${{ secrets.GITLAB_EMAIL }}"
           git add .
           MAIN_COMMIT_MSG=$(cd .. && git log -1 --pretty=%B)
-          git commit -m "Update from GitHub - $(date +%Y-%m-%d\ %H:%M:%S): $MAIN_COMMIT_MSG" || echo "Keine Änderungen"
+          git commit --allow-empty -m "Update from GitHub - $(date +%Y-%m-%d\ %H:%M:%S): $MAIN_COMMIT_MSG"
           git push origin main
