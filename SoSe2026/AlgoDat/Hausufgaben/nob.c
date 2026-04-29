@@ -123,6 +123,17 @@ int blatt01( ) {
   return 0;
 }
 
+int blatt02( ) {
+  nob_log( NOB_INFO, "Blatt02:" );
+  nob_log( NOB_INFO, "gehe zu den Aufgabn von Blatt02" );
+  set_current_dir( "Blatt02" );
+
+  // Hier können die Aufgaben von Blatt02 implementiert werden
+  UNREACHABLE( "Blatt02 ist noch nicht implementiert" );
+
+  return 0;
+}
+
 int main( int argc, char **argv ) {
   NOB_GO_REBUILD_URSELF( argc, argv );
 
@@ -142,11 +153,16 @@ int main( int argc, char **argv ) {
     if ( blatt01( ) ) {
       return 1;
     }
+    if ( blatt02( ) ) {
+      return 1;
+    }
 
   } else if ( sv_eq( blatt, sv_from_cstr( "Blatt00" ) ) ) {
     return blatt00( );
   } else if ( sv_eq( blatt, sv_from_cstr( "Blatt01" ) ) ) {
     return blatt01( );
+  } else if ( sv_eq( blatt, sv_from_cstr( "Blatt02" ) ) ) {
+    return blatt02( );
   } else {
     UNREACHABLE( "keine gültige Aufgabe angegeben" );
   }
