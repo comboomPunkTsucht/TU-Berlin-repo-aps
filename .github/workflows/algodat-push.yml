@@ -24,4 +24,17 @@ jobs:
 
       - name: Push AlgoDat folder to TU-Berlin repo
         run: |
-          git subtree push --prefix SoSe2026/AlgoDat/Hausufgaben https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@git.tu-berlin.de/algodat-sose-26/mahd.git main
+          # Clone GitLab-Repo mit existierender History
+          git clone https://${{ secrets.GITLAB_USERNAME }}:${{ secrets.GITLAB_TOKEN }}@git.tu-berlin.de/algodat-sose-26/mahd.git gitlab-temp
+
+          # Copy aktuellen Subfolder
+          cp -r SoSe2026/AlgoDat/Hausufgaben/* gitlab-temp/
+
+          # Commit & Push mit Message vom Haupt-Repo
+          cd gitlab-temp
+          git config user.name "${{ secrets.GITLAB_NAME }}"
+          git config user.email "${{ secrets.GITLAB_EMAIL }}"
+          git add .
+          MAIN_COMMIT_MSG=$(cd .. && git log -1 --pretty=%B)
+          git commit -m "Update from GitHub: $MAIN_COMMIT_MSG" || echo "Keine Änderungen"
+          git push origin main
