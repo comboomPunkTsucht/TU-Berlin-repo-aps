@@ -35,9 +35,10 @@
 % --- Eigene Befehle und Umgebungen ---
 \newcommand*{\QED}{\hfill\ensuremath{\square}}
 
-\newenvironment{aufgabe}[2]{\noindent\textbf{Aufgabe #1#2)}\\[.5ex]}{\ \\[1ex]}
-\newenvironment{aufgabeH}[1]{\ \\[.5ex]\noindent\textbf{Aufgabe #1)}\\[.5ex]}{\ \\[1ex]}
-\newenvironment{loesung}[2]{\noindent\textbf{Lösung zu Aufgabe #1#2)}\\[.5ex]}{\vfill}
+\newenvironment{aufgabe}[2]{\noindent\textbf{Aufgabe #1#2)}\\\addcontentsline{toc}{subsection}{Aufgabe #1#2)}\\[.5ex]}{\ \\[1ex]}
+\newenvironment{aufgabeH}[1]{\ \\[.5ex]\noindent\textbf{Aufgabe #1)}\\\addcontentsline{toc}{section}{Aufgabe #1)}\\[.5ex]}{\ \\[1ex] \vspace{1cm}}
+\newenvironment{loesung}[2]{\noindent\textbf{Lösung zu Aufgabe #1#2)}\\\addcontentsline{toc}{subsection}{Lösung zu Aufgabe #1#2)}\\[.5ex]}{\vfill}
+\newenvironment{loesungH}[1]{\noindent\textbf{Lösung zu Aufgabe #1)}\\\addcontentsline{toc}{section}{Lösung zu Aufgabe #1)}\\[.5ex]}{\vfill\newpage}
 
 
 \hypersetup{
@@ -67,7 +68,7 @@
 % --- Inhaltsverzeichnis ---
 \newpage
 \pagenumbering{roman}
-\setcounter{page}{2} % Startet bei 2, da Titelseite 1 ist
+\setcounter{page}{1} % Startet bei 2, da Titelseite 1 ist
 
 \tableofcontents
 \clearpage
@@ -76,6 +77,7 @@
 % --- Aufgabenseite ---
 \newpage
 \pagenumbering{arabic}
+\setcounter{page}{1}
 % Die Seitenzahl läuft automatisch weiter (z.B. 3), wie von dir gewünscht
 
 % 1. Kapitel für die Aufgaben erstellen
@@ -83,56 +85,41 @@
 %\addcontentsline{toc}{chapter}{Aufgaben} % Haupteintrag im ToC
 
 \begin{aufgabeH}{1}
-  \addcontentsline{toc}{section}{Aufgabe 1)}
 
   Gegeben seien die beiden folgenden Mengen: \\
-   $$A := \{a \in \mathbb{N} : a < 2\}$$ \\
+   $$A := \{a \in \mathbb{N} : a < 2\}$$
    $$B := \{X \in \mathcal{P}(\mathbb{N}) : X \subseteq A\}$$.
 
 
   \begin{aufgabe}{1}{a}
-    \addcontentsline{toc}{section}{Aufgabe 1a)}
     Geben Sie ohne Begründung die Mengen $A$ und $B$ explizit an (d.h. Auflisten aller Elemente).
   \end{aufgabe}
   \begin{aufgabe}{1}{b}
-    \addcontentsline{toc}{section}{Aufgabe 1b)}
     Geben Sie ohne Begründung die Mengen $A \cup B$ und $A \cap B$ explizit an.
   \end{aufgabe}
   \begin{aufgabe}{1}{c}
-    \addcontentsline{toc}{section}{Aufgabe 1c)}
     Bestimmen Sie $|\{X \in \mathcal{P}(B) : |X| = 2\}|$.
   \end{aufgabe}
 \end{aufgabeH}
 
-\vspace{1cm}
-
 \begin{aufgabeH}{2}
-  \addcontentsline{toc}{section}{Aufgabe 2)}
   Beim Brettspiel Go werden schwarze und weiße Steine aus einem unbegrenzten Vorrat vonSteinen auf die Schnittpunkte eines Gitters aus 19 horizontalen und 19 vertikalen Liniengelegt. Wir gehen davon aus, dass links und rechts sowie oben und unten vom Spielbrettunterscheidbar ist.
   \begin{aufgabe}{2}{a}
-    \addcontentsline{toc}{section}{Aufgabe 2a)}
     Wieviele mögliche Farbkombinationen gibt es bei 19 Steinen ohne Beachtung der Reihenfolge?
   \end{aufgabe}
   \begin{aufgabe}{2}{b}
-    \addcontentsline{toc}{section}{Aufgabe 2b)}
     Wieviele Möglichkeiten gibt es, 19 Steine auf die oberste horizontale Linie zu legen?
   \end{aufgabe}
   \begin{aufgabe}{2}{c}
-    \addcontentsline{toc}{section}{Aufgabe 2c)}
     Wieviele  Möglichkeiten  gibt  es,  14  weiße  und  fünf  schwarze  Steine  auf  die  oberstehorizontale Linie zu legen?
   \end{aufgabe}
   \begin{aufgabe}{2}{d}
-    \addcontentsline{toc}{section}{Aufgabe 2d)}
     Wieviele  Möglichkeiten  gibt  es,  19  schwarze  Steine  so  zu  platzieren,  dass  genau  einschwarzer Stein auf jeder horizontalen und jeder vertikalen Linie liegt?
   \end{aufgabe}
 \end{aufgabeH}
 
-\vspace{1cm}
-
 \begin{aufgabeH}{3}
-  \addcontentsline{toc}{section}{Aufgabe 3)}
   \begin{aufgabe}{3}{a}
-    \addcontentsline{toc}{section}{Aufgabe 3a)}
     Geben Sie für die binomische Formel \\
     $$(a+b)^{n}=\sum_{k=0}^{n}\binom{n}{k}a^{k}\cdot b^{n-k}$$ \\
      einen Beweis mittels vollständiger Induktion an.\\
@@ -151,21 +138,18 @@
 % Hier hattest du bereits ein Kapitel [cite: 12]
 \chapter{Lösungen}\label{ch:loesungen}
 % Da dies ein nummeriertes Kapitel ist, erscheint es automatisch im ToC.
-
+\begin{loesungH}{1}
 \begin{loesung}{1}{a}
-  \addcontentsline{toc}{section}{Lösung zu Aufgabe 1a)}
   $A = \{0, 1\}$ \\
   $B = \{ \emptyset, \{0\}, \{1\}, \{0, 1\} \}$
 \end{loesung}
 
 \begin{loesung}{1}{b}
-  \addcontentsline{toc}{section}{Lösung zu Aufgabe 1b)}
   $A \cup B = \{0, 1, \emptyset, \{0\}, \{1\}, \{0, 1\}\}$ \\
   $A \cap B = \emptyset$
 \end{loesung}
 
 \begin{loesung}{1}{c}
-  \addcontentsline{toc}{section}{Lösung zu Aufgabe 1c)}
   Die Teilmengen müssen jeweils zwei Elemente beinhalten und Duplikate bei Mengen erhöhen per Definition nicht die Kardinalität. Somit wird nicht zurückgelegt. Die Reihenfolge ist ebenfalls per Definition von Mengen nicht Relevant, deshalb verwenden wir den binomischen Lehrsatz:
   \[
   \binom{n}{k} = \binom{4}{2} = \frac{4!}{2!(4-2)!} = 6.
@@ -173,10 +157,10 @@
   Somit gilt $|\{X \in \mathcal{P}(B) : |X| = 2\}| = 6$.
 \end{loesung}
 
-\newpage
+\end{loesungH}
 
+\begin{loesungH}{2}
 \begin{loesung}{2}{a}
-  \addcontentsline{toc}{section}{Lösung zu Aufgabe 2a)}
   Bei der Bestimmung der Farbkombinationen handelt es sich um eine ungeordnete Auswahl mit Zurücklegen (da ein unbegrenzter Vorrat an schwarzen und weißen Steinen existiert).
 
   Gegeben sind $n=2$ Farben (Schwarz, Weiß) und $k=19$ zu ziehende Steine. Laut der Formel für Kombinationen mit Wiederholung ergibt sich:
@@ -187,7 +171,6 @@
 \end{loesung}
 
 \begin{loesung}{2}{b}
-  \addcontentsline{toc}{section}{Lösung zu Aufgabe 2b)}
   Bei dieser Teilaufgabe handelt es sich um ein Ziehen mit Beachtung der Reihenfolge und mit Zurücklegen.
 
   Da links und rechts auf dem Spielbrett unterscheidbar sind, ist die Reihenfolge der platzierten Steine relevant. Da die Steine aus einem unbegrenzten Vorrat stammen, entspricht dies einem Ziehen mit Zurücklegen.
@@ -200,7 +183,6 @@
 \end{loesung}
 
 \begin{loesung}{2}{c}
-  \addcontentsline{toc}{section}{Lösung zu Aufgabe 2c)}
   Auf der obersten horizontalen Linie gibt es genau 19 Schnittpunkte. Da wir insgesamt 19 Steine haben (14 weiße und 5 schwarze), wird jeder Punkt mit genau einem Stein besetzt.
 
   Das Problem entspricht der Auswahl von 5 Positionen aus 19 möglichen Positionen, auf welche die schwarzen Steine gelegt werden (die restlichen 14 Positionen erhalten automatisch die weißen Steine).
@@ -213,7 +195,6 @@
 \end{loesung}
 
 \begin{loesung}{2}{d}
-  \addcontentsline{toc}{section}{Lösung zu Aufgabe 2d)}
   Die Bedingung lautet, dass auf jeder der 19 horizontalen und 19 vertikalen Linien exakt ein schwarzer Stein platziert werden muss. Dies entspricht einem klassischen Permutationsproblem.
 
   Wir können das Spielfeld zeilenweise (horizontal) betrachten:
@@ -226,10 +207,11 @@
   Es gibt somit $19!$ Möglichkeiten, die schwarzen Steine entsprechend der Regeln auf dem Gitter zu verteilen.
 \end{loesung}
 
-\newpage
+\end{loesungH}
+
+\begin{loesungH}{3}
 
 \begin{loesung}{3}{a}
-  \addcontentsline{toc}{section}{Lösung zu Aufgabe 3a)}
   Wir beweisen die binomische Formel mittels vollständiger Induktion über $n$.
 
   \textbf{Induktionsanfang ($n=0$):} \\
@@ -276,7 +258,6 @@
 \end{loesung}
 
 \begin{loesung}{3}{b}
-  \addcontentsline{toc}{section}{Lösung zu Aufgabe 3b)}
   Zu zeigen ist die Symmetrieeigenschaft des Binomialkoeffizienten: $\binom{n}{k} = \binom{n}{n-k}$ für alle $0 < k < n$.
 
   Der Beweis erfolgt direkt über die Definition des Binomialkoeffizienten. Gemäß der Definition aus der Vorlesung gilt für die linke Seite:
@@ -295,6 +276,7 @@
   \]
   Dies entspricht exakt dem Term der linken Seite und damit der Definition von $\binom{n}{k}$. Somit ist die Gleichheit gezeigt. \QED
 \end{loesung}
+\end{loesungH}
 
 % Doom Emacs Lokale Variablen
 %%% Local Variables:
