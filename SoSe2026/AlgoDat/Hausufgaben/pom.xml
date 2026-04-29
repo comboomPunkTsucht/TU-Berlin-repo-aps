@@ -16,6 +16,7 @@
     <modules>
         <module>Blatt00</module>
         <module>Blatt01</module>
+        <module>Blatt02</module>
     </modules>
 
     <properties>
