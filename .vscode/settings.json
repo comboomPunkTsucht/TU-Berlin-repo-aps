@@ -66,5 +66,6 @@
   "C_Cpp.default.recursiveIncludes.order": "depthFirst",
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
-  "nuxt.isNuxtApp": false
+  "nuxt.isNuxtApp": false,
+  "java.configuration.updateBuildConfiguration": "automatic"
 }
