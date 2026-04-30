@@ -35,9 +35,9 @@
 % --- Eigene Befehle und Umgebungen ---
 \newcommand*{\QED}{\hfill\ensuremath{\square}}
 
-\newenvironment{aufgabe}[2]{\noindent\textbf{Aufgabe #1#2)}\\\addcontentsline{toc}{subsection}{Aufgabe #1#2)}\\[.5ex]}{\ \\[1ex]}
+\newenvironment{aufgabe}[2]{\indent\textbf{Aufgabe #1#2)}\\\addcontentsline{toc}{subsection}{Aufgabe #1#2)}\\[.5ex]}{\ \\[1ex]}
 \newenvironment{aufgabeH}[1]{\ \\[.5ex]\noindent\textbf{Aufgabe #1)}\\\addcontentsline{toc}{section}{Aufgabe #1)}\\[.5ex]}{\ \\[1ex] \vspace{1cm}}
-\newenvironment{loesung}[2]{\noindent\textbf{Lösung zu Aufgabe #1#2)}\\\addcontentsline{toc}{subsection}{Lösung zu Aufgabe #1#2)}\\[.5ex]}{\vfill}
+\newenvironment{loesung}[2]{\indent\textbf{Lösung zu Aufgabe #1#2)}\\\addcontentsline{toc}{subsection}{Lösung zu Aufgabe #1#2)}\\[.5ex]}{\vfill}
 \newenvironment{loesungH}[1]{\noindent\textbf{Lösung zu Aufgabe #1)}\\\addcontentsline{toc}{section}{Lösung zu Aufgabe #1)}\\[.5ex]}{\vfill\newpage}
 
 
@@ -88,8 +88,12 @@
 \begin{aufgabeH}{1}
 
   Gegeben seien die beiden folgenden Mengen: \\
-   $$A := \{a \in \mathbb{N} : a < 2\}$$
-   $$B := \{X \in \mathcal{P}(\mathbb{N}) : X \subseteq A\}$$.
+   \[
+   A := \{a \in \mathbb{N} : a < 2\}
+   \]
+   \[
+   B := \{X \in \mathcal{P}(\mathbb{N}) : X \subseteq A\}
+   \].
 
 
   \begin{aufgabe}{1}{a}
@@ -104,7 +108,7 @@
 \end{aufgabeH}
 
 \begin{aufgabeH}{2}
-  Beim Brettspiel Go werden schwarze und weiße Steine aus einem unbegrenzten Vorrat vonSteinen auf die Schnittpunkte eines Gitters aus 19 horizontalen und 19 vertikalen Liniengelegt. Wir gehen davon aus, dass links und rechts sowie oben und unten vom Spielbrettunterscheidbar ist.
+  Beim Brettspiel Go werden schwarze und weiße Steine aus einem unbegrenzten Vorrat von Steinen auf die Schnittpunkte eines Gitters aus 19 horizontalen und 19 vertikalen Linien gelegt. Wir gehen davon aus, dass links und rechts sowie oben und unten vom Spielbrett unterscheidbar sind.
   \begin{aufgabe}{2}{a}
     Wieviele mögliche Farbkombinationen gibt es bei 19 Steinen ohne Beachtung der Reihenfolge?
   \end{aufgabe}
@@ -112,17 +116,19 @@
     Wieviele Möglichkeiten gibt es, 19 Steine auf die oberste horizontale Linie zu legen?
   \end{aufgabe}
   \begin{aufgabe}{2}{c}
-    Wieviele  Möglichkeiten  gibt  es,  14  weiße  und  fünf  schwarze  Steine  auf  die  oberstehorizontale Linie zu legen?
+    Wieviele Möglichkeiten gibt es, 14 weiße und fünf schwarze Steine auf die oberste horizontale Linie zu legen?
   \end{aufgabe}
   \begin{aufgabe}{2}{d}
-    Wieviele  Möglichkeiten  gibt  es,  19  schwarze  Steine  so  zu  platzieren,  dass  genau  einschwarzer Stein auf jeder horizontalen und jeder vertikalen Linie liegt?
+    Wieviele Möglichkeiten gibt es, 19 schwarze Steine so zu platzieren, dass genau ein schwarzer Stein auf jeder horizontalen und jeder vertikalen Linie liegt?
   \end{aufgabe}
 \end{aufgabeH}
 
 \begin{aufgabeH}{3}
   \begin{aufgabe}{3}{a}
     Geben Sie für die binomische Formel \\
-    $$(a+b)^{n}=\sum_{k=0}^{n}\binom{n}{k}a^{k}\cdot b^{n-k}$$ \\
+    \[
+    (a+b)^{n}=\sum_{k=0}^{n}\binom{n}{k}a^{k}\cdot b^{n-k}
+    \] \\
      einen Beweis mittels vollständiger Induktion an.\\
     Hinweis: Benutzen Sie die Pascal'sche Formel $\binom{n+1}{k+1}=\binom{n}{k}+\binom{n}{k+1}$.
   \end{aufgabe}
@@ -141,17 +147,25 @@
 % Da dies ein nummeriertes Kapitel ist, erscheint es automatisch im ToC.
 \begin{loesungH}{1}
 \begin{loesung}{1}{a}
-  $A = \{0, 1\}$ \\
-  $B = \{ \emptyset, \{0\}, \{1\}, \{0, 1\} \}$
+  \[
+    A = \{0, 1\}
+  \]
+  \[
+    B = \{ \emptyset, \{0\}, \{1\}, \{0, 1\} \}
+  \]
 \end{loesung}
 
 \begin{loesung}{1}{b}
-  $A \cup B = \{0, 1, \emptyset, \{0\}, \{1\}, \{0, 1\}\}$ \\
-  $A \cap B = \emptyset$
+  \[
+    A \cup B = \{0, 1, \emptyset, \{0\}, \{1\}, \{0, 1\}\}
+  \]
+  \[
+    A \cap B = \emptyset
+  \]
 \end{loesung}
 
 \begin{loesung}{1}{c}
-  Die Teilmengen müssen jeweils zwei Elemente beinhalten und Duplikate bei Mengen erhöhen per Definition nicht die Kardinalität. Somit wird nicht zurückgelegt. Die Reihenfolge ist ebenfalls per Definition von Mengen nicht Relevant, deshalb verwenden wir den binomischen Lehrsatz:
+  Die Teilmengen müssen jeweils zwei Elemente beinhalten und Duplikate bei Mengen erhöhen per Definition nicht die Kardinalität. Somit wird nicht zurückgelegt. Die Reihenfolge ist ebenfalls per Definition von Mengen nicht relevant, deshalb verwenden wir den binomischen Lehrsatz:
   \[
   \binom{n}{k} = \binom{4}{2} = \frac{4!}{2!(4-2)!} = 6.
   \]
@@ -162,9 +176,11 @@
 
 \begin{loesungH}{2}
 \begin{loesung}{2}{a}
-  Bei der Bestimmung der Farbkombinationen handelt es sich um eine ungeordnete Auswahl mit Zurücklegen (da ein unbegrenzter Vorrat an schwarzen und weißen Steinen existiert).
+  Es existiert ein unbegrenzter Vorrat an schwarzen und weißen Steinen, deswegen handelt es sich um eine ungeordnete Auswahl mit Zurücklegen.
+  % Bei der Bestimmung der Farbkombinationen handelt es sich um eine ungeordnete Auswahl mit Zurücklegen (da ein unbegrenzter Vorrat an schwarzen und weißen Steinen existiert).
 
-  Gegeben sind $n=2$ Farben (Schwarz, Weiß) und $k=19$ zu ziehende Steine. Laut der Formel für Kombinationen mit Wiederholung ergibt sich:
+  Es stehen zwei Farben ($n=2$) und 19 Steine ($k=19$) zur Auswahl. Laut der Formel für Kombinationen mit Wiederholung ergibt sich:
+  % Gegeben sind $n=2$ Farben (Schwarz, Weiß) und $k=19$ zu ziehende Steine. Laut der Formel für Kombinationen mit Wiederholung ergibt sich:
   \[
   \binom{k+n-1}{k} = \binom{19+2-1}{19} = \binom{20}{19} = \binom{20}{1} = 20.
   \]
@@ -172,38 +188,36 @@
 \end{loesung}
 
 \begin{loesung}{2}{b}
-  Bei dieser Teilaufgabe handelt es sich um ein Ziehen mit Beachtung der Reihenfolge und mit Zurücklegen.
+  % Bei dieser Teilaufgabe handelt es sich um ein Ziehen mit Beachtung der Reihenfolge und mit Zurücklegen.
 
-  Da links und rechts auf dem Spielbrett unterscheidbar sind, ist die Reihenfolge der platzierten Steine relevant. Da die Steine aus einem unbegrenzten Vorrat stammen, entspricht dies einem Ziehen mit Zurücklegen.
+  Da links und rechts auf dem Spielbrett unterscheidbar sind, ist die Reihenfolge der platzierten Steine relevant. Da die Steine aus einem unbegrenzten Vorrat stammen, entspricht dies einem Ziehen mit Zurücklegen. Es handelt sich um also ein Ziehen mit Beachtung der Reihenfolge und mit Zurücklegen.
 
-  Auf der obersten horizontalen Linie befinden sich $k = 19$ Schnittpunkte. Für jeden dieser Punkte haben wir $n = 2$ Möglichkeiten (entweder einen schwarzen oder einen weißen Stein). Gemäß der entsprechenden Formel aus der Vorlesung berechnet sich die Anzahl der Möglichkeiten wie folgt:
+  An der horizontalen Linie befinden sich $k = 19$ Schnittpunkte. Für jeden dieser Punkte stehen $n = 2$ Möglichkeiten zur Verfügung (weiß oder schwarz). Laut der Matrix aus dem Skript berechnet sich die Anzahl der Möglichkeiten als:
   \[
   n^k = 2^{19} = 524.288
   \]
-  Es gibt somit $2^{19}$ (oder $524.288$) verschiedene Möglichkeiten, die 19 Steine auf der obersten horizontalen Linie zu platzieren.
+  Es existiert somit $2^{19}$ (oder $524.288$) verschiedene Möglichkeiten, die 19 Steine auf der obersten horizontalen Linie zu platzieren.
 \end{loesung}
 
 \begin{loesung}{2}{c}
-  Auf der obersten horizontalen Linie gibt es genau 19 Schnittpunkte. Da wir insgesamt 19 Steine haben (14 weiße und 5 schwarze), wird jeder Punkt mit genau einem Stein besetzt.
+  Auf der obersten horizontalen Linie gibt es 19 Schnittpunkte. Da wir insgesamt 19 Steine haben (14 weiße und 5 schwarze), wird jeder Punkt mit genau einem Stein besetzt.
 
-  Das Problem entspricht der Auswahl von 5 Positionen aus 19 möglichen Positionen, auf welche die schwarzen Steine gelegt werden (die restlichen 14 Positionen erhalten automatisch die weißen Steine).
+  Das Problem entspricht der Auswahl von 5 Positionen aus 19 möglichen Positionen, auf welche die schwarzen Steine gelegt werden. Die restlichen 14 Positionen erhalten automatisch die weißen Steine.
 
   Da die Positionen nur einmal besetzt werden können (ohne Zurücklegen) und die schwarzen Steine untereinander nicht unterscheidbar sind (ungeordnet), berechnet sich die Anzahl der Möglichkeiten mit dem Binomialkoeffizienten:
   \[
-  \binom{19}{5} = \frac{19!}{5! \cdot (19-5)!} = \frac{19 \cdot 18 \cdot 17 \cdot 16 \cdot 15}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 11.628
+  % \binom{19}{5} = \frac{19!}{5! \cdot (19-5)!} = \frac{19 \cdot 18 \cdot 17 \cdot 16 \cdot 15}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 11.628
+  \binom{19}{5} = \frac{19!}{5! \cdot (19-5)!} = 11.628
   \]
   Es gibt somit 11.628 Möglichkeiten, die 14 weißen und 5 schwarzen Steine zu platzieren.
 \end{loesung}
 
 \begin{loesung}{2}{d}
-  Die Bedingung lautet, dass auf jeder der 19 horizontalen und 19 vertikalen Linien exakt ein schwarzer Stein platziert werden muss. Dies entspricht einem klassischen Permutationsproblem.
+  Die Bedingung lautet, dass auf jeder der 19 horizontalen und 19 vertikalen Linien exakt ein schwarzer Stein platziert werden muss. Dies entspricht dem klassischen Permutationsproblem.
 
-  Wir können das Spielfeld zeilenweise (horizontal) betrachten:
-  Für den Stein in der ersten horizontalen Linie stehen 19 vertikale Linien (Spalten) zur Verfügung. Für den Stein in der zweiten horizontalen Linie verbleiben nur noch 18 Spalten, da die Spalte des ersten Steins blockiert ist. Für die dritte Zeile sind es 17, und so setzt sich dies fort, bis für die 19. horizontale Linie exakt noch 1 Spalte übrig ist.
-
-  Mathematisch entspricht dies einer geordneten Stichprobe ohne Zurücklegen, bei der wir aus $n=19$ verfügbaren Spalten genau $k=19$ auswählen. Nach der Formel für Variationen ohne Zurücklegen ergibt sich:
+  Dadurch können wir das Spielfeld zeilenweise horizontal betrachten. Für den Stein in der ersten horizontalen Linie stehen 19 vertikale Linien (Spalten) zur Verfügung. Für den Stein in der zweiten horizontalen Linie verbleiben nur noch 18 Spalten, da die Spalte des ersten Steins blockiert ist. Für die dritte Zeile sind es 17, und so setzt sich dies fort, bis für die 19. horizontale Linie exakt noch 1 Spalte übrig ist. Mathematisch entspricht dies einer geordneten Stichprobe ohne Zurücklegen, bei der wir aus $n=19$ verfügbaren Spalten genau $k=19$ auswählen. Nach der Formel für Variationen ohne Zurücklegen ergibt sich:
   \[
-  n^{\underline{k}} = 19^{\underline{19}} = \binom{19}{19} \cdot 19! = 19! = 121645100408832000
+  n^{\underline{k}} = 19^{\underline{19}} = \binom{19}{19} \cdot 19! = 19! %= 121.645.100.408.832.000
   \]
   Es gibt somit $19!$ Möglichkeiten, die schwarzen Steine entsprechend der Regeln auf dem Gitter zu verteilen.
 \end{loesung}
@@ -286,3 +300,4 @@
 %%% TeX-master: t
 %%% End:
 \end{document}
+% Joe Biden
