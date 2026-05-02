@@ -32,34 +32,22 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% --- Eigene Befehle und Umgebungen ---
-\newcommand*{\QED}{\hfill\ensuremath{\square}}
 
-\newenvironment{aufgabe}[2]{\indent\textbf{Aufgabe #1#2)}\\\addcontentsline{toc}{subsection}{Aufgabe #1#2)}\\[.5ex]}{\ \\[1ex]}
-\newenvironment{aufgabeH}[1]{\ \\[.5ex]\noindent\textbf{Aufgabe #1)}\\\addcontentsline{toc}{section}{Aufgabe #1)}\\[.5ex]}{\ \\[1ex] \vspace{1cm}}
+% --- Eigene Befehle und Umgebungen ---
+
+\newenvironment{aufgabe}[2]{\indent\textbf{Aufgabe #1#2)}\\\addcontentsline{toc}{subsection}{Aufgabe #1#2)}\\[.5ex]}{\ \\[.5ex]}
+\newenvironment{aufgabeH}[1]{\ \\[.5ex]\noindent\textbf{Aufgabe #1)}\\\addcontentsline{toc}{section}{Aufgabe #1)}\\[.5ex]}{\vfill\newpage}
 \newenvironment{loesung}[2]{\indent\textbf{Lösung zu Aufgabe #1#2)}\\\addcontentsline{toc}{subsection}{Lösung zu Aufgabe #1#2)}\\[.5ex]}{\vfill}
 \newenvironment{loesungH}[1]{\noindent\textbf{Lösung zu Aufgabe #1)}\\\addcontentsline{toc}{section}{Lösung zu Aufgabe #1)}\\[.5ex]}{\vfill\newpage}
-
-
-\hypersetup{
-  pdftitle={\titleline - \subtitleline},
-  pdfauthor={\authorsline},
-  pdfsubject={\titleline - \subtitleline},
-  pdfcreator={LuaLaTeX}
-  keywords={Diskrete Strukturen, Hausaufgabe, \subtitleline, \authorsline, \titleline, DS, HA, Konstantin Di 8 Uhr MA 544, Sami Ertug Akkoca, Fabian Aps, Max Kosec, Franz Juri Münzner, 06.1, 525993, 525528, 512131, 526909}
-}
-% =======================================================
-\begin{document}
-
-% --- Manuelle Titelseite ---
+\newenvironment{pageHA}[2]{\chapter{#1}\label{ch:#2}}{\par\newpage}
+\newenvironment{docHA}{% --- Manuelle Titelseite ---
 \begin{titlepage}
 	\centering
   {\Large Technische Universität Berlin\par}
   \vspace{2cm}
   {\Huge\bfseries \titleline\par}
   \vspace{1.5cm}
-  {\Large \subtitleline\par}
-  \vfill
+  {\Large \subtitleline\par\vfill}
   {\large Autoren:\\\authorsline\par}
 
   \vspace{2cm}
@@ -72,18 +60,34 @@
 \setcounter{page}{1} % Startet bei 2, da Titelseite 1 ist
 
 \tableofcontents
+
 \clearpage
-
-
-% --- Aufgabenseite ---
+% --- Beginn der eigentlichen Hausaufgabe ---
 \newpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
+}{}
+
+\hypersetup{
+  pdftitle={\titleline - \subtitleline},
+  pdfauthor={\authorsline},
+  pdfsubject={\titleline - \subtitleline},
+  pdfcreator={LuaLaTeX},
+  pdfkeywords={Diskrete Strukturen, Hausaufgabe, \subtitleline, \authorsline, \titleline, DS, HA, Konstantin Di 8 Uhr MA 544, Sami Ertug Akkoca, Fabian Aps, Max Kosec, Franz Juri Münzner, 06.1, 525993, 525528, 512131, 526909}
+}
+% =======================================================
+\begin{document}
+
+\begin{docHA}
+
+
+% --- Aufgabenseite ---
 % Die Seitenzahl läuft automatisch weiter (z.B. 3), wie von dir gewünscht
 
 % 1. Kapitel für die Aufgaben erstellen
-\chapter{Aufgaben}\label{ch:aufgaben}
+
 %\addcontentsline{toc}{chapter}{Aufgaben} % Haupteintrag im ToC
+\begin{pageHA}{Aufgaben}{aufgaben}
 
 \begin{aufgabeH}{1}
 
@@ -137,13 +141,12 @@
     Beweisen Sie, dass $\binom{n}{k}=\binom{n}{n-k}$ für alle $0 < k < n$.
   \end{aufgabe}
 \end{aufgabeH}
-\clearpage
 
+\end{pageHA}
 
 % --- Lösungsseite ---
-\newpage
+\begin{pageHA}{Lösungen}{loesungen}
 % Hier hattest du bereits ein Kapitel [cite: 12]
-\chapter{Lösungen}\label{ch:loesungen}
 % Da dies ein nummeriertes Kapitel ist, erscheint es automatisch im ToC.
 \begin{loesungH}{1}
 \begin{loesung}{1}{a}
@@ -269,7 +272,7 @@
   \begin{align*}
     (a+b)^{n+1} &= \sum_{k=0}^{n+1} \binom{n+1}{k} a^k b^{n+1-k}
   \end{align*}
-  Damit ist der Induktionsschritt erbracht und die Formel bewiesen. \QED
+  Damit ist der Induktionsschritt erbracht und die Formel bewiesen.
 \end{loesung}
 
 \begin{loesung}{3}{b}
@@ -283,15 +286,18 @@
   \begin{align*}
     \binom{n}{n-k} &= \frac{n!}{(n-k)! \cdot (n - (n-k))!} \\
     &= \frac{n!}{(n-k)! \cdot (n - n + k)!} \\
-    &= \frac{n!}{(n-k)! \cdot k!}
+    &= \frac{n!}{(n-k)! \cdot k!} \\
+    \binom{n}{k} &= \frac{n!}{k! \cdot (n-k)!}
   \end{align*}
-  Da die Multiplikation reeller Zahlen kommutativ ist, können wir die beiden Faktoren im Nenner einfach vertauschen:
-  \[
-  \frac{n!}{(n-k)! \cdot k!} = \frac{n!}{k! \cdot (n-k)!}
-  \]
-  Dies entspricht exakt dem Term der linken Seite und damit der Definition von $\binom{n}{k}$. Somit ist die Gleichheit gezeigt. \QED
+  % Da die Multiplikation reeller Zahlen kommutativ ist, können wir die beiden Faktoren im Nenner einfach vertauschen:
+  % \[
+  % \frac{n!}{(n-k)! \cdot k!} = \frac{n!}{k! \cdot (n-k)!}
+  % \]
+  Dies entspricht exakt dem Term der linken Seite und damit der Definition von $\binom{n}{k}$. Somit ist die Gleichheit gezeigt.
 \end{loesung}
 \end{loesungH}
+\end{pageHA}
+\end{docHA}
 
 % Doom Emacs Lokale Variablen
 %%% Local Variables:
