@@ -28,7 +28,19 @@ public class Dec2Bin {
      * @param N the number that is to be converted.
      */
     public void convert(int N) {
-        // TODO implement this method
+        this.N = N;
+        binStack.clear(); // Stack für neue Konvertierung leeren
+
+        if (N == 0) {
+            binStack.push(0);
+            return;
+        }
+
+        int temp = N;
+        while (temp > 0) {
+            binStack.push(temp % 2); // Rest (0 oder 1) auf den Stack legen
+            temp = temp / 2;         // Zahl halbieren
+        }
     }
 
     /**
@@ -41,8 +53,22 @@ public class Dec2Bin {
      */
     @Override
     public String toString() {
-        // Caution: Stack.toString() does NOT respect stack order. Do not use it.
-        // TODO implement this method
+        StringBuilder sb = new StringBuilder();
+        Stack<Integer> tempStack = new Stack<>();
+
+        // Stack entleeren und in den String schreiben, dabei in tempStack sichern
+        while (!binStack.isEmpty()) {
+            int bit = binStack.pop();
+            sb.append(bit);
+            tempStack.push(bit);
+        }
+
+        // Ursprünglichen Stack wiederherstellen
+        while (!tempStack.isEmpty()) {
+            binStack.push(tempStack.pop());
+        }
+
+        return sb.toString();
     }
 
     public static void main(String[] args) {
@@ -53,4 +79,3 @@ public class Dec2Bin {
         System.out.println("Die Zahl " + dec2bin.getN() + " in Binärdarstellung: " + dec2bin);
     }
 }
-

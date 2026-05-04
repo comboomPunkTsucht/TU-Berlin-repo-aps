@@ -1,8 +1,8 @@
 {
   "folders": [
     {
-      "path": "."
-    }
+      "path": ".",
+    },
   ],
   "settings": {
     "makefile.extensionOutputFolder": "./.vscode",
@@ -71,7 +71,8 @@
     "C_Cpp.refactoring.includeHeader": "ifNeeded",
     "C_Cpp.default.recursiveIncludes.order": "depthFirst",
     "C_Cpp.autocompleteAddParentheses": true,
-    "C_Cpp.exclusionPolicy": "checkFilesAndFolders"
+    "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
+    "java.configuration.updateBuildConfiguration": "automatic",
   },
   "launch": {
     "version": "0.2.0",
@@ -81,10 +82,8 @@
         "request": "launch",
         "name": "build and run main ",
         "program": "${workspaceFolder}/WiSe2025-26/C-Programming/Default/nob",
-        "args": [
-          "-r"
-        ],
-        "cwd": "${workspaceFolder}/WiSe2025-26/C-Programming/Default/"
+        "args": ["-r"],
+        "cwd": "${workspaceFolder}/WiSe2025-26/C-Programming/Default/",
       },
       {
         "type": "lldb",
@@ -92,8 +91,8 @@
         "name": "Run main",
         "program": "${workspaceFolder}/WiSe2025-26/C-Programming/Default/build/main",
         "args": [],
-        "cwd": "${workspaceFolder}/WiSe2025-26/C-Programming/Default/"
-      }
-    ]
-  }
+        "cwd": "${workspaceFolder}/WiSe2025-26/C-Programming/Default/",
+      },
+    ],
+  },
 }

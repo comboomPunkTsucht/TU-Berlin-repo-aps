@@ -10,10 +10,10 @@ public class Drucker extends Elektrogeraete{
     Queue<Druckauftrag> Druckauftraege;
     int Tinte;
 
-    public Drucker (String Netzwerkname) {
-        // todo
-
-
+    public Drucker(String Netzwerkname) {
+        this.Netzwerkname = Netzwerkname;
+        this.Druckauftraege = new LinkedList<>();
+        this.Tinte = 100; // Wir starten mit 100% Tinte
     }
 
     public void DruckauftragEinreihen(Druckauftrag d) {
@@ -21,8 +21,8 @@ public class Drucker extends Elektrogeraete{
     }
 
     public void fill() {
-        // todo
-
+        this.Tinte = 100;
+        System.out.println("Drucker wurde wieder auf 100% aufgefüllt.");
     }
 
     private void warten(int Sekunden) {
@@ -47,6 +47,31 @@ public class Drucker extends Elektrogeraete{
     }
 
     public void drucken() {
-        // todo
+        if (this.Druckauftraege.isEmpty()) {
+            System.out.println("Keine Druckaufträge in der Warteschlange.");
+            return;
+        }
+
+        while (!this.Druckauftraege.isEmpty()) {
+            if (this.Tinte <= 0) {
+                System.err.println("Tinte leer! Bitte Drucker auffüllen (fill).");
+                return;
+            }
+
+            // Hole den nächsten Auftrag aus der Queue
+            Druckauftrag aktuell = this.Druckauftraege.poll();
+
+            // Simuliere Drucken (hier ca. 1 Sekunde Wartezeit pro Auftrag)
+            System.out.print("Drucke Auftrag... ");
+            warten(1);
+
+            // Tinte reduzieren (z.B. pauschal um 10% pro Auftrag,
+            // oder angepasst an Seitenanzahl, je nachdem wie Druckauftrag aufgebaut ist)
+            this.Tinte -= 10;
+            if (this.Tinte < 0) this.Tinte = 0;
+
+            System.out.println(" Fertig!");
+        }
+        System.out.println("Alle Aufträge wurden gedruckt.");
     }
 }

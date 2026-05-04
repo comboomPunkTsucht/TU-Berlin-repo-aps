@@ -128,8 +128,83 @@ int blatt02( ) {
   nob_log( NOB_INFO, "gehe zu den Aufgabn von Blatt02" );
   set_current_dir( "Blatt02" );
 
-  // Hier können die Aufgaben von Blatt02 implementiert werden
-  UNREACHABLE( "Blatt02 ist noch nicht implementiert" );
+  nob_log( NOB_INFO, "######## Aufgabe: Stapel und Warteschlangen ########" );
+
+  // Compile all source files in src/
+  nob_log( NOB_INFO, "kompiliere alle Blatt02 Java-Dateien (src/)" );
+  JAVAC( );
+  cmd_append( &cmd, "src/Card.java" );
+  cmd_append( &cmd, "src/Dec2Bin.java" );
+  cmd_append( &cmd, "src/Bettelmann.java" );
+  cmd_append( &cmd, "src/QueuesAndStacks.java" );
+  if ( !cmd_run( &cmd ) ) {
+    nob_log( NOB_ERROR, "Kompilierung der Blatt02 Dateien fehlgeschlagen" );
+    return 1;
+  }
+
+  // Compile Vorgaben files
+  nob_log( NOB_INFO, "kompiliere Vorgaben Dateien" );
+  JAVAC( );
+  cmd_append( &cmd, "Vorgaben_Blatt02_Aufgabe1_Aufgabe5/Elektrogeraete.java" );
+  cmd_append( &cmd, "Vorgaben_Blatt02_Aufgabe1_Aufgabe5/Druckauftrag.java" );
+  cmd_append( &cmd, "Vorgaben_Blatt02_Aufgabe1_Aufgabe5/Mitarbeiter.java" );
+  cmd_append( &cmd, "Vorgaben_Blatt02_Aufgabe1_Aufgabe5/Drucker.java" );
+  cmd_append( &cmd, "Vorgaben_Blatt02_Aufgabe1_Aufgabe5/Firma.java" );
+  cmd_append( &cmd, "Vorgaben_Blatt02_Aufgabe1_Aufgabe5/QueuesAndStacks.java" );
+  if ( !cmd_run( &cmd ) ) {
+    nob_log( NOB_ERROR, "Kompilierung der Vorgaben Dateien fehlgeschlagen" );
+    return 1;
+  }
+
+  nob_log( NOB_INFO, "führe Dec2Bin main aus" );
+  JAVA( );
+  cmd_append( &cmd, "-cp" );
+  cmd_append( &cmd, "src" );
+  cmd_append( &cmd, "Dec2Bin" );
+  if ( !cmd_run( &cmd ) ) {
+    nob_log( NOB_ERROR, "Dec2Bin main fehlgeschlagen" );
+    return 1;
+  }
+
+  nob_log( NOB_INFO, "führe QueuesAndStacks main aus" );
+  JAVA( );
+  cmd_append( &cmd, "-cp" );
+  cmd_append( &cmd, "src" );
+  cmd_append( &cmd, "QueuesAndStacks" );
+  if ( !cmd_run( &cmd ) ) {
+    nob_log( NOB_ERROR, "QueuesAndStacks main fehlgeschlagen" );
+    return 1;
+  }
+
+  nob_log( NOB_INFO, "führe Bettelmann main aus" );
+  JAVA( );
+  cmd_append( &cmd, "-cp" );
+  cmd_append( &cmd, "src" );
+  cmd_append( &cmd, "Bettelmann" );
+  if ( !cmd_run( &cmd ) ) {
+    nob_log( NOB_ERROR, "Bettelmann main fehlgeschlagen" );
+    return 1;
+  }
+
+  nob_log( NOB_INFO, "######## Aufgabe: Unit Tests (via Maven) ########" );
+
+  // Go back to parent directory for Maven
+  set_current_dir( ".." );
+
+  nob_log( NOB_INFO, "führe Maven Tests für Blatt02 aus" );
+  Nob_Cmd mvn_cmd = { 0 };
+  cmd_append( &mvn_cmd, "mvn" );
+  cmd_append( &mvn_cmd, "clean" );
+  cmd_append( &mvn_cmd, "test" );
+  cmd_append( &mvn_cmd, "-pl" );
+  cmd_append( &mvn_cmd, "Blatt02" );
+  cmd_append( &mvn_cmd, "-q" );
+  if ( !cmd_run( &mvn_cmd ) ) {
+    nob_log( NOB_ERROR, "Maven Tests fehlgeschlagen" );
+    return 1;
+  }
+
+  nob_log( NOB_INFO, "Blatt02 erfolgreich abgeschlossen" );
 
   return 0;
 }

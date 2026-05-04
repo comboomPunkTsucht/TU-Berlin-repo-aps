@@ -1,4 +1,8 @@
-import java.util.*;
+import java.util.Collections;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 /**
  * The class {@code Bettelmann} simulated the card game 'Bettelmann'. You can construct objects
@@ -54,7 +58,48 @@ public class Bettelmann {
      * to the bottom of her/his closed pile of cards.
      */
     public void playRound() {
-        // TODO implement this method
+        if (closedPile1.isEmpty() || closedPile2.isEmpty()) {
+            // Spiel ist bereits vorbei
+            return;
+        }
+
+        Queue<Card> trick = new LinkedList<>();
+        boolean trickResolved = false;
+
+        while (!trickResolved && !closedPile1.isEmpty() && !closedPile2.isEmpty()) {
+            Card c1 = closedPile1.pollFirst();
+            Card c2 = closedPile2.pollFirst();
+
+            // Karten in den aktuellen "Stich" (Pot) legen
+            trick.add(c1);
+            trick.add(c2);
+
+            int cmp = c1.compareTo(c2);
+            if (cmp > 0) {
+                // Spieler 1 gewinnt den Stich
+                while (!trick.isEmpty()) {
+                    closedPile1.addLast(trick.poll());
+                }
+                trickResolved = true;
+            } else if (cmp < 0) {
+                // Spieler 2 gewinnt den Stich
+                while (!trick.isEmpty()) {
+                    closedPile2.addLast(trick.poll());
+                }
+                trickResolved = true;
+            }
+            // Bei Gleichstand (cmp == 0) läuft die Schleife einfach weiter
+            // und zieht die nächsten Karten für den gleichen Stich.
+        }
+
+        // Gewinner aktualisieren, falls ein Stapel leer ist
+        if (closedPile1.isEmpty() && !closedPile2.isEmpty()) {
+            winner = 2;
+        } else if (closedPile2.isEmpty() && !closedPile1.isEmpty()) {
+            winner = 1;
+        } else if (closedPile1.isEmpty() && closedPile2.isEmpty()) {
+            winner = 0; // Unentschieden
+        }
     }
 
     /**
@@ -134,4 +179,3 @@ public class Bettelmann {
         }
     }
 }
-

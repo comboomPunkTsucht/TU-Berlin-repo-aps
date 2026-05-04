@@ -1,6 +1,3 @@
-import sun.awt.image.ImageWatched;
-
-import java.awt.*;
 import java.util.LinkedList;
 import java.util.Scanner;
 
