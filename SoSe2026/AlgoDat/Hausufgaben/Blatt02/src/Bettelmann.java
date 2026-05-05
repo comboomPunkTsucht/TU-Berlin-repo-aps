@@ -71,8 +71,8 @@ public class Bettelmann {
             Card c2 = closedPile2.pollFirst();
 
             // Karten in den aktuellen "Stich" (Pot) legen
-            trick.add(c1);
             trick.add(c2);
+            trick.add(c1);
 
             int cmp = c1.compareTo(c2);
             if (cmp > 0) {
